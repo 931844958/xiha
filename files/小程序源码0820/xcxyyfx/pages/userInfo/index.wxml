@@ -1,0 +1,76 @@
+<view class="container">
+  <view class="group">
+    <view class="item">
+      <text>头像</text>
+      <view class="right">
+        <image class="head-img" src="{{userTypeImg===1?'../../images/yaodiani.png':'../../images/dailii.png'}}"></image>
+      </view>
+    </view>
+    <view class="item" >
+      <text>用户账号</text>
+      <view class="right">
+        <text>{{pharmacyResultVo.accounts}}</text>
+      </view>
+    </view>
+    <view class="item">
+      <text>手机号</text>
+      <view class="right">
+        <text>{{pharmacyResultVo.phone}}</text>
+      </view>
+    </view>
+    <!-- <navigator url="/pages/setNickName/index?nickName={{userInfo.nickName}}"  class="item">
+      <text>昵称</text>
+      <view class="right">
+        <text>{{userInfo.nickName}}</text>
+        <text class="jiantou"></text>
+      </view>
+    </navigator>
+    <navigator url="/pages/setName/index?realName={{userInfo.realName}}"  class="item">
+      <text>真实姓名</text>
+      <view class="right">
+        <text>{{userInfo.realName}}</text>
+        <text class="jiantou"></text>
+      </view>
+    </navigator> -->
+    <!-- <picker bindchange="bindPickerChange"  value="{{sexIndex}}"  range="{{sexData}}" >
+      <view class="item">
+        <text>性别</text>
+        <view class="right">
+          <text>{{sexData[sexIndex]}}</text>
+          <text class="jiantou"></text>
+        </view>
+      </view>
+    </picker>
+    <view class="item"  style="border-top: 1rpx solid #eeeeee;">
+      <text>我的上级</text>
+      <view class="right">
+        <text>无</text>
+      </view>
+    </view> -->
+    <view class="item"  >
+      <text>我的角色</text>
+      <view class="right">
+        <text>{{userType}}</text>
+      </view>
+    </view>
+    <!-- <navigator  url="/pages/setBeizhu/index?remarks={{userInfo.remarks}}" class="item">
+      <text>备注</text>
+      <view class="right">
+        <text>{{userInfo.remarks || "无"}}</text>
+        <text class="jiantou"></text>
+      </view>
+    </navigator> -->
+    <!--执照列表-->
+    <view class="pic-item" wx:for="{{files}}" wx:key="{{unique}}">
+      <view style="line-height: 3;">{{item.filetype.title}}</view>
+      <view class="img-wrapper">
+        <image bindtap="toggleMask" mode="widthFix" data-src="{{item.image}}" src="{{item.image}}"></image>
+        <!--代理不能修改-->
+        <image bindtap="chooseImages" wx:if="{{userTypeImg===1}}" data-id="{{item.id}}" src="pic@2x.png" style="width: 44rpx;height: 44rpx;"></image>
+      </view>
+    </view>
+  </view>
+  <view wx:if="{{maskShow}}" catchtap="toggleMask" class="mask">
+    <image mode="widthFix" src="{{maskImageUrl}}"></image>
+  </view>
+</view>

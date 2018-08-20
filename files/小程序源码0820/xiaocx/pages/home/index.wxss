@@ -1,0 +1,213 @@
+.container{
+  background: #FFECEB;
+}
+.header-bg{
+  background: #FF3826;height: 188rpx;
+}
+.block{
+  margin-bottom: 20rpx;width: 710rpx;margin: 20rpx auto;background: #ffffff;
+}
+.block:first-of-type{
+  margin-top:0;
+}
+.header{
+  margin-top:-188rpx;
+  height: 188rpx;
+}
+.user-container{
+  display: flex;
+  border-top-left-radius: 8rpx;
+  border-top-right-radius: 8rpx;
+  position: relative;
+}
+.user-container .navigator{
+  padding: 10px;
+  position: absolute;
+  top:30rpx;
+  right: 30rpx;
+}
+.user-container .products{
+  width: 44rpx;
+  height: 44rpx;
+  border-radius: 50%;
+}
+.user-container .icon-wrapper{
+  width: 188rpx;
+  height: 188rpx;
+  border-radius: 50%;
+  border: 4rpx solid #ffffff;
+}
+.user-container .icon-wrapper .image{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+.user-container .content{
+  flex: 1;
+  position: relative;
+  padding: 30rpx 20rpx;
+}
+.user-container .content .name{
+  color:#d93e36;
+  font-family: PingFang-SC-Medium;
+  font-size: 30rpx;
+  line-height: 2;
+}
+.user-container .content .money{
+  color:#666666;
+  font-family: PingFang-SC-Regular;
+  font-size: 24rpx;
+  line-height: 2;
+}
+.user-container .content .userGrade{
+  color:#666666;
+  font-family: PingFang-SC-Regular;
+  font-size: 26rpx;
+  line-height: 1.5;
+}
+
+
+.extract-wrapper{
+  padding-top:20rpx;
+}
+.swiper-extract{
+  height: 188rpx !important;
+}
+.extract-item{
+  padding:0 2rpx;
+  width: 140rpx !important;
+  font-family: PingFang-SC-Regular;
+  text-align: center;
+}
+.extract-item .image{
+  width: 80rpx;height: 80rpx;border-radius: 50%;
+}
+.extract-item text{
+  line-height: 1.5;width: 100%;display: block;overflow: hidden;white-space: nowrap;
+}
+.extract-item .nickname{
+  font-size: 24rpx;
+  color: #666666;
+}
+.extract-item .time,.extract-item .desc{
+  font-size: 20rpx;color: #999999;
+}
+.banner-wrapper{
+  padding: 30rpx 0;
+}
+.banner-item .image{
+  width:670rpx;
+  height: 280rpx;
+  border-radius: 8rpx;
+  display: block;
+  margin:0 auto;
+}
+.banner-item .button{
+  background-color: #ffffff;
+}
+.banner-item .button::after{
+  border: none;
+}
+.block .title{
+  padding:20rpx 0;
+  font-size: 30rpx;
+  color:#333333;
+}
+.block .title text{
+  padding-left: 12rpx;
+  position: relative;
+}
+.block .title text::before{
+  content: '';
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  left: 0;
+  width: 6rpx;
+  height: 20rpx;
+  background: #d93e36;
+}
+
+/*商品列表*/
+/* .products_wrapper{
+  font-size: 14px;
+  padding: 30rpx 0;
+}
+.p-item{
+  overflow: hidden;
+  margin: 0 auto;
+  margin-bottom: 30rpx;
+  width: 690rpx !important;
+  height: 570rpx !important;
+  border-top-left-radius: 10rpx;
+  border-top-right-radius: 10rpx;
+  box-shadow: 0 0 8px grey;
+}
+.name-sale .sale{
+  color: #999999;
+}
+.name-sale{
+  display: flex;
+  justify-content: space-between;
+  padding:0 10px;
+  line-height: 1.8;
+  font-size: 12px;
+}
+.slide-image{
+  height: 450rpx;
+  width: 100%;
+}
+.price{
+  color: #e8454e;
+  font-size: 16px;
+  margin-right: 18rpx;
+}
+.effect{
+  font-family: PingFang-SC-Medium;
+  color: #333333;
+  font-size: 16px;
+  padding: 0 8rpx;
+  line-height: 1.6;
+  margin-right: 16rpx;
+}
+.baozhang{
+  color: #333333;
+  font-size: 10px;
+  background-color: #e2e2e2;
+  padding:0 10rpx;
+  height: 44rpx;
+  line-height: 44rpx;
+} */
+
+/*案例*/
+.caseItem{
+  padding:20rpx 30rpx 0 20rpx;
+}
+.caseItem .name-icon{
+  display: flex;
+  align-items: center;
+}
+.caseItem .name-icon .image{
+  width: 80rpx;
+  height: 80rpx;
+  border-radius: 50%;
+  margin-right: 12rpx;
+}
+.caseItem .name-icon .text{
+  font-size: 30rpx;
+  color: #333333;
+}
+.caseItem .title{
+  padding:20rpx 0;
+  font-size: 24rpx;
+}
+.caseItem .image-wrapper{
+  display: flex;
+  justify-content: space-between;
+  padding-bottom: 20rpx;
+  border-bottom:solid 1rpx #eeeeee; 
+}
+.caseItem .image-wrapper image{
+  width: 200rpx;
+  height: 200rpx;
+}

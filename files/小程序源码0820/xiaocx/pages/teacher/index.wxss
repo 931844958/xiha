@@ -1,0 +1,73 @@
+page{
+    height: 100%;
+}
+.count-wrapper{
+    padding: 10px 15px;
+    display: flex;
+}
+.count-wrapper .item{
+    flex: 1;
+    text-align: center;
+}
+.count-wrapper .item:first-of-type{
+    border-right: 1rpx solid #eeeeee;
+    width: 310rpx;
+}
+.count-wrapper .icon{
+    width: 44rpx;
+    height: 44rpx;
+}
+.count-wrapper .keyss{
+    color: #666666;
+    font-size: 22rpx;
+    line-height: 1.6;
+    font-family: PingFang-SC-Regular;
+}
+.count-wrapper .valuess{
+    color: #333333;
+    font-size: 28rpx;
+    line-height: 1.6;
+    font-family: PingFang-SC-Regular;
+}
+.table{
+    padding: 12rpx;
+    text-align: center;
+}
+.table view{
+    height: 73rpx;
+    line-height: 73rpx;
+    font-size: 20rpx;
+    display: flex;
+    color: #6b6b6b;
+}
+.table view:nth-child(2n){
+    background-color: #f9f9f9;
+}
+.table view:nth-child(2n-1){
+    background-color: #ffffff;
+}
+.table view:first-of-type{
+    background-color: #f1f1f1;
+    color: #a7a7a7;
+    font-size: 24rpx;
+}
+.table .o{
+    width: 156rpx;
+    color: #4bb0ff;
+}
+.table .t{
+    width: 161rpx;
+}
+.table .tr{
+    width: 171rpx;
+}
+.table .f{
+    width: 147rpx;
+}
+.table .fi{
+    width: 89rpx;
+    color: #dddddd;
+}
+.table .fi.active{
+    color: #333333;
+}

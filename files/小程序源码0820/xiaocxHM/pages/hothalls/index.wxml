@@ -1,0 +1,19 @@
+<!--热门讲堂-->
+<view class="container">
+  <view class="lesson-wrapper">
+    <navigator  url="/pages/vDetail/index?articleId={{item.id}}&articleType={{hothallsType}}"  class="lesson-item" wx:for="{{hothalls}}" wx:key="unique">
+        <view class="content">
+          <view  class="title">{{item.title}}</view>
+          <view class="name">{{item.nickname}}</view>
+          <view class="desc">
+            <text  class="view">{{item.browse}}次观看</text>
+            <text class="time">{{item.createTime}}</text>
+          </view>
+        </view>
+        <view class="wrap-image"> 
+          <image class="image" src="{{item.converUrl}}"></image>
+          <image class="btn" src="../../images/videoPlay@2x.png"></image>
+        </view>
+      </navigator>
+  </view>
+</view>

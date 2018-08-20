@@ -1,0 +1,33 @@
+<view class="container">
+  <view class="header">
+    <image class="headImg" src="{{userData.headImg}}"></image>
+    <view>
+      <view class="nike-name">{{userData.nickName}}</view >
+      <!--用户等级：0，小白 1，青铜 2.白银 3.黄金 4。钻石-->
+      <view class="user-grade">{{userData.userGrade===0?'小白':userData.userGrade===1?'青铜':userData.userGrade===2?'白银':userData.userGrade===3?'黄金':'钻石'}}</view >
+    </view>
+  </view>
+  <view class="teamMarket">
+    <view bindtap='changeTab' data-index="1" class="case {{caseIndex===1?'active':''}}">
+      <view class="keyss">我的销售额</view>
+      <view class="valuess">{{teamMarketCase.mySale}}</view>
+    </view>
+    <view bindtap='changeTab' data-index="2" class="case {{caseIndex===2?'active':''}}">
+      <view class="keyss">徒弟销售额</view>
+      <view class="valuess">{{teamMarketCase.apprenticeSale}}</view>
+    </view>
+  </view>
+  <view wx:if="{{detailList.length>0}}" class="list-wrapper">
+    <view class="list-item" wx:for="{{detailList}}">
+      <view >{{item.productName}}</view>
+      <view >{{item.createTime}}</view>
+      <view >{{item.commission}}</view>
+    </view>
+  </view>
+  <view class="no-data">
+    <view>
+      <view bindtap="toProducts" wx:if="{{detailList.length===0}}" style="background-color: #FF3826;color: #ffffff;line-height: 2;padding: 0 30rpx;font-size: 16px;">去分销</view>
+      <view style="color: #999999;line-height: 2;font-size: 14px;text-align: center;">暂无业绩</view>
+    </view>
+  </view>
+</view>

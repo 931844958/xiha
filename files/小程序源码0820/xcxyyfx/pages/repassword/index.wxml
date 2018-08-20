@@ -1,0 +1,11 @@
+<view class="container">
+  <view class="content-wrapper">
+    <form bindsubmit="updatePassword">
+      <input class="input" type="password"  name="oldPassword" placeholder="请输入原密码/六位以上/不能中文"/>
+      <input class="input" type="password" name="password" placeholder="请输入新密码/六位以上/不能中文"/>
+      <input class="input" type="password" name="repassword" placeholder="请再次输入新密码/六位以上/不能中文"/>
+      <navigator url="/pages/contact/index" class="lost" >忘记密码？联系客服</navigator>
+      <button class="button" formType="submit">确定</button>
+    </form>
+  </view>
+</view>

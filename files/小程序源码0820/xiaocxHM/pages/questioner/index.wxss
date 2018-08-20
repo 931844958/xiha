@@ -1,0 +1,95 @@
+page{
+    height: 100%;
+    color: #999999;
+    background-color: #F4F4F4;
+    font-family: PingFang-SC-Regular;
+}
+.container{
+    background-color: #ffffff;
+}
+.title{
+    color: #333333;
+    padding: 20rpx;
+    font-size: 15px;
+    font-family: PingFang-SC-Medium;
+}
+.input-wrapper{
+    padding-left: 20rpx;
+}
+.input-wrapper .item {
+    display: flex;
+    align-items: center;
+    line-height: 3;
+    border-bottom: 1rpx solid #999999;
+}
+.keyss{
+    width: 140rpx;
+    color: #333333;
+    font-family: PingFang-SC-Medium;
+}
+.valuess{
+    flex: 1;
+}
+.radio{
+    margin-right: 20rpx;
+}
+.input-wrapper .item:last-of-type{
+    border-bottom:none;
+}
+
+.textarea-wrapper{
+    position: relative;
+    padding: 20rpx;
+}
+.textarea-wrapper .title{
+    padding:0;
+    font-family: PingFang-SC-Medium;
+    line-height: 2.55;
+}
+.textarea{
+    width: 100%;
+}
+.textarea-wrapper .count{
+    position: absolute;
+    bottom: 50rpx;
+    right: 30rpx;
+    font-family: PingFang-SC-Regular;
+    font-size: 28rpx;
+    color: #cccccc;
+}
+.btn{
+    margin-top: 40rpx;
+    background-color: #8ebdfd;
+    width: 90%;
+}
+.mask{
+    position: absolute;
+    z-index: 888;
+    top:0;
+    bottom:0;
+    left:0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #222222;
+    opacity: 0.88;
+}
+.button-wrapper{
+    width: 588rpx;
+    height: 388rpx;
+    border-radius: 18rpx;
+    background-color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mask .tips{
+    width:100%;
+    text-align: center;
+    color: #333333;
+    font-family: PingFang-SC-Medium;
+    line-height: 2;
+    font-size: 16px;
+}

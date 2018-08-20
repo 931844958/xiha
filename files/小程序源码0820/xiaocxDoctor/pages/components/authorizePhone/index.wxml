@@ -1,0 +1,17 @@
+<view class="container">
+    <!--如果用户目前使用的手机号不是微信绑定的手机号，怎么办,凉拌-->
+    <!--绑定手机号-->
+    <view>
+        <view class="head-wrapper">
+            <view class="head">
+                <image class="logo" src="logo@2x.png"></image>
+                <view class="brand">快问好医生</view>
+            </view>
+        </view> 
+        <button open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" class="save-btn get-info">
+            <image class="icon" src="weixin@2x.png"></image>
+            绑定手机号
+        </button>
+        <image class="buttom-bg" src="pidture@2x.png"></image>
+    </view>
+</view>

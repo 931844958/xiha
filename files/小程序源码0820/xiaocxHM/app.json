@@ -1,0 +1,67 @@
+{
+  "pages":[
+    
+    "pages/home/index",
+    "pages/user/index",
+    "pages/selfTest/index",
+    "pages/products/index",
+    "pages/question/index",
+    "pages/gDetail/index",
+    "pages/selfExam/index",
+    "pages/quizIndex/index",
+    "pages/quizItem/index",
+    "pages/userInfo/index",
+    "pages/addressManage/index",
+    "pages/addressAdd/index",
+    "pages/addressEdit/index",
+    "pages/myOrder/index",
+    "pages/feedback/index",
+    "pages/orderDetail/index",
+    "pages/doctors/index",
+    "pages/questioner/index",
+    
+    "pages/dDetail/index",
+    "pages/aDetail/index",
+    "pages/H5/index",
+    "pages/vDetail/index",
+    "pages/myDoctor/index",
+    "pages/adviceDetail/index",
+    "pages/advices/index",
+    "pages/hothalls/index",
+    "pages/search/index",
+    
+    "pages/authorize/index",
+    "pages/authorizePhone/index",
+    "pages/buy/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#8ebdfd",
+    "navigationBarTitleText": "海狗好药方",
+    "navigationBarTextStyle":"#ffffff",
+    "onReachBottomDistance":20
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#8ebdfd",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "box-shadow":"0 0 6px 0",
+    "list": [{
+     "pagePath": "pages/home/index",
+      "iconPath": "images/nav/home-off@2x.png",
+      "selectedIconPath": "images/nav/home-on@2x.png",
+      "text": "首页"
+    },{
+     "pagePath": "pages/products/index",
+      "iconPath": "images/nav/pris-off@2x.png",
+      "selectedIconPath": "images/nav/pris-on@2x.png",
+      "text": "好药方"
+    },{
+     "pagePath": "pages/user/index",
+      "iconPath": "images/nav/me-off@2x.png",
+      "selectedIconPath": "images/nav/me-on@2x.png",
+      "text": "我的"
+    }]
+  }
+}

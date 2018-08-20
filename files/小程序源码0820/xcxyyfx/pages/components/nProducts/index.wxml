@@ -1,0 +1,43 @@
+<!--新品-->
+<view class="products_wrapper"> 
+  <swiper wx:if="{{productList.length>3}}" circular display-multiple-items="{{3}}" autoplay class="pro-swiper">
+      <swiper-item wx:for="{{productList}}" wx:key="unique" class="pro-wrapper">
+        <view data-id="{{item.id}}" bindtap="toDetail" class="p-item" >
+          <view class="slide-image-wrapper">
+            <image src="{{item.indexUrl}}" class="slide-image"/>
+          </view>
+          <view class="name-sale">
+            <text class="name">{{item.name}}</text>
+            <!-- <text class="price">￥{{item.price}}</text> -->
+            <!-- <text class="sale">月销量：{{item.monthlySales}}</text> -->
+          </view>
+          <!-- <view class="effect">{{item.effect}}</view> -->
+          <view class="des-wrapper">
+            <text class="price">￥{{item.price}}</text>
+            <!--roleId::1店员 2店长 3业务员 4代理-->
+            <view class="share-btn" catchtap="shareHandler" data-sharepid="{{item.id}}"  data-sharepindex="{{index}}"><image style="width:18rpx;height:26rpx; " src="fish-white@2x.png"></image>{{item.myRate}}</view>
+          </view>
+        </view>
+      </swiper-item>
+  </swiper>
+  <view wx:else class="pro-swiper few-pro">
+    <view wx:for="{{productList}}" wx:key="unique" class="pro-wrapper ">
+      <view data-id="{{item.id}}" bindtap="toDetail" class="p-item" >
+        <view class="slide-image-wrapper">
+          <image src="{{item.indexUrl}}" class="slide-image"/>
+        </view>
+        <view class="name-sale">
+          <text class="name">{{item.name}}</text>
+          <!-- <text class="price">￥{{item.price}}</text> -->
+          <!-- <text class="sale">月销量：{{item.monthlySales}}</text> -->
+        </view>
+        <!-- <view class="effect">{{item.effect}}</view> -->
+        <view class="des-wrapper">
+          <text class="price">￥{{item.price}}</text>
+          <!--roleId::1店员 2店长 3业务员 4代理-->
+          <view class="share-btn" catchtap="shareHandler" data-sharepid="{{item.id}}"  data-sharepindex="{{index}}"><image style="width:18rpx;height:26rpx; " src="fish-white@2x.png"></image>{{item.myRate}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

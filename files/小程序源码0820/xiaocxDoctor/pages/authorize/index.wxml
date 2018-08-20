@@ -1,0 +1,16 @@
+<view class="container">
+    <!--获取用户信息-->
+    <view>
+        <view class="head-wrapper">
+            <view class="head">
+                <image class="logo" src="logo@2x.png"></image>
+                <view class="brand">快问好医生</view>
+            </view>
+        </view> 
+        <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="save-btn get-info">
+            <image class="icon" src="weixin@2x.png"></image>
+            授权登录
+        </button>
+        <image class="buttom-bg" src="pidture@2x.png"></image>
+    </view>
+</view>

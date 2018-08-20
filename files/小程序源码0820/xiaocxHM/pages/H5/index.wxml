@@ -1,0 +1,4 @@
+<!--引导手册-->
+<!-- <web-view src="https://fish.city-game.cn/h5/yyjk/index.html#/lead"></web-view> -->
+<!--隐私协议与使用条款https://fish.city-game.cn/h5/yyjk/index.html#/privacy-->
+<web-view src="{{URL}}"></web-view>

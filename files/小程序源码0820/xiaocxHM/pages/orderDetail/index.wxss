@@ -1,0 +1,67 @@
+page{
+    height: 100%;
+}
+.header{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 340rpx;
+}
+.content-wrapper{
+    text-align: center;
+}
+.header .name{
+  font-size: 28rpx;
+  color: #333333;
+  font-family: PingFang-SC-Medium;
+  line-height: 2.2;
+}
+.header .money{
+  font-size: 48rpx;
+  color: #333333;
+  font-family: PingFang-SC-Medium;
+  line-height: 2.4;
+}
+.header .state{
+  font-size: 24rpx;
+  color: #b7b7b7;
+  font-family: PingFang-SC-Medium;
+  line-height: 2.2;
+}
+
+.item{
+  padding:28rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 2.4;
+  border-bottom: 1rpx solid #eeeeee;
+  font-size: 30rpx;
+  color: #999999;
+  font-family: PingFang-SC-Medium;
+}
+.item:last-of-type{
+  border-bottom: none;
+}
+.jiantou{
+  transform:rotate(-45deg);
+  width: 18rpx;
+  height: 18rpx;
+  border-right: 1px solid #888888;
+  border-bottom: 1px solid #888888;
+}
+.left{
+  max-width: 220rpx;
+}
+.item .right{
+  padding-left: 20rpx;
+  flex: 1;
+  display: flex;
+  justify-content:flex-end;
+  align-items: center;
+  color: #333333;
+}
+
+.no-btn{
+    background-color: #ffffff;
+}

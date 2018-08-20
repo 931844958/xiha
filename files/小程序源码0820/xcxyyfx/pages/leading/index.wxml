@@ -1,0 +1,14 @@
+<view class="container">
+  <swiper class="swiper-container" bindchange="changePic" indicator-dots="{{true}}" indicator-active-color="#e81f0b">
+    <swiper-item>
+      <image src="GuidePic1@750.jpg" mode="widthFix" class="guid-pic"></image>
+    </swiper-item>
+    <swiper-item>
+      <image src="GuidePic2@750.jpg" mode="widthFix" class="guid-pic"></image>
+    </swiper-item>
+    <swiper-item bindtap="toHome">
+      <image src="GuidePic3@750.jpg" mode="widthFix" class="guid-pic"></image>
+    </swiper-item>
+  </swiper>
+  <view class="btn" wx:if="{{btnShow}}" bindtap="toHome">立即体验</view>
+</view>

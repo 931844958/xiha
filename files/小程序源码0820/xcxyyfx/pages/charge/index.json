@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "",
+  "usingComponents":{
+    "products":"../components/products/index"
+  }
+}

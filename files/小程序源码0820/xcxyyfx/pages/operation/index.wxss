@@ -1,0 +1,30 @@
+.container{
+    font-family: PingFang-SC-Regular;
+}
+.classify-title{
+    background-color: #eeeeee;
+    color: #333333;
+    font-size: 28rpx;
+    padding: 0 30rpx;
+    line-height: 2;
+}
+.item-wrapper{
+    padding: 30rpx 20rpx;
+    border-bottom: 1rpx solid #eeeeee;
+}
+.item-wrapper:last-child{
+    border-bottom: none;
+}
+.item-title{
+    color: #666666;
+    font-size: 28rpx;
+    line-height: 2;
+}
+.content{
+    color: #666666;
+    font-size: 24rpx;
+    line-height: 2;
+}
+.hide{
+    display: none;
+}

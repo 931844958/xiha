@@ -1,0 +1,120 @@
+.container{
+    min-height: 100vh;
+    font-size: 14px;
+    padding-bottom: 88rpx;
+}
+.boss{
+    display: flex;
+    padding: 10px;
+}
+.boss .head-wrapper{
+    width: 100rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.head-wrapper .image{
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 50%;
+}
+.content{
+    flex:1;
+}
+.content text{
+    margin-right: 10rpx;
+    color: #666666;
+}
+.content .name{
+    color: #333333;
+    font-family: PingFang-SC-Medium;
+    font-size: 16px;  
+}
+.content .section{
+    line-height: 1.8;
+}
+.content .adept{
+    color: #999999;
+}
+.content .star{
+    color: #FF9C00;
+    margin-right: 12rpx;
+}
+
+.times{
+    padding-left: 10px;
+    background-color: #F4F4F4;
+    color: #666666;
+    font-size: 16px;
+    line-height: 2.4;
+}
+
+.advice{
+    padding:10px 15px;
+}
+.question{
+    color: #333333;
+    font-family: PingFang-SC-Medium;
+    line-height: 2;    
+}
+.anwser{
+    color: #999999;
+    font-family: PingFang-SC-Regular;
+    line-height: 1.6;    
+}
+.who-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.doctor .image{
+    width: 40rpx;
+    height: 40rpx;
+    border-radius: 50%;
+    margin-right: 12rpx;
+    vertical-align: middle;
+}
+.doctor .name{
+    color: #999999;
+    font-family: PingFang-SC-Regular;
+    line-height: 1.6;    
+}
+.span-btn{
+    background-color: #eeeeee;
+    color: #333333;
+    padding: 6rpx;
+    line-height: 1.4;
+    border-radius: 4rpx;
+}
+.comment-wrapper{
+    position: fixed;
+    z-index: 111;
+    background-color: #ffffff;
+    bottom:0;
+    width: 100%;
+    height: 88rpx;
+    padding:0 20rpx;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.sub-content{
+    width: 550rpx;
+    height: 60rpx;
+    padding:0 12rpx;
+    border-radius: 30rpx;
+    border:1rpx solid #dcdcdc;
+}
+.sub-btn{
+    width: 88rpx;
+    height:60rpx;
+    margin-left: 0;
+    margin-right: 0;
+    padding:0;
+    line-height: 2;
+    background-color: transparent;
+
+    font-size: 14px;
+    background-color: #8ebdfd;
+    color: #ffffff;
+}

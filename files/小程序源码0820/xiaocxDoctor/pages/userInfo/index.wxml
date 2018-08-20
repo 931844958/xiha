@@ -1,0 +1,35 @@
+<view class="container">
+  <view class="group">
+    <view class="item">
+      <text>头像</text>
+      <view class="right">
+        <image class="head-img" src="{{userData.headImg}}"></image>
+      </view>
+    </view>
+    <view class="item">
+      <text>用户账号</text>
+      <view class="right">
+        <text>{{userData.phone}}</text>
+      </view>
+    </view>
+    <view class="item">
+      <text>用户名</text>
+      <view class="right">
+        <text>{{userData.name}}</text>
+      </view>
+    </view>
+    <view class="item">
+      <text>性别</text>
+      <view class="right">
+        <text>{{userData.sexStr}}</text>
+      </view>
+    </view>
+    <navigator url="/pages/addressManage/index" class="item">
+      <text>收货地址</text>
+      <view class="right">
+        <text>{{userData.userAddress || '添加默认收货地址'}}</text>
+        <text class="jiantou"></text>
+      </view>
+    </navigator>
+  </view>
+</view>

@@ -1,0 +1,194 @@
+page{
+    height: 100%;
+}
+.container{
+    position: relative;
+    height: 100%;
+    font-size: 14px;
+    color: #333333;
+}
+/* 视频，相关列表，评论wrapper */
+.container-wrapepr{
+    position: absolute;
+    left:0;
+    right:0;
+    top:0;
+    bottom:100rpx;
+    height: auto;
+    /* 使之可以滚动 */
+    overflow-y: scroll;
+    /* 增加该属性，可以增加弹性 */
+    -webkit-overflow-scrolling: touch;
+}
+
+
+.video{
+    width:100%;
+}
+.lesson-wrapper{
+     padding: 0 20rpx;
+}
+.lesson-item{
+    display: flex;
+    border-top:1rpx solid #dddddd;
+    padding: 32rpx 0;
+}
+.lesson-item .wrap-image{
+    position: relative;
+    width: 170rpx;
+    height: 170rpx;
+}
+.wrap-image .image{
+    width: 100%;
+    height: 100%;
+    border-radius: 10rpx;
+}
+.wrap-image .btn{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    width: 70rpx;
+    height: 70rpx;
+}
+.lesson-item .content{
+    width: 510rpx;
+    padding-right: 30rpx;
+    font-family: PingFang-SC-Regular;
+    font-size: 26rpx;
+    color: #888888;
+}
+.lesson-item .content .title{
+    font-family: PingFang-SC-Medium;
+    font-size: 30rpx;
+    color: #333333;
+    line-height: 2.44;
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.lesson-item .content .name{
+    line-height: 2.22;
+}
+.lesson-item .content .desc{
+    display: flex;
+    justify-content: space-between;
+}
+/*评论列表*/
+.comment-item{
+    display: flex;
+    align-items: center;
+    border-bottom:1rpx solid #eeeeee;
+    padding: 10px;
+}
+.comment-item:last-of-type{
+    border-bottom: none;
+}
+.comment-item .image{
+    width: 56rpx;
+    height: 56rpx;
+    border-radius: 50%;
+}
+.comment-item .content{
+    flex: 1;
+    padding: 10px;
+}
+.comment-item .words{
+    font-size: 14px;
+    color: #999999;
+}
+.comment-item .name-time{
+    display: flex;
+    justify-content: space-between;
+}
+.comment-item .name{
+    font-size: 12px;
+    color: #8ebdfd;
+}
+.comment-item .time{
+    font-size: 12px;
+    color: #999999;
+}
+
+/*评论*/
+.comment-wrapper{
+    position: fixed;
+    z-index: 222;
+    height: 100rpx;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    padding:0 20rpx;
+    background-color: #ffffff;
+}
+.comment-wrapper .wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 710rpx;
+}
+.textarea{
+    width:460rpx;
+    height: 66rpx;
+    padding:0 12rpx;
+    box-sizing: border-box;
+    border-radius: 25rpx;
+    border:1rpx solid #999999;
+    background-color: #eeeeee;
+}
+.sub-btn .tips{
+    position: absolute;
+    top:18rpx;
+    right:6rpx;
+    padding: 0 16rpx;
+    border-radius: 8rpx;
+    background-color: #CD2B21;
+    color: #ffffff;
+    font-size: 10px;
+}
+.share-btn,.sub-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 88rpx;
+    height:88rpx;
+    margin-left: 0;
+    margin-right: 0;
+    padding:0;
+    line-height: inherit;
+    background-color: transparent;
+}
+.share-btn::after,.sub-btn::after{
+    border:none;
+}
+.share-btn .image,.sub-btn .image{
+    width: 44rpx;
+    height:44rpx;
+}
+/*获取焦点状态*/
+.textarea-focus-comment .textarea{
+    width:700rpx; 
+    height: 100rpx;
+    border-radius: 8rpx;
+}
+.textarea-focus-comment .wrapper{
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+.textarea-focus-container{
+    bottom: 200rpx;
+}
+.textarea-focus-comment{
+    height: 200rpx;
+}
+.textarea-focus-comment .sub-btn{
+    margin-top:10rpx;
+    height:56rpx;
+    border-radius: 8rpx;
+    background-color: #8ebdfd;
+    color: #ffffff;
+    font-size: 12px;
+}

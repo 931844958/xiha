@@ -1,0 +1,32 @@
+<view class="container">
+  <view class="count-wrapper">
+    <view class="item">
+      <image class="icon" src="Me_totalSalary@2x.png"></image>
+      <view class="keyss">团队总业绩（元）</view>
+      <text class="valuess">{{teamSaleroom}}</text>
+    </view>
+    <view wx:if="{{!masterUser}}" style="display: flex;flex:1;justify-content: center;align-items: center;font-family: PingFang_SC-Medium;font-size: 14px;color: #E30102;">没有师傅</view>
+    <view wx:else class="item">
+      <image class="icon" src="{{masterUser.headImg}}"></image>
+      <view class="keyss">{{masterUser.nickName}}</view>
+    </view>
+  </view>
+  <view style="height: 8px;background:#F2F3F5;"></view>
+  <view class="table">
+    <view>
+      <text class="o">账号</text>
+      <text class="t">邀请时间</text>
+      <text class="tr">最后登陆时间</text>
+      <text class="f">销售额</text>
+      <text class="fi">状态</text>
+    </view>
+    <view style="line-height: 2;font-family: PingFang_SC-Medium;font-size: 14px;color: #E30102;text-align: center;" wx:if="{{!prenticeList && prenticeList.length!==0}}">暂无数据</view>
+    <view wx:for="{{prenticeList}}" wx:key="unique">
+      <text class="o">{{item.nickName}}</text>
+      <text class="t">{{item.createTime}}</text>
+      <text class="tr">{{item.lastLoginTime}}</text>
+      <text class="f">{{item.salesAmount}}</text>
+      <text class='{{item.state===0?"fi":"fi active"}}'>{{item.state===0?"正常":"解除"}}</text>
+    </view>
+  </view>
+</view>

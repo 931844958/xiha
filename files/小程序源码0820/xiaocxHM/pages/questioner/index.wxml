@@ -1,0 +1,68 @@
+<form bindsubmit="formSubmit">
+  <view class="container">
+    <view class="title">请完善问诊人信息 以便医生给出最准确的治疗建议</view>
+    <view style="height: 8px;background:#F2F3F5;"></view>
+    <view class="input-wrapper">
+      <view class="item">
+        <view class="keyss">称呼</view>
+        <view class="valuess"><input name="name" type="text" placeholder="请填写您的称呼"/></view>
+      </view>
+      <view class="item">
+        <view class="keyss">性别</view>
+        <view class="valuess">
+          <radio-group class="radio-group" bindchange="sexradioChange">
+            <label class="radio">
+              <radio value="0"  checked="true"/>男
+            </label>
+            <label class="radio">
+              <radio  value="1" />女
+            </label>
+          </radio-group>
+        </view>
+      </view>
+      <view class="item">
+        <view class="keyss">出生年月</view>
+        <view class="valuess">
+          <picker mode="date"  bindchange="bindDateChange">
+            <view class="picker">
+              当前选择: {{date}}
+              <input hidden value="{{date}}" name='birthStr'/>
+            </view>
+          </picker>
+        </view>
+      </view>
+      <view class="item">
+        <view class="keyss">体重</view>
+        <view class="valuess"><input name='weight'  type="number" placeholder="0"/></view>
+      </view>
+      <view class="item">
+        <view class="keyss">过敏史</view>
+        <view class="valuess">
+          <radio-group class="radio-group" bindchange="guoradioChange">
+            <label class="radio">
+              <radio  value="0" checked="true" />无
+            </label>
+            <label class="radio">
+              <radio  value="1" />有
+            </label>
+          </radio-group>
+        </view>
+      </view>
+    </view>
+    <view style="height: 8px;background:#F2F3F5;"></view>
+    <view class="textarea-wrapper">
+      <view class="title">过往病史</view>
+      <view class="count">{{descLength}}/{{descCount}}</view>
+      <textarea wx:if="{{!maskFlag}}"   name="irritability_conent" bindinput="inputing"  maxlength="{{descCount}}" class="textarea" placeholder="请填写功能状况及过往病史（选填）"></textarea>
+    </view>  
+  </view>
+  <button formType="submit"  class="btn">问诊</button>
+  <view class="mask" wx:if="{{maskFlag}}">
+    <view class="button-wrapper">
+      <view>
+        <view class="tips">你的问题已收到，请在我的咨询查进度</view>    
+        <button bindtap="toSomePage" class="btn">查询</button>
+      </view>
+    </view>
+  </view>
+</form>

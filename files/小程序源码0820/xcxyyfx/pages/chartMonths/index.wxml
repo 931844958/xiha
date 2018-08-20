@@ -1,0 +1,17 @@
+<!-- 只要显示 时间 原因 金额 类型-->
+<view class="container" wx:if="{{dataList&&dataList.length>0}}">
+  <view class="item" wx:for="{{dataList}}" wx:key="{{index}}">
+    <view class="desc">转账时间</view>
+    <view class="time">结束时间</view>
+    <view class="desc">标题</view>
+  </view>
+  <navigator url="/pages/chartDays/index?trId={{item.id}}" class="item" wx:for="{{dataList}}" wx:key="{{index}}">
+    <view class="desc">{{item.createTime}}</view>
+    <view class="time">{{item.endTime}}</view>
+    <view class="desc">{{item.titleDisplay}}</view>
+  </navigator>
+</view>
+<view class="empty-container container" wx:if="{{dataList.length==0|| !dataList }}">
+  <!-- <navigator url="/pages/products/index?catalogQuery=1" class="btn">暂无数据</navigator> -->
+  <view class="btn">暂无数据</view>
+</view>

@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="o-header">
+    <view><image class="state-image" src="icon-yiwancheng@2x.png"></image><text class="from">推荐购买</text></view>
+    <view class="money">49.8</view>
+    <view class="state">购买成功</view>
+  </view>
+  <view class="desc-list">
+    <text> 类型</text>
+    <text>下级销售</text>
+  </view>
+  <view class="desc-list">
+    <text>订单时间</text>
+    <text>5天前</text>
+  </view>
+</view>

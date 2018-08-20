@@ -1,0 +1,107 @@
+<view class="container">
+  <view class="search-wrapper" catchtap="toSearch">
+    <view class="search-box">
+      <!--搜索的时候应该打开新页面，显示搜索结果，然后点击进入详情（要保存搜索记录，也可以删除搜索记录）-->
+      <input class="search" placeholder-class="h-class" placeholder="失眠/美白/补肾/减肥"/>
+      <view class="s-icon-wrapper">
+        <image class="s-icon" src="icon-search@2x.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="tab-wrapper">
+    <navigator url="/pages/question/index" wx:if="{{state}}"  class="tab-item">
+      <image class="icon" src="icon-jisuzhenliao@2x.png"></image>
+      <text class="text">极速问诊</text>
+    </navigator>
+    <navigator url="/pages/doctors/index"  class="tab-item">
+      <image class="icon" src="icon-zhaoyisheng@2x.png"></image>
+      <text class="text">找医生</text>
+    </navigator>
+    <view bindtap="toProducts"  class="tab-item">
+      <image class="icon" src="icon-zhaoyaofang@2x.png"></image>
+      <text class="text">好药方</text>
+    </view >
+  </view>
+  <view class="card-wrapper">
+    <view class="card-box">
+      <navigator url="/pages/myDoctor/index" class="card">
+        <image class="image"  src="icon-zhaoyisheng@2x.png"></image>
+        <view class="content">
+          <view>我的医生</view>
+          <view>与我相关的医生</view>
+        </view>
+      </navigator>
+      <navigator url="/pages/advices/index" class="card">
+        <image class="image" src="icon-wodetianshi@2x.png"></image>
+        <view class="content">
+          <view class="name">我的咨询</view>
+          <view class="desc">与我咨询的内容</view>
+        </view>
+      </navigator>
+    </view>
+  </view>
+  <view style="height: 8px;background:#F2F3F5;"></view>
+  <!--产品-->
+  <view class="lesson-wrapper">
+    <view class="title" style="border-bottom: 1rpx solid #dddddd;">
+      <text class="name">热销商品</text>
+      <view bindtap="toProducts"  class="more">
+        <text>更多</text>
+        <text class="jiantou"></text>
+      </view>
+    </view>
+    <!--商品组件-->
+    <products></products>
+  </view>
+  <view style="height: 8px;background:#F2F3F5;"></view>
+  <!--热门讲堂-->
+  <view class="lesson-wrapper">
+    <view class="title">
+      <text class="name">热门讲堂</text>
+      <navigator url="/pages/hothalls/index"  class="more">
+        <text>更多</text>
+        <text class="jiantou"></text>
+      </navigator>
+    </view>
+    <navigator url="/pages/vDetail/index?articleId={{item.id}}&articleType={{hothallsType}}"  class="lesson-item" wx:for="{{hothalls}}" wx:key="unique">
+      <view class="content">
+        <view class="title">{{item.title}}</view>
+        <view class="author">
+          <text class="name">{{item.nickname}}</text>
+          <image class="image" src="{{item.headImg}}"></image>
+        </view>
+        <view class="desc">
+          <text>{{item.browse}}阅读</text>
+          <text>{{item.createTime}}</text>
+        </view>
+      </view>
+      <view  class="wrap-image">
+        <image class="image"  src="{{item.converUrl}}"></image>
+        <image class="btn" src="../../images/videoPlay@2x.png"></image>
+      </view>
+    </navigator>
+  </view>
+  <view style="height: 8px;background:#F2F3F5;"></view>
+  <!--知识列表-->
+  <view class="zhishi">
+    <view class="nav-wrapper">
+      <text class="tab {{index===navIndex?'active':''}}" bindtap="navHandler" data-id="{{index}}" wx:for="{{navData}}" wx:key="unique">{{item}}</text>
+    </view>
+    <navigator url="/pages/aDetail/index?articleId={{item.id}}&articleType={{item.stype||knowledgesType}}"  class="lesson-item" wx:for="{{knowledges}}" wx:key="unique">
+      <view class="content">
+        <view class="title">{{item.title}}</view>
+        <view class="author">
+          <text class="name">{{item.authorName}}</text>
+          <image class="image"  src="{{item.authorHeadImg}}"></image>
+        </view>
+        <view class="desc">
+          <text>{{item.browse}}阅读</text>
+          <text>{{item.createTime}}</text>
+        </view>
+      </view>
+      <view class="wrap-image">
+        <image class="image"  src="{{item.indexImg}}"></image>
+      </view>
+    </navigator>
+  </view>
+</view>

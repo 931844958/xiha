@@ -1,0 +1,35 @@
+<view>
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view>
+      <!--默认地址 点击跳转到地址管理页面-->
+      <navigator url="/pages/addressManage/index" class="input_wrapper bbc" wx:if="{{defaulAddress}}">
+        <input style="display:none;" name="addressId" value="{{defaulAddress.id}}"/>
+        <text class="keyss">收货地址</text>
+        <text class="valuess">{{defaulAddress.area+defaulAddress.detailedAddress}}</text>
+      </navigator>
+      <!--没有默认收货地址，跳转添加收货地址-->
+      <view wx:if="{{!defaulAddress}}" bindtap="goAddressAdd" class="add-btn">添加默认收货地址</view>
+      <!--废话-->
+      <view class="input_wrapper bbc">
+        <text class="keyss">配送方式</text>
+        <text class="valuess">包邮</text>
+      </view>
+      <!--抵扣券-->
+      <view wx-if="{{totalExp>0}}" class="input_wrapper bbc">可抵扣<text style="color: #F04E00;">{{totalExp}}</text>元</view>
+    </view>
+    <view class="input_wrapper bbc">
+      <text class="keyss">买家留言</text>
+      <!--买家留言-->
+      <input class="input valuess" name="message"  placeholder="买家留言（选填）" type="text" />
+    </view>
+    <view class="input_wrapper bbc">
+      <text class="keyss">指导老师</text>
+      <!--指导老师-->
+      <input class="input valuess" name="recommend"  placeholder="指导老师" type="text" />
+    </view>
+    <view style="height: 8px;background:#F2F3F5;"></view>
+    <view class="btn-area">
+      <button class="button" formType="submit">立即支付</button>
+    </view>
+  </form>
+</view>

@@ -1,0 +1,7 @@
+<!--推荐商品-->
+<swiper style="height: 220rpx;padding-top: 30rpx;" circular autoplay circular="{{true}}" display-multiple-items="{{2}}">
+  <swiper-item style="text-align: center;" wx:for="{{productList}}" wx:key="unique" data-id="{{item.id}}" bindtap="toDetail">
+    <image style="height: 118rpx;width: 296rpx;" src="{{item.indexUrl}}"></image>
+    <view >{{item.name}}</view>
+  </swiper-item>
+</swiper>

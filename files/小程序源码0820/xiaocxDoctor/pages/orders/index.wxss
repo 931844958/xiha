@@ -1,0 +1,46 @@
+.container{
+    min-height: 100vh;
+}
+.item{
+    position: relative;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #333333;
+    justify-content: space-between;
+    padding:10px;
+    font-family: PingFang-SC-Regular;
+    border-bottom: 1rpx solid #eeeeee; 
+}
+.item view{
+    flex: 1;
+    text-align: center;
+}
+.time{
+    font-size: 22rpx;
+    color: #999999;
+    line-height: 2;
+}
+.count{
+    width: 90rpx;
+    font-size: 30rpx;
+    color: #333333;
+    line-height: 2;
+}
+
+
+
+.empty-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.empty-container .btn{
+    background-color: #e81f0b;
+    color: #ffffff;
+    width: 199rpx;
+    text-align: center;
+    border-radius: 30rpx;
+    line-height: 2;
+    font-size: 32rpx;
+}

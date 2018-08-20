@@ -1,0 +1,19 @@
+<!-- 只要显示 时间 原因 金额 类型-->
+<view class="container" wx:if="{{dataList&&dataList.length>0}}">
+  <view class="item" >
+    <view class="desc">订单金额</view>
+    <view class="time">订单明细</view>
+    <view class="desc">药店佣金</view>
+    <!-- <view class="">{{item.clientName}}</view> -->
+  </view>
+  <view class="item" wx:for="{{dataList}}" wx:key="{{index}}">
+    <view class="desc">{{item.orderAmount}}</view>
+    <view class="time">{{item.orderDetailsDisplay}}</view>
+    <view class="desc">{{item.pharmaxyAmount}}</view>
+    <!-- <view class="">{{item.clientName}}</view> -->
+  </view>
+</view>
+<view class="empty-container container" wx:if="{{dataList.length==0|| !dataList }}">
+  <!-- <navigator url="/pages/products/index?catalogQuery=1" class="btn">暂无数据</navigator> -->
+  <view class="btn">暂无数据</view>
+</view>

@@ -1,0 +1,47 @@
+page{
+    height: 100%;
+}
+.module{
+  box-sizing: border-box;
+  padding: 0 20rpx;
+}
+.module :active{
+  background: #f9f9f9;
+}
+.module .wrapper{
+  position: relative;
+  height: 88rpx;
+  line-height: 88rpx;
+  padding-left: 10rpx;
+}
+.module .border{
+  border-bottom: 1rpx #eeeeee solid;
+}
+.module .wrapper .image{
+  width: 40rpx;
+  height: 48rpx;
+  vertical-align: middle;
+  margin-right: 22rpx;
+}
+.module .wrapper .text{
+  color: #666666;
+  font-size: 28rpx;
+}
+.module button::after{
+  border: none;
+}
+.module button{
+  color: #666666;
+  background-color: #ffffff;
+  text-align: left;
+}
+.module .wrapper .jiantou{
+  position: absolute;
+  right: 20rpx;
+  top:50%;
+  transform:translateY(-50%) rotate(-45deg);
+  width: 24rpx;
+  height: 24rpx;
+  border-right: 1px solid #888888;
+  border-bottom: 1px solid #888888;
+}

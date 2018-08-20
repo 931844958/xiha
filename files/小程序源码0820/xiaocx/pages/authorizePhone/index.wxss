@@ -1,0 +1,17 @@
+page{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.save-btn{
+    width: 690rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    text-align: center;
+    margin-top:30rpx; 
+    border-radius: 6rpx;
+    box-sizing: border-box;
+    background-color: #e64340;
+    color:#fff;
+}

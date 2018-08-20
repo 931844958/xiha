@@ -1,0 +1,41 @@
+.o-header{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding:30rpx;
+}
+.state-image{
+    width: 32rpx;
+    height: 30rpx;
+    margin-right: 20rpx;
+}
+.from{
+    font-family: PingFang-SC-Rergular;
+    font-size: 24rpx;
+    color: #666666;
+}
+.money{
+    font-family: PingFang-SC-Medium;
+    font-size: 32rpx;
+    color: #333333;
+}
+.state{
+    font-family: PingFang-SC-Rergular;
+    font-size: 24rpx;
+    color: #999999;
+}
+.desc-list{
+    display: flex;
+    justify-content: space-between;
+    padding:20rpx 30rpx; 
+}
+.desc-list text:first-child{
+    font-family: PingFang-SC-Rergular;
+    font-size: 24rpx;
+    color: #999999;
+}
+.desc-list text:last-child{
+    font-family: PingFang-SC-Rergular;
+    font-size: 24rpx;
+    color: #666666;
+}

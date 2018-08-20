@@ -1,0 +1,10 @@
+<view class="container">
+  <view style="width: 100%;">
+  <form bindsubmit="setOper">
+    <view class="group">
+      <input name="remarks" class="value-i" value="{{remarks}}"/>
+      <button class="set-btn" formType="submit" >设置</button>
+    </view>
+  </form>
+  </view>
+</view>

@@ -1,0 +1,4 @@
+<view class="container">
+    <image class="bg" src="authorize@2x.png"></image>
+    <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="authorize-btn">立即使用</button>
+</view>

@@ -1,0 +1,47 @@
+<view class="container">
+    <view class="ways">
+        <view class="title">客服QQ</view>
+        <view class="item">
+            <image class="image" src="QQShare@2x.png"></image>
+            <text class="text" >2351407466</text>
+            <view  class="btn" bindtap="copppy" data-data="2351407466">复制</view>
+            <!--小程序不能识别二维码-->
+            <!-- <text class="btn" bindtap="showMask">点击查看二维码</text> -->
+        </view>
+    </view>
+    <view style="height:8px;background:#F2F3F5;"></view>
+    <view class="ways">
+        <view class="title">客服微信</view>
+        <view class="item">
+            <image class="image"  src="wechatShare@2x.png"></image>
+            <text class="text">17666143788</text>
+            <!-- <button open-type="contact" class="btn">联系客服</button> -->
+            <view  class="btn" bindtap="copppy" data-data="wan7793168">复制</view>
+        </view>
+        <view class="item">
+            <image class="image"  src="wechatShare@2x.png"></image>
+            <text class="text">YML961300416</text>
+            <!-- <button open-type="contact" class="btn">联系客服</button> -->
+            <view  class="btn" bindtap="copppy" data-data="YML961300416">复制</view>
+        </view>
+    </view>
+    <view style="height:8px;background:#F2F3F5;"></view>
+    <view class="ways" bindtap="makeCall">
+        <!-- <view class="title">联系人：肖先生</view> -->
+        <view class="item">
+            <image class="image" src="Me_task@2x.png"></image>
+
+            <text class="text">肖先生：17666143788</text>
+            <botton class="call" bindtap="makeCall">拨打电话</botton>
+        </view>
+    </view >
+    <!--长按识别二维码要在预览模式下才可以？？-->
+    <!-- <view style="height:8px;background:#F2F3F5;"></view>
+    <view class="ways">
+        <view class="title">公众号</view>
+        <view class="item">
+            <image  class="gzhao" src="gzhao.jpg"></image>
+        </view>
+        <view class="oper">长按识别二维码</view>
+    </view> -->
+</view>

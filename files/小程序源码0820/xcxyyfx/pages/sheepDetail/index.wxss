@@ -1,0 +1,65 @@
+
+.container{
+    min-height: 100vh;
+    font-family: PingFang-SC-Regular;
+}
+.headImg{
+    width: 44rpx;
+    height: 44rpx;
+    border-radius: 50%;
+    margin-right: 24rpx;
+}
+.header-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40rpx;
+}
+.totle-count{
+    color: #333333;
+    font-size: 60rpx;
+    line-height: 2;
+}
+.totle-desc{
+    color: #acacac;
+    font-size: 26rpx;
+}
+.title{
+    display: flex;
+    justify-content: space-around;
+    color: #666666;
+    font-family: PingFang-SC-Medium;
+    font-size: 30rpx;
+    line-height: 2;
+    text-align: center;
+    border-bottom: 1rpx solid #eeeeee;
+}
+.first{
+    width: 40%;
+}
+.title text{
+    flex:1;
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20rpx;
+    text-align: center;
+    color: #333333;
+    font-size: 14px;
+    border-bottom: 1rpx solid #eeeeee;
+}
+.item:last-of-type{
+    border-bottom: none;
+}
+.item view{
+    flex: 1;
+}
+.time{
+    color: #acacac;
+    font-size: 22rpx;
+}
+.money{
+   color: #ff0000;
+}

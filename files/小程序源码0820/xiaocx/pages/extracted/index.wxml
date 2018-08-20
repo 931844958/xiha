@@ -1,0 +1,38 @@
+<view class="container">
+  <view class="header">
+    <view class="head-img-wrapper">
+      <view class="wrapper">
+        <image class="image" src="{{userInfo.headImg}}"></image>
+        <view class="name-stage">
+          <text class="name">{{userInfo.nickName}} </text>
+          <view class="stage-wrapper">
+            <!--根据等级显示图标-->
+            <image class="stage-icon" src="../../images/stage/{{userInfo.userGrade===0?'home_white':userInfo.userGrade===1?'home_copper':userInfo.userGrade===2?'home_silver':userInfo.userGrade===3?'home_gold':'home_diamond'}}@2x.png"></image>
+            <text>{{userInfo.userGradeFormat}}</text>
+          </view>
+          </view>
+      </view>
+    </view>
+    <view class="count-wrapper">
+      <view class="box">
+        <view class="namess">累积佣金</view>
+        <view class="number">{{userInfo.earnings}}</view>
+      </view>
+      <view class="box">
+        <view class="namess">累积收徒</view>
+        <view class="number">{{userInfo.apprenticeNum}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="record-wrapper">
+    <view class="rtitle">提现记录<text class="desc">（最近提现）</text></view>
+    <view class="item" wx:for="{{withdrawRecord}}" wx:key="unique">
+      <view class="oper">提现</view>
+      <view class="time-count">
+        <text class="time">{{item.createTime}}</text>
+        <text class="count">{{item.money}}</text>
+      </view>
+    </view>
+  </view>
+  <button class="contact" open-type="contact">请教他</button>
+</view>

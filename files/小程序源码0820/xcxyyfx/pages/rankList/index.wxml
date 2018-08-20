@@ -1,0 +1,23 @@
+<view class="container">
+  <view class="ranklist">
+    <image src="home_angleListBanner@2x.png" class="banner"></image>
+    <view class="nav">
+      <view class="{{index===tabIndex?'active':''}}" 
+      bindtap="changeTab" data-index="{{index}}"  
+      wx:for='{{tabData}}' wx:key="{{index}}"
+      style="text-align: center;font-size: 16px;color:#999999;border-bottom: 1px solid #999999;height: 98rpx;line-height: 2.44;flex: 1;">{{item}}</view>
+    </view>
+    <view class="list_wrapper">
+      <view class="col_name">
+        <view wx:for='{{listName}}' wx:key="{{index}}">{{item}}</view>
+      </view>
+      <view class="list_item" wx:for='{{listData}}' wx:key="{{index}}">
+        <view wx:if="{{item.ranking===1}}"><image style="height: 51rpx;width:51rpx;vertical-align: middle;" src='num1.png'></image></view>
+        <view wx:elif="{{item.ranking===2}}"><image style="height: 51rpx;width:51rpx;vertical-align: middle;" src='num2.png'></image></view>
+        <view wx:elif="{{item.ranking===3}}"><image style="height: 51rpx;width:51rpx;vertical-align: middle;" src='num3.png'></image></view>
+        <view wx:else>{{item.ranking}}</view>
+        <view>{{item.nickName}}</view><view>{{item.num}}</view><view>{{item.rewarding}}</view>
+      </view>
+    </view> 
+  </view>
+</view>

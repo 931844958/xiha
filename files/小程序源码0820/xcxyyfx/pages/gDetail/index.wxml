@@ -1,0 +1,119 @@
+<view class="goodsDetail">
+  <!--产品图-->
+  <view class="shoutu_wrapper">
+    <!--产品首图也是个数组-->
+    <swiper class="swiper" indicator-dots="{{true}}">
+      <view wx:for="{{currentGood.shoutu}}" bindtap="toggleProSlider" wx:key="unique">
+        <swiper-item >
+          <image src="{{item}}" class="slide-image" />
+        </swiper-item>
+      </view>
+    </swiper>
+  </view>
+  <view wx:if="{{ProSliderShow}}" catchtap="toggleProSlider" class="pro-slider-wrapper-container">
+    <view class="shoutu_wrapper">
+      <!--产品首图也是个数组-->
+      <swiper class="swiper" indicator-dots="{{false}}">
+        <view wx:for="{{currentGood.shoutu}}" wx:key="unique">
+          <swiper-item >
+            <image src="{{item}}" class="slide-image" />
+          </swiper-item>
+        </view>
+      </swiper>
+    </view>
+  </view>
+  <view class="name_price">
+    <view class="name">{{product.name}}</view>
+    <view class="price">￥{{product.price}}/盒</view>
+    <view class="deliver_wrapepr">
+      <text>快递：0.00</text>
+      <text>月销量：{{product.monthlySales}}盒</text>
+      <text>广东深圳</text>
+    </view>
+  </view>
+  <view style="height: 8px;background:#F2F3F5;"></view>
+  <view class="youhui">正品保障 极速退款 赠运费险</view>
+  <view style="height: 8px;background:#F2F3F5;"></view>
+  <view class="detail_wrapper">
+    <view class="title">
+      <text>产品详情</text>
+      <!-- <text>药品详情</text>
+      <text>产品参数</text>
+      <text>相关推荐</text> -->
+    </view>
+    <!--产品详情-->
+    <view class="d-view"  wx:for="{{currentGood.detailImg}}" wx:key="unique">
+      <image lazy-load="true" mode="widthFix" src="{{item.imagePath}}" class="d-image"/>
+    </view>
+  </view>
+  <view style="height: 8px;background:#F2F3F5;"></view>
+  <!--评论-->
+  <view class="comment_wrapper"  wx:if="{{currentGood.commentions && currentGood.commentions.length>0}}">
+    <view class="title">
+      <text>用户说</text>
+    </view>
+    <swiper style="height: 400px;"  
+        indicator-dots="{{false}}" vertical="{{true}}" display-multiple-items="{{4}}" 
+        autoplay="{{true}}" interval="{{1000}}" circular="{{true}}">
+      <view  wx:for="{{currentGood.commentions}}" wx:key="unique">
+        <swiper-item class="comment" >
+          <view class="content">
+            <view>{{item.crerateTime}}</view>
+            <view class="show-text"><text class="sheepshow">买家秀</text>{{item.content}}</view>
+            <view class="user-wrapper">
+              <view class="user-content">
+                <image class="u-image" lazy-load="true" src="{{item.headImg}}"></image>
+                <text class="name">{{item.createUser}}</text>
+              </view>
+              <view class="star-wrapper">
+                <image wx:for="{{[1,2,3,4,5]}}" wx:key="unique" src="full-star@2x.png"></image>
+              </view>
+            </view>
+          </view>
+          <!--评论图片(是个数组???)-->
+          <image class="c-image" wx:if="{{item.commentImgs.length>0}}" lazy-load="true" src="{{item.commentImgs[0]}}"></image>
+        </swiper-item>
+      </view>
+    </swiper>
+    <!-- <view class="comment"  wx:for="{{currentGood.commentions}}" wx:key="unique">
+      <view class="content">
+        <view class="text"><text>买家秀</text>{{item.content}}</view>
+        <view class="user">
+          <view class="user-content">
+            <image class="u-image" lazy-load="true" src="{{item.headImg}}"></image>
+            <text class="name">{{item.createUser}}</text>
+          </view>
+          <view class="star_wrapper">
+            <image wx:for="{{[1,2,3,4,5]}}" wx:key="unique" src="full-star@2x.png"></image>
+          </view>
+        </view>
+      </view>
+      <image class="c-image" lazy-load="true" src="{{item.commentImgs[0]}}"></image>
+    </view> -->
+  </view>
+  <!--侧边按钮-->
+  <view class="buy_ask">
+    <button class="text" open-type="contact" >
+      <image class="image" style="width: 48rpx; height: 47rpx;" src="icon zixun@2x.png"></image>
+      <text class="words">咨询</text>
+    </button>
+    <!-- <button class="text" bindtap="makeCall">
+      <image class="image" style="width: 44rpx; height: 43rpx;" src="icon bodadianhua@2x.png"></image>
+      <text class="words">电话</text>
+    </button>
+    <button class="text" bindtap="toBuyTap" data-id="{{product.id}}">
+      <image class="image" style="width: 49rpx; height: 40rpx;" src="icon gouwu@2x.png"></image>
+      <text class="words">购买</text>
+    </button> -->
+    <!-- <button class="text" open-type="share">
+      <image class="image" style="width: 44rpx; height: 43rpx;" src="icon fenxiang@2x.png"></image>
+      <text class="words">分销</text>
+    </button> -->
+   </view>
+  <!--购买按钮放在这个地方，容易看清-->
+  <!-- <view class="but-btn-wrapper">
+    <button class="text" type="warn" bindtap="toBuyTap" data-id="{{product.id}}">
+      购买
+    </button>
+  </view> -->
+</view>

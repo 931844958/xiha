@@ -1,0 +1,143 @@
+<view class="container">
+  <view class="nav">
+    <view bindtap="changeNav" data-index="0" class="{{navIndex==='1'?'active':''}}">药店</view>
+    <view bindtap="changeNav" data-index="1" class="{{navIndex==='0'?'active':''}}">代理</view>
+  </view>
+  <view class="re-wrapper" >
+    <!--药店-->
+    <form bindsubmit="ydregister" wx:if="{{navIndex==='0'}}">
+      <view class="container">
+        <view class="step-wrapper">
+          <view class="steps">
+            <view class="steps-item">
+              <text></text>
+              <image class="image" src="tianxiexinxi@2x.png"></image>
+              <text></text>
+            </view>
+            <view class="steps-item">
+              <text></text>
+              <image class="image" src="shangchuangpic@2x.png"></image>
+              <text></text>
+            </view>
+          </view>
+          <view class="steps-desc">
+            <view>填写基本信息</view>
+            <view>上传相关证件照片</view>
+          </view>
+        </view>
+        <view class="form-wrapepr">
+          <view class="form-title"><view>药店基本信息</view></view>
+          <!-- <view class="form-group">
+            <view><text>药店名称</text><text class="star">*</text></view>
+            <input name="pharmacyName" placeholder="请输入"/>
+          </view>
+          <view class="form-group">
+            <view><text>药店地址</text><text class="star">*</text></view>
+            <input name="pharmacyAddress" placeholder="请输入"/>
+          </view>
+          <view class="form-group">
+            <view><text>店主姓名</text><text class="star">*</text></view>
+            <input name="manager" placeholder="请输入"/>
+          </view> -->
+          <view class="form-group">
+            <view><text>联系手机</text><text class="star">*</text></view>
+            <input name="phone" bindinput="phoneInput" placeholder="手机号码"/>
+          </view>
+          <view class="form-group">
+            <input class="tf" name="authCode" placeholder="请输入验证码"/>
+            <view class="c-btn" disabled="{{authCodeBtnDisable}}" bindtap="sendAuthCode">{{authCodeTips}}</view>
+          </view>
+          <view class="form-group">
+            <view><text>登录密码</text><text class="star">*</text></view>
+            <input name="password" type="password" placeholder="请输入"/>
+          </view>
+          <view class="form-group">
+            <view><text>邀请码</text><text class="star">*</text></view>
+            <input name="inviteCode" bindinput="inviteCodeInput" style="text-align: center;" placeholder="请输入邀请码"/>
+            <view class="c-btn" bindtap="bornAccount">生成账号</view>
+          </view>
+          <!--账号-->
+          <view class="form-group">
+            <view><text>账号</text></view>
+            <view><text>{{myAccount}}</text></view>
+            <input name="account" style="display: none;" value="{{myAccount}}"/>
+          </view>
+          <!--药店经营资质-->
+          <view class="form-title"><view>注册药店信息</view></view>
+          <view class="form-group" wx:for="{{certificateData}}" wx:key="{{index}}">
+            <view><text>{{item.title}}</text><text class="star">*</text></view>
+            <image bindtap="chooseImages" wx:if="{{!item.currentImg}}" data-id="{{item.id}}" class="pic-image" src="pic@2x.png"></image>
+            <image bindtap="toggleMask" wx:if="{{item.currentImg}}" data-src="{{item.currentImg}}" class="pic-image" src="{{item.currentImg}}"></image>
+          </view>
+          <button class="r-btn" formType="submit">注册</button>
+        </view>
+      </view>
+    </form>
+    <!--代理-->
+    <form bindsubmit="dlregister" wx:if="{{navIndex==='1'}}">
+      <view class="container">
+        <view class="step-wrapper">
+          <view class="steps">
+            <view class="steps-item">
+              <text></text>
+              <image class="image" src="tianxiexinxi@2x.png"></image>
+              <text></text>
+            </view>
+            <view class="steps-item">
+              <text></text>
+              <image class="image" src="shangchuangpic@2x.png"></image>
+              <text></text>
+            </view>
+          </view>
+          <view class="steps-desc">
+            <view>填写基本信息</view>
+            <view>上传相关证件照片</view>
+          </view>
+        </view>
+        <view class="form-wrapepr">
+          <view class="form-title"><view>代理基本信息</view></view>
+          <!-- <view class="form-group">
+            <view><text>药店名称</text><text class="star">*</text></view>
+            <input name="pharmacyName" placeholder="请输入"/>
+          </view>
+          <view class="form-group">
+            <view><text>药店地址</text><text class="star">*</text></view>
+            <input name="pharmacyAddress" placeholder="请输入"/>
+          </view>
+          <view class="form-group">
+            <view><text>店主姓名</text><text class="star">*</text></view>
+            <input name="manager" placeholder="请输入"/>
+          </view> -->
+          <view class="form-group">
+            <view><text>联系手机</text><text class="star">*</text></view>
+            <input name="phone" bindinput="phoneInput" placeholder="手机号码"/>
+          </view>
+          <view class="form-group">
+            <input class="tf" name="authCode" placeholder="请输入验证码"/>
+            <view class="c-btn" disabled="{{authCodeBtnDisable}}" bindtap="sendAuthCode">{{authCodeTips}}</view>
+          </view>
+          <view class="form-group">
+            <view><text>登录密码</text><text class="star">*</text></view>
+            <input name="password" type="password" placeholder="请输入"/>
+          </view>
+          <view class="form-group">
+            <view><text>账号</text><text class="star">*</text></view>
+            <input name="inviteCode" style="text-align: center;" name="account" value="{{myAccount}}"/>
+            <view class="c-btn" bindtap="bornDLaccount">生成账号</view>
+          </view>
+          <!--药店经营资质-->
+          <view class="form-title"><view>注册药店信息</view></view>
+          <view class="form-group" wx:for="{{certificateData}}" wx:key="{{index}}">
+            <view><text>{{item.title}}</text><text class="star">*</text></view>
+            <image bindtap="chooseImages" wx:if="{{!item.currentImg}}" data-id="{{item.id}}" class="pic-image" src="pic@2x.png"></image>
+            <image bindtap="toggleMask" wx:if="{{item.currentImg}}" data-src="{{item.currentImg}}" class="pic-image" src="{{item.currentImg}}"></image>
+          </view>
+          <button class="r-btn" formType="submit">注册</button>
+        </view>
+      </view>
+    </form>
+  </view>
+  <view wx:if="{{maskShow}}" catchtap="toggleMask" class="mask">
+    <image mode="widthFix" src="{{maskImageUrl}}"></image>
+  </view>
+</view>

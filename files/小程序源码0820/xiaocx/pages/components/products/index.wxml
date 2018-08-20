@@ -1,0 +1,58 @@
+<view class="products_wrapper"> 
+  <view wx:for="{{productList}}" wx:key="unique" style="background: #FFECEB;padding:30rpx 0;">
+    <view data-id="{{item.id}}" bindtap="toDetailBtn" class="p-item" >
+      <view class="slide-image-wrapper">
+        <image src="{{item.indexUrl}}" class="slide-image"/>
+        <text class="effect">{{item.effect}}</text>
+      </view>
+      <view class="name-sale">
+        <text class="name">{{item.name}}</text>
+      </view>
+      <view class="des-wrapper">
+        <text class="price">￥{{item.price}}</text>
+        <view class="share-btn" catchtap="shareHandler" data-sharepid="{{item.id}}"  data-sharepindex="{{index}}">赚￥{{item.commission}}</view>
+      </view>
+    </view>
+  </view>
+</view>
+<!--弹框-->
+<view class="share-mask" bindtap="hideMask" wx:if="{{maskShow}}">
+  <view class="share-wrapper" wx:if="{{!shareCodeShow}}">
+    <text class="btn">X</text>
+    <view class="share-content">
+      <view class="content-area">
+        <view class="title">购买赚佣金</view>
+        <view class="content">
+          <view class="list">1.分享小程序</view>
+          <view class="list">2.他人购买</view>
+          <view class="list">3.获取<text style="color: #FF3826;">￥{{productList[sharepindex].commission}}</text></view>
+          <view class="list">4.奖金实时存入<text style="color: #FF3826;">“可提金额”</text>请前往<text style="color: #FF3826;">“我的”</text>中查看</view>
+          <view class="steps">
+            <view>
+              <image class="step-icon"  src="incon-fenxiangshangpin@2x.png"></image>
+              <view>分享链接</view>
+            </view>
+            <view>
+              <image class="jiantou-icon"   src="icon-xiayibu@2x.png"></image>
+            </view>
+            <view>
+              <image class="step-icon" src="icon-goumai@2x.png"></image>
+              <view>他人购买</view>
+            </view>
+            <view>
+              <image class="jiantou-icon" src="icon-xiayibu@2x.png"></image>
+            </view>
+            <view>
+              <image class="step-icon" src="icon-huodehongbao@2x.png"></image>
+              <view>获得佣金</view>
+            </view>
+          </view>
+        </view>
+      </view>
+      <view class="btn-area">
+        <view class="btns" catchtap="toDetailBtn">去商品页</view>
+        <button class="btns" open-type="share" catchtap="sharing"  >立即分享</button>
+      </view>
+    </view>
+  </view> 
+</view>

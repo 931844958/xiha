@@ -1,0 +1,23 @@
+<view class="container" wx:if="{{clientList&&clientList.length>0}}">
+  <view class="title">
+    <text>昵称</text>
+    <text>贡献鱼仔（个）</text>
+    <text>销售额</text>
+  </view>
+  <view class="content">
+    <navigator wx:for="{{clientList}}" wx:key="{{index}}" url="/pages/sheepDetail/index?clientId={{item.id}}&clientName={{item.clientName}}&amount={{item.amount}}&phone={{item.phone}}" class="item">
+      <text>{{item.clientName}}</text>
+      <text>{{item.amount}}</text>
+      <text>{{item.salesAmount}}</text>
+    </navigator> 
+    <!-- <navigator url="/pages/sheepDetail/index" class="item">
+      <image class="head" src="https://cn.bing.com/az/hprichbg/rb/EtaAquarids_ZH-CN10323549621_1920x1080.jpg"></image>
+      <text>登高远望</text>
+      <text>5000</text>
+      <button class="contact">联系他</button>
+    </navigator> -->
+  </view>
+</view>
+<view class="empty-container container" wx:if="{{clientList.length==0||clientList===undefined }}">
+  <view  class="btn">暂无数据</view>
+</view>

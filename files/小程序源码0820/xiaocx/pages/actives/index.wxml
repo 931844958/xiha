@@ -1,0 +1,30 @@
+<view class="container">
+  <navigator url="/pages/H5/index?url=https://fish.vilicom.cn/yyhy/index.html#/sales"  class="module">
+    <view class="wrapper border">
+      <image class="image" src="Me_profile@2x.png"></image>
+      <text class="text">百万计划</text>
+      <text class="jiantou"></text>
+    </view>
+  </navigator>
+  <navigator url="/pages/H5/index?url=https://fish.vilicom.cn/yyhy/index.html#/stu"  class="module">
+    <view class="wrapper border">
+      <image class="image" src="Me_wallet@2x.png"></image>
+      <text class="text">坐享其成</text>
+      <text class="jiantou"></text>
+    </view>
+  </navigator>
+  <navigator url="/pages/inviteFriend/index"  class="module">
+    <view class="wrapper border">
+      <image class="image" src="Me_purchase@2x.png"></image>
+      <text class="text">邀请好友赚现金</text>
+      <text class="jiantou"></text>
+    </view>
+  </navigator>
+  <navigator url="/pages/H5/index?url=https://fish.vilicom.cn/yyhy/index.html#/jifen"  class="module">
+    <view class="wrapper border">
+      <image class="image" src="Me_jifen@2x.png"></image>
+      <text class="text">积分商城</text>
+      <text class="jiantou"></text>
+    </view>
+  </navigator>
+</view>

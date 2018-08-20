@@ -1,0 +1,71 @@
+page{
+    height: 100%;
+}
+.container{
+    padding: 30rpx;
+}
+.group{
+    margin-bottom: 60rpx;
+}
+.group .title{
+    color: #666666;
+    font-family: PingFang-SC-Medium;
+    font-size: 30rpx;
+    line-height: 3;
+}
+.star{
+    color: #ff0000;
+}
+.title .desc{
+    color: #999999;
+    font-family: PingFang-SC-Regular;
+    font-size: 24rpx;
+}
+.textarea{
+    box-sizing: border-box;
+    border:1rpx solid #999999;
+    border-radius: 20rpx;
+    padding: 26rpx 30rpx;
+    width: 690rpx;
+    height: 232rpx;
+}
+.valuess{
+    padding: 0 10px;
+    box-sizing: border-box;
+    border:1rpx solid #999999;
+    border-radius: 20rpx;
+    width: 690rpx;
+    height: 68rpx;
+}
+.btn-desc{
+    color: #ff0000;
+    font-family: PingFang-SC-Medium;
+    font-size: 26rpx;
+    line-height: 2.55;
+}
+.sub-btn{
+    background-color: #8ebdfd;
+}
+
+.feedBacked{
+    padding-top: 50rpx;
+}
+.feedBacked .item{
+    border:1rpx solid #999999;
+    margin-bottom: 20rpx; 
+}
+.item .line{
+    display: flex;
+    border-bottom:1rpx solid #999999;
+}
+.item .line:last-of-type{
+    border-bottom:none;
+}
+.item .line .keyss{
+    width: 150rpx;
+    border-right:1rpx solid #999999;
+}
+.item .line .valuess{
+    flex: 1;
+    border:none;
+}

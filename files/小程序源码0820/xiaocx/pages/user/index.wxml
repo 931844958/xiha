@@ -1,0 +1,113 @@
+<view class="container">
+  <view class="header">
+    <view class="bg-container">
+      <view class="bg"></view>
+    </view>
+    <view class="user-icon"><image class="image" src="{{userData.headImg}}"></image></view>
+    <view class="user-icon name">{{userData.nickName}}</view>
+    <view class="user-icon grade">当前等级：{{userGrade.explains}}</view>
+    <view class="money-container">
+      <navigator url="/pages/myTeam/index" class="item">
+        <view class="key">我的团队</view>
+        <view class="value">{{teamData.teamSaleroom}}</view>
+      </navigator>
+      <navigator url="/pages/totleMoney/index" class="item">
+        <view class="key">可提金额</view>
+        <view class="value">{{userData.moneyOk}}</view>
+      </navigator>
+      <navigator url="/pages/totleMoney/index" class="item">
+        <view class="key">总收入（元）</view>
+        <view class="value">{{userData.moneyInall+userData.moneyOk}}</view>
+      </navigator>
+    </view>
+  </view>
+  <view style="height: 8px;background:#F2F3F5;"></view>
+  <navigator url="/pages/inviteFriend/index"  class="module">
+    <view class="wrapper" bindtap="navigating">
+      <image class="image" src="../../images/user/Me_hongbao@2x.png"></image>
+      <text class="text">每天收2名徒弟赚3元，可立即提现</text>
+      <text class="jiantou"></text>
+    </view>
+  </navigator >
+  <view style="height: 8px;background:#F2F3F5;"></view>
+  <navigator url="/pages/H5/index?url=https://fish.vilicom.cn/yyhy/index.html#/jifen"  class="module">
+    <view class="wrapper border">
+      <image class="image" src="../../images/user/Me_jifen@2x.png"></image>
+      <text class="text">我的积分</text>
+      <text class="jiantou"></text>
+    </view>
+  </navigator>
+  <navigator url="/pages/actives/index"  class="module">
+    <view class="wrapper border">
+      <image class="image" src="../../images/user/Me_profile@2x.png"></image>
+      <text class="text">活动中心</text>
+      <text class="jiantou"></text>
+    </view>
+  </navigator>
+  <navigator url="/pages/teacher/index"  class="module">
+    <view class="wrapper border">
+      <image class="image" src="../../images/user/Me_teacherAndStudent@2x.png"></image>
+      <text class="text">我的师徒</text>
+      <text class="jiantou"></text>
+    </view>
+  </navigator>
+  <view bindtap="toProducts" class="module">
+    <view class="wrapper">
+      <image class="image" src="../../images/user/Me_icon fenxiaozhongxin@2x.png"></image>
+      <text class="text">分销中心</text>
+      <text class="jiantou"></text>
+    </view>
+  </view>
+  <view style="height: 8px;background:#F2F3F5;"></view>
+  <view class="banner-wrapper"> 
+    <swiper class="swiper-banner" circular="{{circular}}" autoplay="{{bannerAutoplay}}" indicator-dots="{{bannerIndicatorDots}}" interval="{{bannerInterval}}" duration="{{bannerDuration}}">
+        <!-- <swiper-item wx:for="{{bannerData}}" wx:key="unique" class="banner-item">
+          <image class="image" src="{{item.imgUrl}}"></image>
+        </swiper-item> -->
+        <navigator url="/pages/H5/index?url=https://fish.vilicom.cn/yyhy/index.html#/sales"  class="module">
+          <swiper-item class="banner-item">
+            <image class="image"  src="{{bannerData[0].imgUrl}}"></image>
+          </swiper-item>
+        </navigator>
+        <!--怎么赚佣金 调到哪里去-->
+        <navigator url="/pages/H5/index?url=https://fish.vilicom.cn/yyhy/index.html#/stu"  class="module">
+          <swiper-item class="banner-item">
+            <image class="image" src="{{bannerData[1].imgUrl}}"></image>
+          </swiper-item>
+        </navigator>
+        <swiper-item class="banner-item">
+          <button class="button" open-type="contact">
+            <image class="image" src="{{bannerData[2].imgUrl}}"></image>
+          </button>
+        </swiper-item>
+        <navigator url="/pages/H5/index?url=https://fish.vilicom.cn/yyhy/index.html#/stu"  class="module">
+          <swiper-item class="banner-item">
+            <image class="image" src="{{bannerData[3].imgUrl}}"></image>
+          </swiper-item>
+        </navigator>
+      </swiper>
+  </view>
+  <view style="height: 8px;background:#F2F3F5;"></view>
+  <view  class="module"> 
+    <button  open-type="contact" class="wrapper border">
+      <image class="image" src="../../images/user/Me_purchase@2x.png"></image>
+      <text class="text">我的客服</text>
+      <text class="jiantou"></text>
+    </button>
+  </view>
+  <navigator url="/pages/contact/index"  class="module">
+    <view class="wrapper border">
+      <image class="image" src="../../images/user/Me_contactUs@2x.png"></image>
+      <text class="text">联系我们</text>
+      <text class="jiantou"></text>
+    </view>
+  </navigator>
+  <navigator url="/pages/H5/index?url=https://fish.vilicom.cn/yyhy/index.html#/lead"  class="module">
+    <view class="wrapper">
+      <image class="image" src="../../images/user/Me_operationBook@2x.png"></image>
+      <text class="text">操作手册</text>
+      <text class="jiantou"></text>
+    </view>
+  </navigator>
+  <view style="height: 8px;background:#F2F3F5;"></view>
+</view>

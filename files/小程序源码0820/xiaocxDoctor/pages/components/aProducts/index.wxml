@@ -1,0 +1,21 @@
+<!--全部商品-->
+<view class="products_wrapper"> 
+  <view wx:for="{{productList}}" wx:key="unique" style="padding:30rpx 0; width: 335rpx;">
+    <view data-id="{{item.id}}" bindtap="toDetail" class="p-item" >
+      <view class="slide-image-wrapper">
+        <image src="{{item.indexUrl}}" class="slide-image"/>
+      </view>
+      <view class="name-sale">
+        <text class="name">{{item.name}}</text>
+        <!-- <text class="price">￥{{item.price}}</text> -->
+        <!-- <text class="sale">月销量：{{item.monthlySales}}</text> -->
+      </view>
+      <view class="effect">{{item.effect}}</view>
+      <view class="des-wrapper">
+        <text class="price">￥{{item.price}}</text>
+        <text style="color: #999999;font-size: 10px;">售出:{{item.price}}</text>
+        <text style="color: #999999;font-size: 10px;">库存:{{item.price}}</text>
+      </view>
+    </view>
+  </view>
+</view>

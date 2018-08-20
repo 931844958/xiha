@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "产品中心",
+  "usingComponents":{
+    "products":"../components/products/index"
+  }
+}

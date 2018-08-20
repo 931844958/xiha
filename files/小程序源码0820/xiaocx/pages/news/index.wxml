@@ -1,0 +1,5 @@
+<view class="container">
+  <view class="confirm-btn" bindtap='goToIndex'>
+    <text >秘籍</text>
+  </view>
+</view>

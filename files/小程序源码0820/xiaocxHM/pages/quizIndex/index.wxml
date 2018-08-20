@@ -1,0 +1,7 @@
+<view class="container">
+  <image class="bg" src="bg@2x.png"></image>
+  <navigator url="/pages/quizItem/index" class="btn">
+    <text class="btn-text">立即测试</text>
+    <image class="btn-bg" src="anniu@2x.png"></image>
+  </navigator>
+</view>

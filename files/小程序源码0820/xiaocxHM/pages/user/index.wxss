@@ -1,0 +1,46 @@
+page{
+  height: 100%;
+}
+
+.head-wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height:420rpx;
+  background-color: #8ebdfd;
+}
+.head-wrapper .name{
+  margin-top:18rpx;
+  font-size: 28rpx;
+  color: #ffffff;
+  font-family: PingFang-SC-Regular;
+  text-align: center;
+}
+.head-img{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+}
+.group{
+  padding: 0 28rpx;
+}
+.group .item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 3;
+  border-bottom: 1rpx solid #eeeeee;
+  font-size: 32rpx;
+  color: #333333;
+  font-family: PingFang-SC-Medium;
+}
+.group .item:last-of-type{
+  border-bottom: none;
+}
+.group .jiantou{
+  transform:rotate(-45deg);
+  width: 18rpx;
+  height: 18rpx;
+  border-right: 1px solid #888888;
+  border-bottom: 1px solid #888888;
+}

@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="wrapper">
+    <view wx:if="{{!advices || advices.length===0}}" style="line-height: 2.4;text-align: center;color: #333333;">暂无数据</view>
+    <navigator  url="/pages/adviceDetail/index?id={{item.id}}" class="advices-wrapper"  wx:for="{{advices}}" wx:key="unique">
+      <view class="advice">
+        <view class="question-wrapper">
+          <view class="question" >患者问：{{item.content}}</view>
+          <view class="oper" wx:if="{{item.isdelete===0}}">
+            <text class="del-wrapepr" catchtap="delQuestion" data-id="{{item.id}}">
+              <text class="del-btn"  >删除</text>
+            </text>
+          </view>
+        </view>
+        <view class="anwser"  wx:if="{{item.replys.length>0}}">{{item.replys[0].replyContent}}</view>
+        <view class="who-wrapper" wx:if="{{item.replys.length>0}}">
+          <view  class="doctor">
+            <image class="image" src="{{item.replys[0].userHeadImg}}"></image>
+            <text class="name">{{item.replys[0].userName}}</text>
+          </view>
+          <view class="btn" >优质回答</view>
+        </view>
+      </view>
+      <view style="height: 8px;background:#F2F3F5;"></view>
+    </navigator>
+  </view>
+</view>

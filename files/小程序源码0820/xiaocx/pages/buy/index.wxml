@@ -1,0 +1,73 @@
+<view class="orderContainer">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="bHeader">
+      <view class="good_wrapper">
+        <image class="good_image" src="{{product.indexUrl}}"></image>
+        <view class="name_price">
+          <view class="name">{{product.name}}</view>
+          <view class="price">￥{{product.price}}</view>
+        </view>
+      </view>
+      <!--购买数量-->
+      <view class="pNumber">
+        <text>购买数量（盒）</text>
+        <view class="plus_wrapper">
+          <button bindtap="makeMinus">-</button>
+          <input class="input" name="productNum" disabled="true" value="{{productNum}}"  type="number" />
+          <button bindtap="makePlus">+</button>
+        </view>
+      </view>
+    </view>
+    <view style="height: 8px;background:#F2F3F5;"></view>
+    <view class="form">
+      <!--收货人姓名-->
+      <view class="input_wrapper bbc">
+        <text class="keyss">收货人</text>
+        <input class="valuess" name="userName" placeholder="请输入收货人姓名" type="text" />
+      </view>
+      <!--收货人电话号码-->
+      <view class="input_wrapper  bbc">
+        <text class="keyss">联系方式</text>
+        <input class="valuess" bindinput="bindPhoneInput" name="phone" placeholder="请输入手机号" type="number"/>
+      </view>
+      <view class="input_wrapper  bbc">
+        <text class="keyss">验证码</text>
+        <!--验证码-->
+        <input class="valuess" name="authCode" placeholder="验证码"  type="number" />
+        <button bindtap="sendAuthCode" disabled="{{authCodeBtnDisable}}">{{authCodeTips}}</button>
+      </view>
+      <view class="input_wrapper  bbc">
+        <text class="keyss">收货地址</text>
+        <picker mode="region" bindchange="bindRegionChange" value="{{region}}">
+          <view class="picker">
+            {{region[0]}}，{{region[1]}}，{{region[2]}}
+          </view>
+        </picker>
+      </view>
+      <view class="input_wrapper bbc">
+        <text class="keyss">详细地址</text>
+        <!--详细地址-->
+        <input class="valuess" name="addressDetail"  placeholder="请输入详细地址" type="text" />
+      </view>
+      <view class="input_wrapper bbc">
+        <text class="keyss">配送方式</text>
+        <text class="valuess">包邮</text>
+      </view>
+    </view>
+    <view style="height: 8px;background:#F2F3F5;"></view>
+    <view class="input_wrapper">
+      <text class="keyss">买家留言</text>
+      <!--买家留言-->
+      <input class="input valuess" name="message"  placeholder="买家留言（选填）" type="text" />
+    </view>
+    <view style="height: 8px;background:#F2F3F5;"></view>
+    <view class="input_wrapper  number_price">
+      <text>购买数量(盒) {{productNum}}</text>
+      <text class="price">￥{{productNum*product.price}}</text>
+    </view>
+    <view style="height: 8px;background:#F2F3F5;"></view>
+    <view class="btn-area">
+      <button class="button" formType="submit">立即支付</button>
+    </view>
+  </form>
+</view>

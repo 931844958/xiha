@@ -1,0 +1,45 @@
+<view class="container">
+  <view class="person-wrapper">
+    <view class="who-where">
+      <image class="image" src="{{dDetail.headImg}}"></image>
+      <view class="content">
+        <view class="name">{{dDetail.name}}</view>
+        <view class="juewei">{{dDetail.section.title}}|{{dDetail.position.title}}</view>
+        <view class="hosp">{{dDetail.hospital.title}}</view>
+      </view>
+    </view>
+    <view class="count">
+      <text>服务患者：{{dDetail.patientsNumber}}次</text>
+      <text>海狗 ★{{dDetail.userGrade.title}}</text>
+      <text>回复咨询：{{dDetail.answerNumber}}次</text>
+    </view>
+  </view>
+  <view class="ways">
+    <image class="icon" src="icon-My advice@2x.png"></image>
+    <view class="desc">
+      <view class="keyss">咨询医生</view>
+      <view class="valuess">使用图文，语音与医生沟通</view>
+    </view>
+    <button open-type="contact" class="btn">免费咨询</button>
+  </view>
+  <view style="height: 8px;background:#F2F3F5;"></view>
+  <view class="desc-wrapper">
+    <view class="title">
+      <image class="icon" src="icon-shanchanglingyu@2x.png"></image>
+      擅长领域
+    </view>
+    <view class="content">
+     {{dDetail.adept}}
+    </view>
+  </view>
+  <view class="desc-wrapper">
+    <view class="title">
+      <image class="icon" src="icon-zhiyejingli@2x.png"></image>
+      职业经历
+    </view>
+    <view class="content">
+     保密
+    </view>
+  </view>
+  <button open-type="contact" style="background-color: #8ebdfd;color: #ffffff;width:90%;">免费咨询</button>
+</view>

@@ -1,0 +1,19 @@
+<view class="products_wrapper"> 
+  <view wx:for="{{productList}}" wx:key="unique">
+    <navigator url="/pages/gDetail/index?id={{item.id}}" class="p-item" >
+      <view> 
+        <image src="{{item.indexUrl}}" class="slide-image"/>
+      </view>
+      <view>
+        <view class="effect">{{item.effect}}</view>
+        <view class="name-sale">
+          <view>
+            <text class="price">￥{{item.price}}</text>
+            <text class="sale">已售{{item.monthlySales}}件</text>
+          </view>
+          <view class="baozhang">品质保障</view>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>

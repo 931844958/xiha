@@ -1,0 +1,32 @@
+<form bindsubmit="formSubmit">
+  <view class="container">
+    <view class="tips">
+      <view class="content">
+        <image class="icon" src="icon-zhuanyehuifu@2x.png"></image>
+        <text  class="eords">专业回复</text>
+      </view>
+      <view class="content">
+        <image class="icon" src="icon-yinsibaohu@2x.png"></image>
+        <text class="eords">隐私保护</text>
+      </view>
+    </view>
+    <view class="q-wrapper">
+      <view class="count">{{descLength}}/{{descCount}}</view>
+      <textarea name="content" bindinput="inputing" class="text" maxlength="{{descCount}}" placeholder-class="p-class" placeholder="请描述您的年龄、性别及相关症状，便于我们进行准确分析，很快会给您进行回复，并且保证您的隐私安全，请放心使用"></textarea>
+    </view>
+    <view class="upload-wrapper">
+      <view class="uploaded">
+        <image class="up-image" src="{{item}}" wx:for="{{imagesPaths}}" wx:key="unique"></image>
+      </view>
+      <view class="upload-desc">
+        <view class="big-icon" bindtap="uploadImage"><text>+</text></view>
+        <view class="desc">
+          <view>添加视频/照片</view>
+          <view>最多可上传9张</view>
+          <view>绝对保障您的隐私安全</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <button formType="submit" class="btn">提问</button>
+</form>

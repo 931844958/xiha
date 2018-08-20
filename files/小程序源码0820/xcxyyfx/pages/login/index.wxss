@@ -1,0 +1,33 @@
+.logo-wrapper{
+    display: flex;
+    justify-content: center;
+    padding: 66rpx;
+}
+.logo{
+    width: 196rpx;
+    height: 196rpx;
+}
+.content-wrapper{
+    font-family: PingFang-SC-Regular;
+    padding: 30rpx;
+}
+.input{
+    font-size: 28rpx;
+    padding: 30rpx 0;
+    border-bottom: 1rpx solid #eeeeee;
+}
+.button{
+    margin-top: 60rpx;
+    background-color: #e81f0b;
+    height: 88rpx;
+    border-radius: 44rpx;
+    color: #ffffff;
+    font-family: PingFang-SC-Medium;
+}
+.lost-register{
+    display: flex;
+    justify-content: space-between;
+    line-height: 3;
+    color: #e81f0b;
+    font-size: 12px;
+}

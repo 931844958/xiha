@@ -1,0 +1,118 @@
+<view class="container">
+  <view class="header-bg" style="background: #e81f0b;height: 188rpx;"></view>
+  <view class="header-wrapper" style="margin: 20rpx auto;margin-top:20px;width: 710rpx;background: #ffffff;">
+    <!--头像账号-->
+    <view class="header">
+      <navigator url="/pages/userInfo/index" class="user-container">
+        <view class="icon-wrapper">
+          <image class="image" src="{{userTypeImg===1?'../../images/yaodiani.png':'../../images/dailii.png'}}" ></image>
+        </view>
+        <view class="content">
+          <view class="name">{{pharmacyResultVo.name||pharmacyResultVo.manager}}</view>
+          <view class="money">账号：{{pharmacyResultVo.accounts}}</view>
+          <view class="userGrade">角色:{{userType}}</view>
+        </view>
+      </navigator>
+    </view>
+    <!--积分-->
+    <!-- <view class="count-wrapper" wx:if="{{userType==='药店'}}" style="border-bottom: 1rpx solid #eeeeee;"> -->
+    <view class="count-wrapper" style="border-bottom: 1rpx solid #eeeeee;">
+      <navigator url="/pages/jifenStore/index" class="item">
+        <view class="keyss">当前积分</view>
+        <view class="valuess">0</view>
+        <!-- <view class="valuess">{{pharmacyResultVo.totalMoney}}</view> -->
+      </navigator>
+      <navigator url="/pages/accountDetail/index" class="item">
+        <view class="keyss">已赚鱼仔（<image style="width:18rpx;height:26rpx; " src="fish-red@2x.png"></image>）</view>
+        <view class="valuess">{{pharmacyResultVo.totalMoney}}</view>
+      </navigator>
+    </view>
+    <!--轮播显示用户-->
+    <view style="padding-top:20rpx;position: relative;" wx:if="{{salesRecord&&salesRecord.length>0}}">
+      <navigator url="/pages/rankList/index">
+        <image src="moreSheep.png" style="position: absolute;z-index:33;right: 0;top:50%;transform: translateY(-50%);width: 50rpx;height: 140rpx;"></image>
+      </navigator>
+      <swiper style="height: 188rpx !important;" circular autoplay indicator-dots="{{false}}" interval="{{3000}}" duration="{{500}}">
+        <swiper-item wx:for="{{salesRecord}}" class="swiper-item-extract" wx:key="unique" style="padding:0 2rpx;text-align:center;">
+          <navigator 
+              url="/pages/extracted/index?extractMoney={{item.extractMoney}}&extractTime={{item.extractTime}}&headImg={{item.headPrtrait}}&nickname={{item.nickname}}">
+            <image style="width: 80rpx;height: 80rpx;border-radius: 50%;" src="{{item.headPrtrait}}"></image>
+            <!-- <text class="nickname">{{item.nickname}}</text> -->
+            <text style="font-size: 20rpx;color: #999999;line-height: 1.5;width: 100%;display: block;overflow: hidden;white-space: nowrap;">售出{{item.name}}</text>
+            <text style="font-size: 20rpx;color: #999999;line-height: 1.5;width: 100%;display: block;overflow: hidden;white-space: nowrap;">成功赚取{{item.pharmaxyAmount}}鱼仔</text>
+            <text style="font-size: 20rpx;color: #999999;line-height: 1.5;width: 100%;display: block;overflow: hidden;white-space: nowrap;">{{item.createTime}}</text>
+          </navigator>
+        </swiper-item>
+      </swiper>
+    </view>
+  </view>
+  <!--搜索框-->
+  <view class="search-wrapper">
+    <view class="search-box">
+      <input class="search" bindinput="searchInput" value="{{keywords}}" placeholder-class="h-class" placeholder="搜索药品、症状、品牌"/>
+      <view class="s-icon-wrapper" bindtap="toProduct">
+        <image class="s-icon" src="icon_seach_44_42_red@2x.png"></image>
+      </view>
+    </view>
+  </view>
+  <view class="catogory">
+    <view class="ca-item" bindtap="toProduct" data-id="1" >
+      <image src="icon-xinpintuijian@2x.png" style="width: 100rpx;height: 100rpx;"></image>
+      <image src="hot@2x.png" class="t-icon" style="width: 31rpx;height: 36rpx;"></image>
+      <view>新品推荐</view>
+    </view>
+    <view class="ca-item" bindtap="toProduct" data-id="2">
+      <image src="icon-nanxing@2x.png" style="width: 100rpx;height: 100rpx;"></image>
+      <image src="otc@2x.png" class="t-icon" style="width: 44rpx;height: 25rpx;"></image>
+      <view>男性</view>
+    </view>
+    <view class="ca-item" bindtap="toProduct" data-id="3">
+      <image src="icon-nvxing@2x.png" style="width: 100rpx;height: 100rpx;"></image>
+      <image src="otc@2x.png" class="t-icon" style="width: 44rpx;height: 25rpx;"></image>
+      <view>女性</view>
+    </view>
+    <view class="ca-item" bindtap="toProduct" data-id="4">
+      <image src="icon-chufangyao@2x.png" style="width: 100rpx;height: 100rpx;"></image>
+      <view>处方药</view>
+    </view>
+    <view class="ca-item" bindtap="toProduct" data-id="5">
+      <image src="icon-yiliaoqixie@2x.png" style="width: 100rpx;height: 100rpx;"></image>
+      <view>医疗器械</view>
+    </view>
+  </view>
+  <view class="board-wrapper">
+    <view class="title">
+      <image style="width: 46rpx;height: 40rpx;" src="icon-gonggao@2x.png"></image>
+      <text >有鱼公告</text>
+    </view>
+    <swiper class="board-swiper" circular="{{true}}" autoplay="true" interval="{{3000}}" display-multiple-items="{{2}}" vertical="{{true}}">
+      <view bindtap='toH5' data-src="OTY5X2IxdlBVZW9WQ3hCVS9JdnhEU29KNUNsX0JzVFc1djd6MzFNTWl5NXRTMDZ6dXUyaGJhZm8wNlh0aDRZU2hETUREWWhhVkZnMTNlaEFWWVBlMF9kRUh1U1JjcHloeUl3MWp4eUFOWnVudDBFRnAxVjhPdkQ5V3k2N2VLdUpNSHFpMzFuU01YUXhZaTVjUE1NejVZc2hYbjV0TlBDaXV5cVF1ZVhYT2d%2Bfg%3D%3D&chksm=7df6a2fc4a812beafa3b42d85741c01e2ec679a7e5865d488ff8cac3642037cbf7098da26c05&scene=0&previewkey=4TY24Rttt0HLeafXszhXM8NS9bJajjJKzz%252F0By7ITJA%253D#rd"><swiper-item ><text class="b-tips">医药</text>注意啦 |有鱼好药小程序上线啦！！</swiper-item></view>
+      <view bindtap='toH5' data-src="OTY5X2haMURiTjZ0aUxoSFdMRnNEU29KNUNsX0JzVFc1djd6MzFNTWl5NXRTMDZ6dXUyaGJhZm8wNlh0aDRhRG9KMDZlN3A0dHVINkRJaEhsMGt0OFZaVVAzdkk0LWhfRzlIbGNLWVR3RDJWVnhFZnNSenQ5dEJqTXVhMmRDZ1BieDFCWmphanpMekRiaVJ3UmNXcXNnTDBuVUxYbVlxa2k5Y0dTYmEyTEF%2Bfg%3D%3D&chksm=7df6a2fc4a812beaab706589a8c88019592938c24580ab17a014b977d0aa58bb29f3f32fa5d2&scene=0&previewkey=4TY24Rttt0HLeafXszhXM8NS9bJajjJKzz%252F0By7ITJA%253D#rd"><swiper-item ><text class="b-tips">医药</text>传统药店的营销模式遭淘汰，寻求开辟新途径！</swiper-item></view>
+      <view bindtap='toH5' data-src="OTY5X2ExRFp6WlQydUplcmcrVTdEU29KNUNsX0JzVFc1djd6MzFNTWl5NXRTMDZ6dXUyaGJhZm8wNlh0aDRZdktmLU1SUFQ2b2xmLXZGZlhvc09UX0pqWndhbzktUG9wSjNKMEYwaXpjbnUwTVN1c2R0Vzc1Q2ZQamN4VzdNZnhhNnBvdEtLV2ZZeUhZLXpnNWFOS3FhQVIwR2Y1Q1pOSDRrLWswY29Kemd%2Bfg%3D%3D&chksm=7df6a2fc4a812bea53c37a5611952422e011eca922e0585ccaadbcb4f6e90370072694d1b813&scene=0&previewkey=4TY24Rttt0HLeafXszhXM8NS9bJajjJKzz%252F0By7ITJA%253D#rd"><swiper-item ><text class="b-tips">医药</text>优质好药资源，消费者忠诚信赖 ！</swiper-item></view>
+    </swiper>
+  </view>
+  <!--商品组件-->
+  <view class="pro-wrapper">
+    <view class="bt-wrapper">
+      <text class="b-title"></text>
+      <text style="margin:0 24rpx;">新品上架</text>
+      <text class="b-title"></text>
+    </view>
+    <!--新品-->
+    <nProducts></nProducts>
+    <view class="bt-wrapper">
+      <text class="b-title"></text>
+      <text style="margin:0 24rpx;">全部商品</text>
+      <text class="b-title"></text>
+    </view>
+    <!--全部产品-->
+    <products></products>
+    <view bindtap="toProduct" data-id="1" style="color: #d61203;font-family: PingFang-SC-Medium;font-size: 18px;text-align: center;line-height: 2;">点击查看更多</view>
+  </view>
+  <!-- <view style="position: fixed;z-index:222;top:50%;transform: translateY(-50%);right:0;background-color: #fc3636;border-radius: 10rpx;padding: 10rpx 0;">
+    <button  open-type="contact" style="background: #f93625;color: #ffffff;padding:0;line-height: 0;display: flex;flex-wrap: wrap;justify-content: center;border: none;">
+      <image class="image" style="width: 78rpx; height:78rpx;" src="zixun@2x.png"></image>
+      <view style="font-size: 32rpx;padding-top:10rpx;padding-bottom: 20rpx;width: 100%;line-height: 1.2; ">咨询</view>
+    </button>
+  </view> -->
+</view>

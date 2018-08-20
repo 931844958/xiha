@@ -1,0 +1,9 @@
+.orders_wapper{
+  font-size: 28rpx;
+}
+.order{
+  padding: 20rpx 30rpx;
+}
+.nodata{
+  text-align: center;
+}

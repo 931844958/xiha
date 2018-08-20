@@ -1,0 +1,18 @@
+<view class="container">
+  <view wx:if="{{!addressList || addressList.length===0}}" style="line-height: 2.4;text-align: center;color: #333333;">暂无数据</view>
+  <view class="item" wx:if="{{addressList.length>0}}"  wx:for="{{addressList}}" wx:key="unique" >
+    <view class="name-default">
+      <view class="name">{{item.name}}</view>
+      <text class="default" wx:if="{{item.isDefault===1}}">默认</text>
+    </view>
+    <view class="phone-address">
+      <view class="phone">{{item.phone}}</view>
+      <view class="address">{{item.area+item.detailedAddress}}</view>
+    </view>
+    <!--如果直接点击image元素，data-id穿不过去-->
+    <view class="reset-btn" bindtap="editAddress" data-id="{{item.id}}">
+      <image src="icon-bianji@2x.png" data-id="{{item.id}}"></image>
+    </view>
+  </view>
+  <navigator url="/pages/addressAdd/index" class="add-btn">新增地址</navigator>
+</view>

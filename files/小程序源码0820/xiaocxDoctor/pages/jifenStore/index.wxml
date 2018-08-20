@@ -1,0 +1,31 @@
+<view class="container">
+  <view class="banner-wrapper">
+    <image src="bannerImg@2x.png" class="banner-bg"></image>
+    <view>
+      <image class="store-image" src="storeImg@2x.png"></image>
+      <text class="count-num">{{userInfo.totalScore}}</text>
+      <text class="count-name">积分</text>
+    </view>
+    <navigator url="/pages/employPoint/index?type=jifen" class="detail-href">积分明细 ></navigator>
+    <view class="lishi-btn" bindtap="exchangeHis">兑换历史</view>
+  </view>
+  <view style="height:8rpx;background-color: #F0F0F0;"></view>
+  <view class="good-wrapper">
+    <view class="title"><text>兑换区</text></view>
+    <view class="good_list">
+        <view class="_goods" wx:for="{{jifenMall}}" wx:key='{{index}}'>
+          <view class="good-item">
+            <image mode="aspectFit" class="iphoneImg" src="{{item.imgUrl}}"></image>
+            <image class="overImg" src="overImg@2x.png" wx:if="{{item.stock===0}}"></image>
+            <view class="_store {{item.stock===0?'over_store':''}}">库存{{item.stock}}</view>
+          </view>
+          <view class="good_name">{{item.name}}</view>
+          <view class="_history">
+            <view><image src="jifenImg@2x.png"></image><text>积分</text><text class="jifen">{{item.price}}</text></view>
+            <view><image src="duihuanImg@2x.png"></image><text>已兑换</text><text class="yiduihuan">{{item.exchange}}</text></view>
+          </view>
+          <view class="btn-wrapper" bindtap="exchange" data-jifen="{{item.price}}">立即兑换</view>
+        </view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,87 @@
+.orderContainer .good_wrapper{
+  display: flex;
+  padding: 20rpx 30rpx;
+}
+.orderContainer .good_wrapper .good_image{
+  width: 156rpx;
+  height:156rpx;
+  margin-right: 12rpx;
+}
+.orderContainer .good_wrapper .name_price{
+  flex: 1;
+}
+.good_wrapper .name_price .name{
+  color: #333; 
+  font-size: 28rpx;
+}
+.good_wrapper .name_price .price{
+  font-size: 28rpx;
+  line-height:3;
+}
+.price{
+  color: #ff4b3d;
+}
+.plus_wrapper{
+  display: flex;
+}
+.plus_wrapper button{
+  height: 1.6rem;
+  line-height: 1;
+  border-radius: 0rpx;
+  font-size: 46rpx;
+  border:1rpx solid #999999;
+}
+.plus_wrapper button::after{
+  border: none;
+}
+.plus_wrapper .input{
+  height: 1.5rem;
+  width: 112rpx;
+  text-align: center;
+  background-color:#F8F8F8;
+  border:none;
+}
+.pNumber{
+  display: flex;
+  justify-content: space-between;
+  padding: 20rpx 30rpx;
+  font-size: 32rpx;
+}
+.pNumber .input{
+  border:1px solid #999999;
+}
+.input_wrapper{
+  display: flex;
+  justify-content: flex-start;
+  padding: 20rpx 30rpx;
+  font-size: 32rpx;
+}
+.number_price{
+  justify-content: space-between;
+}
+.bbc{
+  border-bottom: 1rpx solid #999999;
+}
+.input_wrapper:last-of-type{
+  border: none;
+}
+.input_wrapper .keyss{
+  width: 160rpx;
+}
+.input_wrapper .valuess{
+  padding-left: 10px;
+  flex: 1;
+}
+.input_wrapper .picker{
+  padding-left: 10px;
+  color: #888888;
+}
+.input_wrapper button{
+  padding:0 4px;
+  line-height: 1.65;
+  flex: 1;
+}
+.btn-area .button{
+  background: #ff4b3d;
+  color: #ffffff;
+}

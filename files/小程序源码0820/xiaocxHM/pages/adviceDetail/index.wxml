@@ -1,0 +1,37 @@
+<view class="container">
+  <view class="boss">
+    <view class="head-wrapper">
+      <image class="image" src="{{docData.headImg}}"></image>
+    </view>
+    <view class="content">
+      <view><text class="name">{{docData.name}}</text><text>{{docData.position.title}}</text></view>
+      <view class="section"><text>{{docData.section.title}}</text><text>{{docData.hospital.title}}</text></view>
+      <view class="adept"><text>擅长</text><text>{{docData.adept}}</text></view>
+      <view><text class="star"> ★{{docData.userGrade.title}}</text><text class="">{{docData.answerNumber}}个回答</text></view>
+      <view><text class="">平均响应：{{docData.responseTime}}分钟</text></view>
+    </view>
+  </view>
+  <view class="wrapper">
+    <view   class="advices-wrapper"  wx:for="{{adviceData}}" wx:key="unique">
+      <view class="times">第{{item.quizNumber}}次提问</view>
+      <view class="advice">
+        <view class="question">患者问：{{item.content}}</view>
+        <view class="anwser"  wx:if="{{item.replys.length>0}}">{{item.replys[0].replyContent}}</view>
+        <view class="who-wrapper" wx:if="{{item.replys.length>0}}">
+          <view  class="doctor">
+            <image class="image" src="{{item.replys[0].userHeadImg}}"></image>
+            <text class="name">{{item.replys[0].userName}}</text>
+          </view>
+          <view class="span-btn">优质回答</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <form bindsubmit="pushContent">
+    <view class="comment-wrapper">
+      <input style="display: none;" name="parentId" value="{{problemId}}"/>
+      <input name="content" value="{{contentValue}}" placeholder="向医生提问" class="sub-content"/>
+      <button formType="submit" class="sub-btn">提问</button>
+    </view>
+  </form>
+</view>

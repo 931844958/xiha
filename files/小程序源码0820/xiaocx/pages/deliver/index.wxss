@@ -1,0 +1,9 @@
+.deliver_wapper{
+  font-size: 28rpx;
+}
+.deliver{
+  padding: 20rpx 30rpx;
+}
+.nodata{
+  text-align: center;
+}

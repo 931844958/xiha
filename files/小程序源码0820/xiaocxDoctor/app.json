@@ -1,0 +1,49 @@
+{
+  "pages":[
+
+    "pages/home/index",
+    "pages/shopCar/index",
+    "pages/h5/index",
+    "pages/products/index",
+    "pages/gDetail/index",
+    "pages/user/index",
+    "pages/addressAdd/index",
+    "pages/buyMore/index",
+    "pages/jifenStore/index",
+    "pages/orders/index",
+    "pages/userInfo/index",
+    "pages/addressManage/index",
+    "pages/addressEdit/index",
+    "pages/feedback/index",
+    "pages/myOrder/index",
+    "pages/orderDetail/index",
+    "pages/search/index",
+    "pages/authorize/index",
+    "pages/buy/index"
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#45A0EF",
+    "navigationBarTitleText": "快问好医生",
+    "navigationBarTextStyle":"#ffffff",
+    "onReachBottomDistance":20
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#45A0EF",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "box-shadow":"0 0 6px 0",
+    "list": [{
+     "pagePath": "pages/home/index",
+      "iconPath": "images/nav/home-off@2x.png",
+      "selectedIconPath": "images/nav/home-on@2x.png",
+      "text": "首页"
+    },{
+     "pagePath": "pages/user/index",
+      "iconPath": "images/nav/me-off@2x.png",
+      "selectedIconPath": "images/nav/me-on@2x.png",
+      "text": "我的"
+    }]
+  }
+}

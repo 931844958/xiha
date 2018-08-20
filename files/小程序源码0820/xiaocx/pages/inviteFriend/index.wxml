@@ -1,0 +1,30 @@
+<view class="container">
+    <image class="headImg" src="invitedImg@2x.png"></image>
+    <button open-type="share" class="btn">点击邀请好友</button>
+    <!--测试跳转到邀请界面-->
+    <!-- <navigator class="btn" url="/pages/inviteRegister/index?share=1&userId={{userId}}">邀请好友注册</navigator> -->
+    <view class="inviteHis" wx:if="{{!invitedList}}">您还未邀请任何好友</view>
+    <view class="inviteHis" wx:if="{{invitedList.length>0}}">已成功邀请{{invitedResult.count}}名好友，赚取{{invitedResult.inviteScore}}积分，获得￥{{invitedResult.money}}奖励，获得{{invitedResult.experience}}经验值</view>
+    <view class="hisList">
+        <view class="title_wrapepr trtd">
+            <view>昵称</view><view>邀请时间</view><view>已赚积分</view>
+        </view>
+        <view wx:if="{{invitedList.length>0}}" class="list trtd" wx:for="{{invitedList}}" wx:key="unique">
+            <view>{{item.nickName}}</view><view>{{item.createTime}}</view><view>{{item.fromUserAward}}</view>
+        </view>
+        <view class="nodata" wx:if="{{!invitedList}}" >
+            暂无数据
+        </view>
+    </view>
+    <view class="desc">
+        <view class="title">说明</view>
+        <view>1、成功邀请好友注册
+            <text style="color: #F40008;padding-left: 5px;">经验+5</text>
+            <text style="color: #F40008;padding-left: 5px;">积分+10</text>
+            <text style="color: #F40008;padding-left: 5px;">现金+1</text>
+        </view>
+        <view>2、成功邀请后相关经验，积分，现金立马到账。</view>
+        <view>3、邀请好友后，自动绑定师徒关系，坐享徒弟佣金贡献。</view>
+        <view>4、不玩虚的，不玩套路，多邀多得</view>
+    </view>
+</view>

@@ -1,0 +1,223 @@
+page{
+    height: 100%;
+    font-family: PingFang-SC-Medium;
+}
+.container{
+    padding-bottom: 130rpx;
+}
+/*药店信息*/
+.store-wrapper{
+    position: relative;
+    height: 240rpx;
+}
+.sbg1{
+    height: 120rpx;
+    background-color: #45A0EF;
+}
+.sbg2{
+    height: 120rpx;
+    background-color: #FEF2F2;
+}
+.store-desc{
+    position: absolute;
+    width: 690rpx;
+    height: 100%;
+    top:0;
+    left:50%;
+    transform: translateX(-50%);
+
+    display:flex;
+    padding:20rpx;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    border-radius: 10rpx;
+}
+.store-img{
+    width: 150rpx;
+    height: 150rpx;
+    margin-right: 20rpx;
+}
+.desc-list{
+    flex: 1;
+}
+.desc-item{
+    display: flex;
+}
+.desc-item text:first-child{
+    color: #666666;
+    font-size: 14px;
+    margin-right: 10rpx;
+}
+.desc-item text:last-child{
+    color: #333333;
+    font-size: 14px;
+}
+
+.good-wrapper{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #ffffff;
+    padding: 38rpx 30rpx;
+}
+.del-btn-wra{
+    position: absolute;
+    right: 0px;
+    top:0px;
+    padding: 10px;
+}
+.del-btn-wra view{
+    width: 15px;
+    font-size: 16px;
+    text-align: center;
+    padding: 0 6rpx;
+    border-radius: 50%;
+    color: #ffffff;
+    background-color: #F93625;
+}
+.circle{
+    width: 38rpx;
+    height: 38rpx;
+    border-radius: 50%;
+    box-sizing: border-box;
+    border:1px solid #999999;
+    margin-right: 20rpx;
+}
+.circle-image{
+    width: 38rpx;
+    height: 38rpx;
+    margin-right: 20rpx;
+}
+.p-img{
+    width: 186rpx;
+    height: 186rpx;
+    margin-right: 20rpx;
+}
+.g-desc-wrapper{
+    flex:1;
+
+}
+.name{
+    color: #333333;
+    font-size: 12px;
+}
+.quality{
+    color: #666666;
+    font-size: 12px;
+    line-height: 2;
+}
+.price-num{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #333333;
+    font-size: 14px;
+    line-height: 2;
+}
+.price{
+    color:#F93625;
+}
+.num{
+    columns: #666666;
+}
+
+
+.car-wrapper{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 11;
+    display: flex; 
+    background-color: #ffffff;
+}
+.car-wrapper > view{
+    flex:1;    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.car-wrapper > view:last-child{
+    width: 200rpx;
+    background-color: #F93625;
+    font-size: 16px;
+    color: #ffffff;
+    height: 108rpx;
+}
+
+/*加减*/
+.plus_wrapper{
+  display: flex;
+}
+.plus_wrapper .btn{
+  width: 38rpx;
+  height: 38rpx;
+  text-align: center;
+  line-height: 0.6;
+  border-radius: 0rpx;
+  font-size: 46rpx;
+  border:1rpx solid #cccccc;
+}
+.plus_wrapper .input{
+  height:38rpx;
+  width: 110rpx;
+  text-align: center;
+  background-color:#F8F8F8;
+  border:1rpx solid #cccccc;
+  min-height: 38rpx;
+  line-height: 0.1;
+}
+
+
+/*表单样式*/
+.price{
+  color: #ff4b3d;
+}
+.input_wrapper{
+  display: flex;
+  justify-content: flex-start;
+  padding: 20rpx 30rpx;
+  font-size: 32rpx;
+}
+.bbc{
+  border-bottom: 1rpx solid #dddddd;
+}
+.bbc:last-child{
+  border: none;
+}
+.input_wrapper .keyss{
+  width: 160rpx;
+}
+.input_wrapper .valuess{
+  padding-left: 10px;
+  flex: 1;
+}
+.input_wrapper button{
+  padding:0 4px;
+  line-height: 1.65;
+  flex: 1;
+}
+button.btn-area{
+  background: #ff4b3d;
+  color: #ffffff;
+}
+
+.add-btn{
+  position:relative;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  padding-left:14px;
+  padding-right:14px;
+  box-sizing:border-box;
+  font-size:18px;
+  text-align:center;
+  text-decoration:none;
+  line-height:2.55555556;
+  border-radius:5px;
+  -webkit-tap-highlight-color:transparent;
+  overflow:hidden;
+  background-color: #45A0EF;
+  color: #ffffff;
+}

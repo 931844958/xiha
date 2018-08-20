@@ -1,0 +1,4 @@
+<!--引导手册-->
+<!-- <web-view src="https://fish.vilicom.cn/yyhy/index.html#/lead"></web-view> -->
+<!--隐私协议与使用条款https://fish.vilicom.cn/yyhy/index.html#/privacy-->
+<web-view src="{{URL}}"></web-view>

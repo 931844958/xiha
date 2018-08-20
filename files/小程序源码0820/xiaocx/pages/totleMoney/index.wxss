@@ -1,0 +1,72 @@
+page{
+    height: 100%;
+    font-family: PingFang-SC-Regular;
+}
+.head-icon-wrapper{
+    width:216rpx;
+    height: 216rpx;
+    margin:0 auto;
+    margin-top:94rpx;
+    margin-bottom:36rpx;
+}
+.header{
+    text-align: center;
+}
+.head-icon{
+    width:216rpx;
+    height: 216rpx;
+}
+.k-title{
+    font-family: PingFang-SC-Bold;
+    font-size: 32rpx;
+    color: #333333;
+}
+.k-money{
+    font-family: PingFang-SC-Heavy;
+    font-size: 60rpx;
+    color: #333333;
+}
+.k-made{
+    font-size: 22rpx;
+    color: #666666;
+}
+
+.form-group{
+    padding: 80rpx 69rpx;
+}
+.t-input{
+    background-color: #eeeeee;
+    border-radius: 10rpx;
+    font-family: PingFang-SC-Medium;
+    font-size: 30rpx;
+    color: #999999;
+    text-align: center;
+    line-height: 2.5;
+    margin-bottom: 30rpx;
+}
+.t-button{
+    background-color: #FF3826;
+    font-size: 30rpx;
+    color: #ffffff;
+    line-height: 2;
+}
+
+.desc-wrapepr{
+    padding: 69rpx;
+    font-family: PingFang-SC-Medium;
+    font-size: 24rpx;
+    color: #999999;
+}
+.desc-wrapepr > view{
+    line-height: 2.4;
+}
+.copy-btn{
+    background-color: #FF3826;
+    padding: 0 16rpx;
+    line-height: 3;
+    font-family: PingFang-SC-Medium;
+    font-size: 24rpx;
+    color: #ffffff;
+    border-radius: 8rpx;
+    margin-left: 12rpx;
+}

@@ -1,0 +1,36 @@
+<view class="container">
+  <!-- <view class="header">
+    <view class="head-img-wrapper">
+      <view class="wrapper">
+        <image class="image" src="{{userInfo.headImg}}"></image>
+        <view class="name-stage">
+          <text class="name">{{userInfo.nickName}} </text>
+          <view class="stage-wrapper">
+            <text>{{userInfo.userGradeFormat}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <view class="count-wrapper">
+      <view class="box">
+        <view class="namess">累积鱼仔</view>
+        <view class="number">{{userInfo.earnings}}</view>
+      </view>
+      <view class="box">
+        <view class="namess">积分</view>
+        <view class="number">{{userInfo.apprenticeNum}}</view>
+      </view>
+    </view>
+  </view> -->
+  <view class="record-wrapper">
+    <view class="rtitle">提现记录<text class="desc">（最近提现）</text></view>
+    <view class="item" wx:for="{{withdrawRecord}}" wx:key="unique">
+      <view class="oper">销售{{item.extractFrom}}</view>
+      <view class="time-count">
+        <text class="time">{{item.createTime}}</text>
+        <text class="count">赚{{item.money}}鱼仔</text>
+      </view>
+    </view>
+  </view>
+  <!-- <button class="contact" open-type="contact">请教他</button> -->
+</view>

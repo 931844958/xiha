@@ -1,0 +1,13 @@
+<!--主要显示物流信息-->
+<view class="container">
+  <view class="order-group">
+    <view wx:if="{{!orderList || orderList.length===0}}" style="line-height: 2.4;text-align: center;color: #333333;">暂无数据</view>
+    <navigator url="/pages/orderDetail/index?orderSn={{item.orderSn}}" wx:for="{{orderList}}" wx:key="unique" class="item">
+      <view class="centent">
+        <view class="desc">{{item.title}}</view>
+        <view class="time">{{item.payEndTime}}</view>
+      </view>
+      <text class="jiantou"></text>
+    </navigator>
+  </view>
+</view>

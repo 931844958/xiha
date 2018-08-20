@@ -1,0 +1,94 @@
+page{
+  font-family: PingFang-SC-Medium;
+  height: 100%;
+}
+/* .head-wrapper{
+  height:310rpx;
+  background-color: #ffffff;
+} */
+.hcontent{
+  padding: 40rpx;
+  display: flex;
+  align-items: center;
+}
+.head-wrapper .name{
+  margin-top:18rpx;
+  font-size: 14px;
+  color: #333333;
+}
+.head-img{
+  width: 120rpx;
+  height: 120rpx;
+  border-radius: 50%;
+  margin-right: 30rpx;
+}
+.hdesc{
+  display: flex;
+}
+.hdesc .item{
+  flex: 1;
+  text-align: center;
+}
+button.item::after{
+  border: none;
+}
+button.item{
+  color: #666666;
+  background-color: #ffffff;
+  padding: 0;
+  border-bottom: 1rpx solid #eeeeee !important;
+}
+.keyss{
+  font-size: 26rpx;
+  line-height: 1.4;
+  display: block;
+  color: #45a0ef;
+  font-family: PingFang-SC-Regular;
+}
+.valuess{
+  font-size: 32rpx;
+  line-height: 2;
+  display: block;
+  color: #666666;
+  font-family: PingFang-SC-Regular;
+}
+
+.state-container{
+  background-color: #ffffff;
+  padding-bottom: 40rpx;
+}
+.state-name{
+  padding: 34rpx 30rpx;
+}
+.state-wrapper{
+  display: flex;
+  justify-content: space-around;
+  text-align: center;
+  font-size: 14px;
+  color: #333333;
+}
+
+
+.group{
+  padding: 0 28rpx;
+}
+.group .item{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 3;
+  border-bottom: 1rpx solid #eeeeee;
+  font-size: 32rpx;
+  color: #333333;
+  font-family: PingFang-SC-Medium;
+}
+.group .item:last-of-type{
+  border-bottom: none;
+}
+.group .jiantou{
+  transform:rotate(-45deg);
+  width: 18rpx;
+  height: 18rpx;
+  border-right: 1px solid #888888;
+  border-bottom: 1px solid #888888;
+}

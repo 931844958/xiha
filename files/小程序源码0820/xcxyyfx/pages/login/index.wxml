@@ -1,0 +1,17 @@
+<view class="container" wx:if="{{!isBoundWeChat}}">
+  <view class="logo-wrapper">
+    <image src="../../images/logo@2x.png" class="logo"></image>
+  </view>
+  <view class="content-wrapper">
+    <form bindsubmit="login">
+      <input class="input"  name="accounts" placeholder="输入帐号/六位以上/不能中文"/>
+      <input class="input" type="password" name="password" placeholder="输入密码/六位以上/不能中文"/>
+      <view class="lost-register">
+        <!-- <navigator url="/pages/register/index">立即注册</navigator> -->
+        <navigator url="/pages/contact/index">忘记密码?</navigator>
+      </view>
+      <button class="button" formType="submit">登录</button>
+    </form>
+  </view>
+</view>
+<authorize wx:if="{{isBoundWeChat}}"></authorize>

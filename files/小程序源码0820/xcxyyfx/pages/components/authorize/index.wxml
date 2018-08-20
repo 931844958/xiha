@@ -1,0 +1,16 @@
+<view class="container">
+    <!--获取用户信息-->
+    <view>
+        <view class="head-wrapper">
+            <view class="head">
+                <image class="logo" src="../../../images/logo@2x.png"></image>
+                <view class="brand">有鱼好药</view>
+            </view>
+        </view> 
+        <view style="font-family: PingFang-SC-Medium;width: 80%;margin:0 auto;margin-bottom:40px;color: #666666;font-size: 14px;line-height: 1.6;">您暂未获取微信授权，将无法正常使用小程序的功能。如需要正常使用，请点击“授权登录”按钮，打开头像昵称等信息的授权</view>
+        <button open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" class="get-info">
+            <image class="icon" src="weixin@2x.png"></image>
+            授权登录
+        </button>
+    </view>
+</view>

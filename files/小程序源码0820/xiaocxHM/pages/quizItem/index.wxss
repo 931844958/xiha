@@ -1,0 +1,100 @@
+.container{
+    position: relative;
+    height: 100vh;
+}
+.bg{
+    position: absolute;
+    z-index: -22;
+    width: 100%;
+    height: 100%;
+}
+.v-header{
+    padding-top: 100rpx;
+    padding-bottom: 160rpx;
+    text-align: center;
+    color: #ffffff;
+    font-size: 43rpx;
+    font-family: 'PingFang-SC-Bold';
+}
+.swiper{
+    height: 840rpx;
+}
+.q-key{
+    color: #ff6c00;
+    font-size: 36rpx;
+    font-family: 'PingFang-SC-Bold';
+    text-align: center;
+}
+.q-item{
+    width:554rpx;
+    height: 116rpx;
+    position: relative;
+    margin: 54rpx auto;
+}
+.item-text{
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 3.4;
+    color: #333333;
+    font-size: 36rpx;
+    font-family: 'PingFang-SC-Bold';
+}
+.item-bg{
+    position: absolute;
+    z-index: -11;
+    width: 100%;
+    height: 100%;
+}
+
+.content{
+    box-sizing: content-box;
+    padding: 300rpx 142rpx;
+}
+.title{
+    color: #ff6c00;
+    font-size: 100rpx;
+    text-align: center;
+    font-family: 'PingFang-SC-Bold';
+    margin-bottom: 90rpx;
+}
+.tips{
+    color: #333333;
+    font-size: 60rpx;
+    text-align: center;
+    font-family: HYLiangPinXianCuJ;
+    margin-bottom: 38rpx;
+}
+.btn{
+    position: absolute;
+    bottom:180rpx;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 529rpx;
+    height: 108rpx;
+    background:transparent;
+}
+button::after{ 
+    border: none; 
+}
+.btn-bg{
+    position: absolute;
+    transform: translateX(-49%);
+    z-index: -11;
+    width: 100%;
+    height: 100%;
+}
+.btn-text{
+    position: absolute;
+    transform: translateX(-49%);
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 3;
+    font-size: 36rpx;
+    font-family: SimHei;
+    color: #ff6c00;
+}

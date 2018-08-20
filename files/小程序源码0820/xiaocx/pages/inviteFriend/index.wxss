@@ -1,0 +1,77 @@
+page{
+    height: 100%;
+    background-color: #ffdb34;
+}
+.headImg{
+    height: 596rpx;
+    width: 750rpx;
+}
+.btn{
+    display: block;
+    width:582rpx;
+    height: 104rpx;
+    line-height: 104rpx;
+    margin:0 auto;
+    background-color: #F40008;
+    color: #ffffff;
+    font-size: 38rpx;
+    font-family: PingFang_SC-Medium;
+    border-radius: 54rpx;
+    border: 1px solid #AB1D18;
+    text-align: center;
+}
+.inviteHis,.nodata{
+    line-height: 2;
+    font-family: PingFang_SC-Medium;
+    font-size: 14px;
+    color: #E30102;
+    text-align: center;
+}
+.hisList{
+    font-size: 14px;
+    width: 710rpx;
+    margin:0 auto;
+}
+.hisList .title_wrapepr view{
+    background-color: #FEF9D1;
+}
+.hisList .list:nth-child(2n) view{
+    background-color: #FEEF88;
+    opacity: .8;
+}
+.hisList .list:nth-child(2n-1) view{
+    background-color: #FFE64B;
+    opacity: .8;
+}
+.hisList .trtd{
+    display: flex;
+    justify-content: space-between;
+    color:#333;
+}
+.hisList .trtd view{
+    width: 33.2%;
+    text-align: center;
+    height:72rpx;
+    line-height:72rpx;
+}
+.hisList .trtd view:last-child{
+    width: 20%;
+}
+.hisList .trtd view:nth-child(2){
+    width: 46%;
+}
+.desc{
+    color: #C5A14D;
+    text-align: left;
+    font-size: 14px;
+    padding-bottom: 40rpx;
+}
+.desc > view{
+    padding-left:25px; 
+}
+.desc .title{
+    font-size: 16px;
+    border-bottom: 1px solid #F8D710;
+    line-height: 1.6;
+    padding-left:15px; 
+}

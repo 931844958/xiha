@@ -1,0 +1,46 @@
+<import src="../../wxParse/wxParse.wxml" />
+<view class="container">
+  <view class="container-wrapepr  {{isTextareaFocus ? 'textarea-focus-container':''}}">
+    <view class="title">{{aricle.title}}</view>
+    <view class="writer">
+        <view class="user">
+          <view>
+            <image class="image"  src='{{aricle.headImg}}'></image> 
+          </view>
+          <view class="desc">
+            <text>{{aricle.nickName}}</text>
+            <view>{{aricle.createTime}}</view>
+          </view>
+        </view>
+    </view>
+    <view class="wxParse-wrapper">
+      <template is="wxParse" data="{{wxParseData:article.nodes}}"/>
+    </view>
+    <image style="width:100%;display: block;" wx:if="{{loadFlag}}" mode="widthFix"  src="../../images/originPic.png"></image>
+    <image style="width: 520rpx;height: 110rpx;margin: 0 auto;display: block;" wx:if="{{loadFlag}}" bindtap="toHome" src="../../images/morePic.png"></image>
+    <!-- <scroll-view scroll-y wx:if="{{commentList.length>0}}" style="height:{{commentList.length*75}}px;" bindscrolltolower="reachBottom">  -->
+    <view class="comment-list" wx:if="{{commentList.length>0}}">
+      <view class="comment-item" wx:for="{{commentList}}" wx:key="unique">
+        <image class="image" src="{{item.userHeadImg}}"></image>
+        <view class="content">
+          <view class="words">{{item.content}}</view>
+          <view class="name-time">
+            <text class="name">{{item.createUserName}}</text>
+            <text class="time">{{item.createTime}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- </scroll-view> -->
+  </view>
+  <view class="comment-wrapper   {{isTextareaFocus ? 'textarea-focus-comment':''}}">
+    <form bindsubmit="pushContent">
+      <view class="wrapper">
+        <textarea class="textarea" value="{{textareaValue}}" bindconfirm="confirming" cursor-spacing="70" bindblur="textareaBlur" bindfocus="textareaFocus" name="content" placeholder="写下你的评论"></textarea>
+        <button wx:if="{{isTextareaFocus}}" formType="submit" class="sub-btn">发表</button>
+        <button wx:if="{{!isTextareaFocus}}" formType="submit" class="sub-btn"><text class="tips">{{commentList.length}}</text><image class="image" src="pinglun@2x.png"></image></button>
+        <button wx:if="{{!isTextareaFocus}}" open-type="share" class="share-btn"><image class="image" src="zhuanfa@2x.png"></image></button>
+      </view>  
+    </form>
+  </view>
+</view>

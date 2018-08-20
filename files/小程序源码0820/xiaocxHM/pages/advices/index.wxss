@@ -1,0 +1,57 @@
+page{
+    height: 100%;
+    font-size: 14px;
+}
+.advice{
+    padding:10px 15px;
+}
+.question-wrapper .oper{
+    display: flex;
+    justify-content: flex-end;
+    padding:0 20rpx;
+}
+.del-wrapepr{
+    padding: 10rpx;
+}
+.del-btn{
+    display: inline-block;
+    background-color: #999999;
+    color: #ffffff;
+    font-size: 20rpx;
+    line-height: 2;
+    padding: 0 16rpx;
+    border-radius: 10rpx;
+}
+.question{
+    color: #333333;
+    font-family: PingFang-SC-Medium;
+    line-height: 2;    
+}
+.anwser{
+    color: #999999;
+    font-family: PingFang-SC-Regular;
+    line-height: 1.6;    
+}
+.who-wrapper{
+    display: flex;
+    justify-content: space-between;
+}
+.doctor .image{
+    width: 40rpx;
+    height: 40rpx;
+    border-radius: 50%;
+    margin-right: 12rpx;
+    vertical-align: middle;
+}
+.doctor .name{
+    color: #999999;
+    font-family: PingFang-SC-Regular;
+    line-height: 1.6;    
+}
+.btn{
+    background-color: #eeeeee;
+    color: #333333;
+    padding: 6rpx;
+    line-height: 1.4;
+    border-radius: 4rpx;
+}

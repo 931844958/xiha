@@ -1,0 +1,64 @@
+page{
+    height: 100%;
+    font-size: 32rpx;
+    color: #333333;
+    font-family: PingFang-SC-Medium;
+}
+.item{
+  padding:0 28rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  line-height: 3;
+  border-bottom: 1rpx solid #eeeeee;
+}
+.item:last-child{
+  border-bottom: none;
+}
+.jiantou{
+  transform:rotate(-45deg);
+  width: 18rpx;
+  height: 18rpx;
+  border-right: 1px solid #888888;
+  border-bottom: 1px solid #888888;
+}
+.item .right{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.head-img{
+  width: 60rpx;
+  height: 60rpx;
+  border-radius: 50%;
+}
+
+.pic-item{
+  padding:0 28rpx;
+  border-bottom: 1rpx solid #999999;
+}
+.pic-item .img-wrapper{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.img-wrapper image{
+  width: 120rpx;
+  margin: 10rpx;
+}
+
+.mask{
+  position: fixed;
+  top:0;
+  right: 0;
+  bottom: 0;
+  left:0;
+  z-index: 777;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mask image{
+  width: 100%;
+}

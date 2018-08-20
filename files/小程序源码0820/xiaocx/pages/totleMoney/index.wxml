@@ -1,0 +1,22 @@
+<view class="container">
+  <view class="header">
+    <view class="head-icon-wrapper">
+      <image class="head-icon" src="lingqian@2x.png"></image>
+    </view>
+    <view class="k-title">可提佣金</view>
+    <view class="k-money">￥{{moneyData.moneyOk}}</view>
+    <view class="k-made">已提取{{moneyData.moneyInall}}元</view>
+  </view>
+  <view class="form-group">
+    <form bindsubmit="formSubmit">
+      <input name="money" class="t-input"  type="number" placeholder="请输入提现金额"/>
+      <button formType="submit" class="t-button">提现</button>
+    </form>
+  </view>
+  <view class="desc-wrapepr">
+    <view>提现规则</view>
+    <view>1.先关注公众号：有鱼健康互助俱乐部<text class="copy-btn" bindtap="copppy" data-data="youyujiankang">复制公众号</text></view>
+    <view>2.每天只可提现一次</view>
+    <view>3.每次提现金额必须大于30，且是整数，每天最多提现200元</view>
+  </view>
+</view>

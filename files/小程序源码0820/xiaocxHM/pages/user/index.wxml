@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="head-wrapper">
+    <navigator  url="/pages/userInfo/index" class="content">
+      <image class="head-img" src="{{userData.headImg}}"></image>
+      <view class="name">{{userData.name}}</view>
+    </navigator>
+  </view>
+  <view style="height: 8px;background:#F2F3F5;"></view>
+  <view class="group">
+    <navigator  url="/pages/myOrder/index" class="item"><text>我的订单</text><text class="jiantou"></text></navigator>
+    <navigator  url="/pages/advices/index" class="item"><text>我的问诊</text><text class="jiantou"></text></navigator>
+  </view>
+  <view style="height: 8px;background:#F2F3F5;"></view>
+  <view class="group">
+    <navigator  url="/pages/userInfo/index" class="item"><text>个人资料</text><text class="jiantou"></text></navigator>
+    <navigator  url="/pages/H5/index?url=https://fish.city-game.cn/h5/yyjk/index.html#/jifen" class="item"><text>积分商城</text><text class="jiantou"></text></navigator>
+    <navigator  url="/pages/feedback/index" class="item"><text>有奖反馈</text><text class="jiantou"></text></navigator>
+    <navigator  url="/pages/selfExam/index" class="item"><text>健康自测</text><text class="jiantou"></text></navigator>
+    <navigator  url="/pages/quizIndex/index" class="item"><text>有奖自测</text><text class="jiantou"></text></navigator>
+  </view>
+</view>

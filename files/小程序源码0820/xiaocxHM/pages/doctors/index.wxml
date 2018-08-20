@@ -1,0 +1,26 @@
+<view class="container">
+  <view class="nav-wrapper">
+    <text class="tab {{item.id===navIndex?'active':''}}" bindtap="navHandler" data-id="{{item.id}}" wx:for="{{navData}}" wx:key="unique">{{item.name}}</text>
+  </view>
+  <view class="d-list">
+    <navigator   url="/pages/dDetail/index?id={{item.id}}" class="d-item" wx:for="{{doctorsList}}" wx:key="unique">
+      <view class="image-wrapper">
+        <image class="image" src="{{item.headImg}}"></image>
+      </view>
+      <view class="content">
+        <view class="name-line">
+          <view class="name-wrapper">
+            <text class="name">{{item.name}}</text>
+            <text class="desc">{{item.position.title}}</text>
+          </view>
+          <view class="anwsers">{{item.answerNumber}}个回答</view>
+        </view>
+        <view class="desc-line">擅长：{{item.adept}}</view>
+        <view class="count-line">
+          <text class="star">海狗 ★{{item.userGrade.title}}</text>
+          <text class="time">平均回复：{{item.responseTime}}分钟</text>
+        </view>
+      </view>
+    </navigator>
+  </view>
+</view>

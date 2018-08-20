@@ -1,0 +1,86 @@
+page{
+    background-color: #F4F4F4;
+}
+.tips{
+    line-height: 3;
+    display: flex;
+    margin: 0 20rpx;
+    font-family: PingFang-SC-Medium;
+    font-size: 26rpx;
+    color: #999999;
+}
+.container{
+    background-color: #ffffff;
+}
+.tips .icon{
+    width: 32rpx;
+    height: 32rpx;
+    margin-right: 20rpx;
+}
+.tips .content{
+    display: flex;
+    align-items: center;
+    margin-right: 88rpx;
+}
+.q-wrapper{
+    position: relative;
+    margin: 0 30rpx;
+    border-top:1rpx solid #dddddd;
+    border-bottom:1rpx solid #dddddd;
+}
+.q-wrapper .text{
+    padding: 50rpx 0;
+}
+.p-class{
+    font-family: PingFang-SC-Medium;
+    font-size: 32rpx;
+    color: #cccccc;
+}
+.q-wrapper .count{
+    position: absolute;
+    bottom: 50rpx;
+    right: 30rpx;
+    font-family: PingFang-SC-Regular;
+    font-size: 28rpx;
+    color: #cccccc;
+}
+.upload-wrapper{
+    padding: 50rpx 40rpx;
+}
+.upload-desc{
+    display: flex;
+}
+.big-icon{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200rpx;
+    height: 200rpx;
+    background-color: #e6e6e6;
+    font-size: 55px;
+    color: #ffffff;
+}
+.uploaded{
+    display: flex;
+    flex-wrap: wrap;
+}
+.uploaded .up-image{
+    width: 200rpx;
+    height: 200rpx;
+    margin-right: 10rpx;
+    margin-bottom: 10rpx;
+}
+
+.upload-wrapper .desc{
+    flex: 1;
+    padding: 36rpx;
+    font-family: PingFang-SC-Medium;
+    font-size: 26rpx;
+    color: #cccccc;
+    line-height: 1.8;
+}
+.btn{
+    margin-top: 40rpx;
+    background-color: #8ebdfd;
+    width: 90%;
+}

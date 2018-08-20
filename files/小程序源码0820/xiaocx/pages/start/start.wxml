@@ -1,0 +1,5 @@
+<view class="container">
+  <view class="confirm-btn" bindtap='goToIndex'>
+    <text >进入店铺</text>
+  </view>
+</view>

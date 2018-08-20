@@ -1,0 +1,50 @@
+.price{
+  color: #ff4b3d;
+}
+.input_wrapper{
+  display: flex;
+  justify-content: flex-start;
+  padding: 20rpx 30rpx;
+  font-size: 32rpx;
+}
+.bbc{
+  border-bottom: 1rpx solid #dddddd;
+}
+.bbc:last-child{
+  border: none;
+}
+.input_wrapper .keyss{
+  width: 160rpx;
+}
+.input_wrapper .valuess{
+  padding-left: 10px;
+  flex: 1;
+}
+.input_wrapper button{
+  padding:0 4px;
+  line-height: 1.65;
+  flex: 1;
+}
+.btn-area .button{
+  background: #ff4b3d;
+  color: #ffffff;
+}
+
+.add-btn{
+  position:relative;
+  display:block;
+  margin-left:auto;
+  margin-right:auto;
+  padding-left:14px;
+  padding-right:14px;
+  box-sizing:border-box;
+  font-size:18px;
+  text-align:center;
+  text-decoration:none;
+  line-height:2.55555556;
+  border-radius:5px;
+  -webkit-tap-highlight-color:transparent;
+  overflow:hidden;
+  background-color: #45A0EF;
+  color: #ffffff;
+}

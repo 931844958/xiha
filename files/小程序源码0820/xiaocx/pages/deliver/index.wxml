@@ -1,0 +1,16 @@
+<view class="deliver_wapper">
+  <view wx:if="{{deliverList.length>0}}" wx:for="{{deliverList}}" wx:key="unique" class="deliver">
+    <view>快递公司：{{item.express}}</view>
+    <view>快递单号：{{item.expressNo}}</view>
+    <view>收货人姓名：{{item.userName}}</view>
+    <view class="address dis_flex">
+      <view class="key">物流信息：</view>
+      <view class="value">{{item.logisticsInformation}}</view>
+    </view>
+    <view>下单时间：{{item.crerateTime}}</view>
+  </view>
+
+  <view class="nodata" wx:if="{{deliverList.length===0}}">
+    <text>您还没有相关订单</text>
+  </view>
+</view>

@@ -1,0 +1,118 @@
+
+.header .bg-container{
+  position: relative;
+  height: 80rpx;
+  background: #FF3826;
+}
+.header .bg{
+  position: absolute;
+  width: 100%;
+  height: 160rpx;
+  border-radius: 50%/50%;
+  background: #FF3826;
+  z-index: -1;
+}
+.user-icon{
+  display: flex;
+  justify-content: center;
+}
+.user-icon.name{
+  color: #f93625;
+  font-size: 28rpx;
+  line-height: 2;
+  font-family: PingFang-SC-Medium;
+}
+.user-icon.grade{
+  color: #666666;
+  font-size: 22rpx;
+  line-height: 1.5;
+  font-family: PingFang-SC-Medium;
+}
+.user-icon .image{
+  border:solid 2px #fff;  
+  width: 157rpx;
+  height: 157rpx;
+  border-radius: 50%;
+}
+.money-container{
+  display: flex;
+  padding-top:10rpx;
+  padding-bottom: 40rpx;
+}
+.money-container .item{
+  flex: 1;
+  text-align: center;
+  border-right: 1rpx #eeeeee solid;
+}
+.money-container .item:last-of-type{
+  border: none;
+}
+.money-container .item .key{
+  color: #999999;
+  font-size: 24rpx;
+  line-height: 1.8;
+  font-family: PingFang-SC-Medium;
+}
+.money-container .item .value{
+  color: #000000;
+  font-size: 38rpx;
+  line-height: 1.8;
+  font-family: PingFang-SC-Bold;
+}
+.module{
+  box-sizing: border-box;
+}
+.module :active{
+  background: #f9f9f9;
+}
+.module .wrapper{
+  position: relative;
+  height: 88rpx;
+  line-height: 88rpx;
+  padding-left: 10rpx;
+}
+.module .border{
+  border-bottom: 1rpx #eeeeee solid;
+}
+.module .wrapper .image{
+  width: 40rpx;
+  height: 48rpx;
+  vertical-align: middle;
+  margin-right: 22rpx;
+}
+.module .wrapper .text{
+  color: #666666;
+  font-size: 28rpx;
+}
+.module button::after{
+  border: none;
+}
+.module button{
+  color: #666666;
+  background-color: #ffffff;
+  text-align: left;
+}
+.module .wrapper .jiantou{
+  position: absolute;
+  right: 20rpx;
+  top:50%;
+  transform:translateY(-50%) rotate(-45deg);
+  width: 24rpx;
+  height: 24rpx;
+  border-right: 1px solid #888888;
+  border-bottom: 1px solid #888888;
+}
+.swiper-banner{
+  height: 120rpx;
+}
+.banner-wrapper .image{
+  width: 100%;
+  height: 120rpx;
+}
+.swiper-banner .button{
+  background-color: #ffffff;
+  padding: 0;
+}
+.swiper-banner .button::after{
+  border: none;
+}

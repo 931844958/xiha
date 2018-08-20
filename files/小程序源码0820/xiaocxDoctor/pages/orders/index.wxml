@@ -1,0 +1,19 @@
+<view class="container" wx:if="{{dataList&&dataList.length>0}}">
+  <view class="item">
+    <!-- <image class="state-image" src="{{item.state===0?'icon-weiwancheng@2x.png':'icon-yiwancheng@2x.png'}}"></image> -->
+    <view class="name">商品名称</view>
+    <view class="time">订单日期</view>
+    <view class="price">订单价格</view>
+    <!-- <view class="count">{{item.brokerage}}</view> -->
+    <view class="state">发货状态</view>
+  </view>
+  <view class="item" wx:for="{{dataList}}" wx:key="unique">
+    <view class="name">{{item.items[0].productName}}</view>
+    <view class="time">{{item.createTime}}</view>
+    <view class="price">{{item.totalMoney}}</view>
+    <view class="state">{{oState===0?'待发货':oState===1?'已发货':'已完成'}}</view>
+  </view>
+</view>
+<view class="empty-container container" wx:if="{{loadFlag && (dataList.length==0||dataList===undefined)}}">
+  <view>暂无订单记录</view>
+</view>

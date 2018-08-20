@@ -1,0 +1,164 @@
+.container{
+    min-height: 100vh;
+    position: relative;
+}
+.bg{
+    position: absolute;
+    z-index: -99;
+    width: 100%;
+    height: 100%;
+}
+
+.head-wrapper{
+    padding-top:254rpx;
+}
+.head-img{
+    width: 288rpx;
+    height: 216rpx;
+    margin-left: 370rpx;
+}
+.form{
+    margin-top: 200rpx;
+    margin-left: 218rpx;
+    margin-right: 55rpx;
+}
+.form-wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top:44rpx;
+}
+
+.valuess{
+    padding-left: 18rpx;
+    box-sizing: border-box;
+    width: 380rpx;
+    height: 66rpx;
+    border:1rpx solid #8ebdfd;
+    border-radius: 12rpx;
+}
+.tips{
+    color: #ff0000;
+    font-size: 22rpx;
+    line-height: 1.8;
+}
+.sub-btn{
+    margin-top: 100rpx;
+    width: 590rpx;
+    height: 88rpx;
+    border-radius: 44rpx;
+    background-color: #8ebdfd;
+    color: #ffffff;
+}
+
+/*自测题目*/
+.exam-head {
+    display: flex;
+    justify-content: space-around;
+    padding:30rpx;
+}
+.exam-head .item{
+    display: flex;
+    align-items: center;
+}
+.circle{
+    width: 40rpx;
+    height: 40rpx;
+    border-radius: 50%;
+    margin-right: 16rpx;
+}
+.c1{
+    background-color: #e2e2e2;
+}
+.c2{
+    background-color: #166db8;
+}
+.c3{
+    background-color: #ed2e2e;
+}
+
+.list-wrapper{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30rpx;
+}
+.case{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 86rpx;
+    padding:0 90rpx;
+    text-align: center;
+    margin:30rpx 0;
+}
+.case-iamge{
+    position: absolute;
+    z-index: -1;
+    top:0;
+    right: 0;
+    bottom: 0;
+    left:0;
+    height: 100%;
+    width: 100%;
+}
+.btn-wrapper{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+.btn-wrapper button{
+    background-color: #1569b0;
+    color: #ffffff;
+    font-size: 34rpx;
+}
+
+/*结果显示页*/
+.content-wrapper{
+    padding-top:370rpx;
+}
+.score{
+    font-size: 48rpx;
+    color: #ff0000;
+    font-family: PingFang-SC-Medium;
+    text-align: center;
+}
+.content{
+    padding: 0 154rpx;
+    margin-top: 60rpx;
+    font-size: 30rpx;
+    color: #999999;
+    font-family: PingFang-SC-Regular;
+}
+.button-wrapper{
+    position: absolute;
+    top:906rpx;
+    width: 100%;
+    padding: 0 130rpx;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+}
+.contact-btn{
+    width: 230rpx;
+    height: 74rpx;
+    margin:0;
+    padding: 0;
+    text-align: left;
+}
+.contact-btn .image{
+    position: absolute;
+    z-index: 66;
+    width: 100%;
+    height: 100%;
+}
+.contact-btn .text{
+    position: absolute;
+    z-index: 99;
+    line-height: 2.5;
+    width: 100%;
+    height: 100%;
+    color: #ffffff;
+    text-align: center;
+}

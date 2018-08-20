@@ -1,0 +1,22 @@
+.container{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fefef7;
+}
+.group{
+    padding: 10px 15px;
+}
+.value-i{
+    font-size: 14px;
+    padding: 5px;
+    color: #333333;
+    border:1rpx solid #bfbfbf;
+    background: #ffffff;
+}
+.set-btn{
+    text-align:center;font-size:14px;background-color: #e81f0b;
+    color: #ffffff;width: 50%;line-height: 2.44;
+    border-radius: 10px;margin: 15px auto;
+}

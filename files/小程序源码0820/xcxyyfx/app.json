@@ -1,0 +1,72 @@
+{
+  "pages":[
+    
+    
+    "pages/login/index",
+    "pages/accountDetail/index",
+    "pages/h5/index",
+    "pages/charge/index",
+    "pages/userInfo/index",
+    "pages/register/index",
+    "pages/products/index",
+    "pages/home/index",
+    "pages/orders/index",
+    "pages/leading/index",
+    "pages/addressAdd/index",
+    "pages/addressEdit/index",
+    "pages/addressManage/index",
+    "pages/user/index",
+    "pages/missing/index",
+    "pages/company/index",
+    "pages/contact/index",
+    "pages/extracted/index",
+    
+    
+    "pages/rankList/index",
+    "pages/mySheep/index",
+    
+    "pages/jifenStore/index",
+    "pages/oDetail/index",
+    "pages/myClient/index",
+    
+    "pages/repassword/index",
+    "pages/sheepDetail/index",
+    
+    "pages/gDetail/index",
+    "pages/buy/index",
+    "pages/operation/index",
+    "pages/chartMonths/index",
+    "pages/chartDays/index"
+    
+  ],
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#e81f0b",
+    "navigationBarTitleText": "有鱼好药",
+    "navigationBarTextStyle":"#ffffff",
+    "onReachBottomDistance":20
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#e81f0b",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "box-shadow":"0 0 6px 0",
+    "list": [{
+     "pagePath": "pages/home/index",
+      "iconPath": "images/nav/home-off@2x.png",
+      "selectedIconPath": "images/nav/home-on@2x.png",
+      "text": "首页"
+    },{
+     "pagePath": "pages/charge/index",
+      "iconPath": "images/nav/charge-off@2x.png",
+      "selectedIconPath": "images/nav/charge-on@2x.png",
+      "text": "专属码"
+    },{
+     "pagePath": "pages/user/index",
+      "iconPath": "images/nav/me-off@2x.png",
+      "selectedIconPath": "images/nav/me-on@2x.png",
+      "text": "我的"
+    }]
+  }
+}

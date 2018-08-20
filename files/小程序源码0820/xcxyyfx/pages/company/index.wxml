@@ -1,0 +1,24 @@
+<!--我写的等级只有三个：： 代理，销售，业务员-->
+<view class="container">
+  <image class="bg" src="company@2x.jpg"></image>
+  <view class="content">
+    <view class="role">您当前的等级为：{{role}}</view>
+    <view class="role-des-t">有鱼好药分销体系总共有四种身份，至上而下身份绑定原则</view>
+    <view class="role-des">【代理】 - 【业务】 -【店主】-【店员】</view>
+    <view class="role-des-t">通过上下级身份的绑定计提不同的 </view>
+    <!--roleId::1店员 2店长 3业务员 4代理-->
+    <view wx:if="{{myLevel==='3'}}">
+      <view class="l-title"><image style="width: 26rpx;height: 26rpx;" src="star@2x.png"></image>业务员（上级为代理，下级为销售员）</view>
+      <view class="desc">通过绑定下级销售员分销出去一瓶药，计提10% ，如果自己分销出去一瓶药，则按业务员（10%）、销售员（55%）双重身份立刻提65% ，上级的代理员提5.5%的 。</view>
+    </view>
+    <view wx:if="{{myLevel==='1'||myLevel==='2'}}">
+      <view class="l-title"><image style="width: 26rpx;height: 26rpx;" src="star@2x.png"></image>销售员（无下级，上级为业务员）</view>
+      <view class="desc">每次分销出去一瓶药，立刻提55% </view>
+    </view>
+    <view wx:if="{{myLevel==='4'}}">
+      <view class="l-title"><image style="width: 26rpx;height: 26rpx;" src="star@2x.png"></image>代理员（无上级，下级为业务员、销售员）</view>
+      <view class="desc">通过绑定的下级分销出去一瓶药，计提5.5% ，如果自己分销出去一瓶药，则按销售员（55%）、业务员（10%）、代理员（5.5%）三重身份，计提70.5% 。</view>
+    </view>
+  </view>
+  <navigator url="/pages/contact/index" class="contact-btn">还有问题，联系专职客服</navigator>
+</view>

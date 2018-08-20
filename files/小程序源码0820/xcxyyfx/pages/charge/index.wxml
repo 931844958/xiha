@@ -1,0 +1,21 @@
+<view class="container" wx:if="{{pharmacyResultVo}}">
+  <image class="bg" src="poster@2x.png"></image>
+  <view class="store-wrapepr">
+    <image class="store-img" src="yaodian.jpg"></image>
+    <view class="desc-wrapper">
+      <view><text class="keyss">店长名称</text><text class="valuess">{{pharmacyResultVo.manager}}</text></view>
+      <view>
+        <view class="keyss">药店名称</view>
+        <view class="valuess">{{pharmacyResultVo.pharmacyName}}</view>
+      </view>
+      <view>
+        <view class="keyss">药店地址</view>
+        <view class="valuess">{{pharmacyResultVo.pharmacyAddress}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="code-wrapper">
+    <image class="code-img" src="{{pharmacyResultVo.promoCode}}"></image>
+    <view class="code-desc">微信扫一扫，选择购买商品</view>
+  </view>
+</view>

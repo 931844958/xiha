@@ -1,0 +1,47 @@
+<view class="container">
+  <view class="head-wrapper">
+    <navigator  url="/pages/userInfo/index" class="head-img-wrapper">
+      <image class="head-img" src="{{userTypeImg===1?'../../images/yaodiani.png':'../../images/dailii.png'}}"></image>
+    </navigator>
+    <view>
+      <view class="name">姓名：{{pharmacyResultVo.manager || pharmacyResultVo.name}}</view>
+      <view class="name">账号：{{pharmacyResultVo.accounts}}</view>
+      <view class="name">角色：{{userType}}</view>
+    </view>
+  </view>
+  <view class="order-des-wrapper">
+    <view class="title">订单中心</view>
+    <view class="content">
+      <navigator url="/pages/orders/index?oState=0">
+        <image class="o-img" src="icom-daifahuo_62_62@2x.png"></image>
+        <view>未支付</view>
+      </navigator>
+      <navigator url="/pages/orders/index?oState=2">
+        <image class="o-img" src="icon-daiquerenfahuo_62_62@2x.png"></image>
+        <view>已发货</view>
+      </navigator>
+      <navigator url="/pages/orders/index?oState=3">
+        <image class="o-img" src="icon-yifahuo_62_62@2x.png"></image>
+        <view>已完成</view>
+      </navigator>
+    </view>
+  </view>
+  <view style="height: 16rpx;background:#F2F2F2;"></view>
+  <view class="content-wrapper">
+    <view class="group">
+      <navigator url="/pages/chartMonths/index?type=yongjin" class="g-item"><view><image class="icon" src="icon_baobiaotongji@2x.png"></image><text>报表统计</text></view><text class="jiantou"></text></navigator>
+      <navigator url="/pages/jifenStore/index" class="g-item"><view><image class="icon" src="icon-wodejifen@2x.png"></image><text>积分商城</text></view><text class="jiantou"></text></navigator>
+      <!-- <navigator url="/pages/orders/index" class="g-item"><view><image class="icon" src="icon-wodedingdan@2x.png"></image><text>我的订单</text></view><text class="jiantou"></text></navigator> -->
+      <navigator url="/pages/mySheep/index" wx:if="{{userType==='药店'}}" class="g-item"><view><image class="icon" src="icon-wodekehu@2x.png"></image><text>我的顾客</text></view><text class="jiantou"></text></navigator>
+    </view>
+    <view class="group">
+      <navigator url="/pages/userInfo/index" class="g-item"><view><image class="icon" src="icon-gerenxinxi@2x.png"></image><text>个人资料</text></view><text class="jiantou"></text></navigator>
+      <!-- <navigator url="/pages/products/index" class="g-item"><view><image class="icon" src="icon-chanpinzhongxin@2x.png"></image><text>产品中心</text></view><text class="jiantou"></text></navigator> -->
+      <!-- <navigator url="/pages/operation/index" class="g-item"><view><image class="icon" src="icon-zaozuoshouce@2x.png"></image><text>操作手册</text></view><text class="jiantou"></text></navigator> -->
+      <navigator url="/pages/repassword/index" class="g-item"><view><image class="icon" src="icon-xiugaimima@2x.png"></image><text>修改密码</text></view><text class="jiantou"></text></navigator>
+      <navigator url="/pages/contact/index" class="g-item"><view><image class="icon" src="call@2x.png"></image><text>联系我们</text></view><text class="jiantou"></text></navigator>
+      <navigator url="/pages/missing/index" class="g-item"><view><image class="icon" src="icon_quepindengji@2x.png"></image><text>缺品登记</text></view><text class="jiantou"></text></navigator>
+    </view>
+  </view>
+  <view bindtap="loginout" style="text-align:center;font-size:14px;background-color: #e81f0b;color: #ffffff;width: 50%;line-height: 2.44;border-radius: 10px;margin: 25px auto;">退出登录</view>
+</view>

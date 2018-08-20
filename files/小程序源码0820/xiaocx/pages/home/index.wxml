@@ -1,0 +1,129 @@
+<view class="container">
+  <view class="header-bg"></view>
+  <!--用户信息-->
+  <view class="block">
+    <view class="header">
+      <view class="user-container">
+        <view class="icon-wrapper">
+          <image class="image" src="{{userData.headImg}}"></image>
+        </view>
+        <view class="content">
+          <view class="name">{{userData.nickName}}</view>
+          <view class="money">账户余额：{{userData.moneyOk}}元</view>
+          <view class="userGrade">当前等级:{{userGrade.explains}}</view>
+        </view>
+        <view class="navigator" bindtap="toProducts">
+          <image class="products" src="../../images/home/Home_myproduct@2x.png"></image>
+        </view>
+      </view>
+    </view>
+    <!--轮播显示用户-->
+    <view class="extract-wrapper">
+      <swiper class="swiper-extract" circular="{{true}}" autoplay="{{true}}" indicator-dots="{{false}}" interval="{{5000}}" duration="{{500}}">
+        <swiper-item wx:for="{{extractData}}" wx:key="unique" class="extract-item">
+          <navigator url="/pages/extracted/index?extractMoney={{item.extractMoney}}&extractTime={{item.extractTime}}&userId={{item.userId}}">
+            <image class="image" src="{{item.headPrtrait}}"></image>
+            <!-- <text class="nickname">{{item.nickname}}</text> -->
+            <text class="desc">成功提取{{item.extractMoney}}</text>
+            <text class="time">{{item.extractTimeFormat}}</text>
+          </navigator>
+        </swiper-item>
+      </swiper>
+    </view>
+    <!--banner导航-->
+    <view class="banner-wrapper">
+      <swiper class="swiper-banner" circular="{{true}}" autoplay="{{true}}" indicator-dots="{{true}}" interval="{{5000}}" duration="{{500}}">
+        <navigator url="/pages/H5/index?url=https://fish.vilicom.cn/yyhy/index.html#/sales"  class="module">
+          <swiper-item class="banner-item">
+            <image class="image" src="{{bannerData[0].imgUrl}}"></image>
+          </swiper-item>
+        </navigator>
+        <!--怎么赚佣金 调到哪里去-->
+        <navigator url="/pages/H5/index?url=https://fish.vilicom.cn/yyhy/index.html#/stu"  class="module">
+          <swiper-item class="banner-item">
+            <image class="image" src="{{bannerData[1].imgUrl}}"></image>
+          </swiper-item>
+        </navigator>
+        <swiper-item class="banner-item">
+          <button class="button" open-type="contact">
+            <image class="image" src="{{bannerData[2].imgUrl}}"></image>
+          </button>
+        </swiper-item>
+        <navigator url="/pages/H5/index?url=https://fish.vilicom.cn/yyhy/index.html#/stu"  class="module">
+          <swiper-item class="banner-item">
+            <image class="image" src="{{bannerData[3].imgUrl}}"></image>
+          </swiper-item>
+        </navigator>
+      </swiper>
+    </view>
+  </view>
+  <view class="block">
+    <view class="title">
+      <text>热销商品</text>
+    </view>
+  </view>
+  <!--商品列表-->
+  <view class="block">
+    <!--商品组件-->
+    <products  wx:if="{{userLoaded}}"></products>
+    <!-- <view class="products_wrapper" style="background-color: #FFECEB;"> 
+      <view wx:for="{{productList}}" wx:key="unique"style="background-color: #ffffff;" >
+        <view bindtap="toDetailsTap" data-id="{{item.id}}" class="p-item" >
+          <view> 
+            <image src="{{item.indexUrl}}" class="slide-image"/>
+          </view>
+          <view>
+            <view class="effect">{{item.effect}}</view>
+            <view class="name-sale">
+              <view>
+                <text class="price">￥{{item.price}}</text>
+                <text class="sale">已售{{item.monthlySales}}件</text>
+              </view>
+              <view class="baozhang">品质保障</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </view> -->
+  </view>
+  
+  <!--各种案例-->
+  <view class="block">
+    <view class="title">
+      <text>收徒赚钱</text>
+    </view>
+  </view>
+  <view class="block">
+    <navigator url="/pages/H5/index?url=https://fish.vilicom.cn/yyhy/index.html#/casedetail&articleId={{item.id}}&articleType={{ProductCase[0].stype}}" class="caseItem"  wx:for="{{ProductCase[0].resultantList}}" wx:key="unique">
+      <view class="name-icon">
+        <image class="image" src="{{item.headImg}}"></image>
+        <text class="text">{{item.createUserName}}</text>
+      </view>
+      <view class="title">{{item.title}}</view>
+      <view class="image-wrapper">
+        <image src="{{item.indexImg}}"></image>
+        <image src="{{item.indexImg2}}"></image>
+        <image src="{{item.indexImg3}}"></image>
+      </view>
+    </navigator>
+  </view>
+  <view class="block">
+    <view class="title">
+      <text>成功案例</text>
+    </view>
+  </view>
+  <view class="block">
+    <navigator url="/pages/H5/index?url=https://fish.vilicom.cn/yyhy/index.html#/casedetail&articleId={{item.id}}&articleType={{ProductCase[1].stype}}" class="caseItem" wx:for="{{ProductCase[1].resultantList}}" wx:key="unique">
+      <view class="name-icon">
+        <image class="image" src="{{item.headImg}}"></image>
+        <text class="text">{{item.createUserName}}</text>
+      </view>
+      <view class="title">{{item.title}}</view>
+      <view class="image-wrapper">
+        <image src="{{item.indexImg}}"></image>
+        <image src="{{item.indexImg2}}"></image>
+        <image src="{{item.indexImg3}}"></image>
+      </view>
+    </navigator>
+  </view>
+</view>

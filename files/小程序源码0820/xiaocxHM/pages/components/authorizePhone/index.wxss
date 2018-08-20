@@ -1,0 +1,43 @@
+.container{
+    height: 100vh;
+}
+.save-btn{
+    width: 390rpx;
+    line-height: 2.2;
+    text-align: center;
+    box-sizing: border-box;
+}
+.head-wrapper{
+    height: 500rpx;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.icon{
+    width:42rpx;
+    height:42rpx;
+    vertical-align: middle;
+}
+.logo{
+    width:160rpx;
+    height:160rpx;
+    border-radius: 50%;
+}
+.brand{
+    line-height: 2;
+    color: #45A0EF;
+    font-size: 16px;
+    font-family: PingFang-SC-Medium;
+}
+.get-info{
+    background-color: #45A0EF;
+    color: #ffffff;
+    font-size: 36rpx;
+}
+
+.buttom-bg{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height:292rpx;
+}

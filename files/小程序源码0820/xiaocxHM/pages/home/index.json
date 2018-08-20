@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "海狗好药方",
+  "usingComponents":{
+    "products":"../components/products/index"
+  }
+}

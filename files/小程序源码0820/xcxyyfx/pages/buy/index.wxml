@@ -1,0 +1,53 @@
+<view class="orderContainer">
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <view class="bHeader">
+      <view class="good_wrapper">
+        <image class="good_image" src="{{product.indexUrl}}"></image>
+        <view class="name_price">
+          <view class="name">{{product.name}}</view>
+          <view class="price">￥{{product.price}}</view>
+        </view>
+      </view>
+      <!--购买数量-->
+      <view class="pNumber">
+        <text>购买数量（盒）</text>
+        <view class="plus_wrapper">
+          <button bindtap="makeMinus">-</button>
+          <input class="input" name="productNum" disabled="true" value="{{productNum}}"  type="number" />
+          <button bindtap="makePlus">+</button>
+        </view>
+      </view>
+    </view>
+    <view style="height: 8px;background:#F2F3F5;"></view>
+    <view class="form">
+      <!--默认地址 点击跳转到地址管理页面-->
+      <navigator url="/pages/addressManage/index" class="input_wrapper bbc" wx:if="{{defaulAddress}}">
+        <input style="display:none;" name="addressId" value="{{defaulAddress.id}}"/>
+        <text class="keyss">收货地址</text>
+        <text class="valuess">{{defaulAddress.area+defaulAddress.detailedAddress}}</text>
+      </navigator>
+      <!--没有默认收货地址，跳转添加收货地址-->
+      <view wx:if="{{!defaulAddress}}" bindtap="goAddressAdd" class="add-btn">添加默认收货地址</view>
+      <!--废话-->
+      <view class="input_wrapper bbc">
+        <text class="keyss">配送方式</text>
+        <text class="valuess">包邮</text>
+      </view>
+    </view>
+    <view style="height: 8px;background:#F2F3F5;"></view>
+    <view class="input_wrapper">
+      <text class="keyss">买家留言</text>
+      <!--买家留言-->
+      <input class="input valuess" name="message"  placeholder="买家留言（选填）" type="text" />
+    </view>
+    <view style="height: 8px;background:#F2F3F5;"></view>
+    <view class="input_wrapper  number_price">
+      <text>购买数量(盒) {{productNum}}</text>
+      <text class="price">￥{{productNum*product.price}}</text>
+    </view>
+    <view style="height: 8px;background:#F2F3F5;"></view>
+    <view class="btn-area">
+      <button class="button" formType="submit">立即支付</button>
+    </view>
+  </form>
+</view>

@@ -1,0 +1,96 @@
+<view class="container">
+  <view class="store-wrapper">
+    <view class="sbg1" ></view>
+    <view class="sbg2"></view>
+    <view class="store-desc">
+      <image class="store-img" src="https://cn.bing.com/az/hprichbg/rb/SuperBlueBloodMoon_ZH-CN11881086623_1920x1080.jpg"></image>
+      <view class="desc-list">
+        <view class="desc-item">
+          <text>药店名称</text>
+          <text>{{pharmacyData.pharmacyName}}</text>
+        </view>
+        <view class="desc-item">
+          <text>药店地址</text>
+          <text>{{pharmacyData.pharmacyAddress}}</text>
+        </view>
+        <view class="desc-item">
+          <text>指导医师</text>
+          <text>{{pharmacyData.manager}}</text>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view style="height: 8rpx;background-color: #FEF2F2;"></view>
+  <view class="good-list">
+    <view wx:for="{{productList}}" wx:key="index">
+      <view class="good-wrapper" >
+        <view class="del-btn-wra" bindtap="delateGood" data-id="{{item.id}}">
+          <view>X</view>
+        </view>
+        <!-- <view bindtap="selectGood" data-id="{{item.id}}" wx:if="{{!item.checked}}"  class="circle"></view>
+        <image bindtap="selectGood" data-id="{{item.id}}" wx:if="{{item.checked}}" class="circle-image"  src="xuanzhong@2x.png"></image> -->
+        <image class="p-img" src="{{item.indexUrl}}"></image>
+        <view class="g-desc-wrapper">
+          <view class="name">{{item.effect}}</view>
+          <view class="quality">{{item.name}}</view>
+          <view class="price-num">
+            <view class="price">￥{{item.price}}</view>
+            <view class="plus_wrapper">
+              <text class="btn" bindtap="minusPlus" data-flag="{{false}}" data-id="{{item.id}}">-</text>
+              <input class="input" name="productNum" disabled="true" value="{{item.NUM}}"  type="number" />
+              <text class="btn" bindtap="minusPlus" data-flag="{{true}}" data-id="{{item.id}}">+</text>
+            </view>
+            <view class="num">X{{item.NUM}}</view>
+          </view>
+        </view>
+      </view>
+      <view style="height: 8rpx;background-color: #FEF2F2;"></view>
+    </view>
+  </view>
+  <!--表单-->
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view>
+        <!--默认地址 点击跳转到地址管理页面-->
+        <navigator url="/pages/addressManage/index" class="input_wrapper bbc" wx:if="{{defaulAddress}}">
+          <input style="display:none;" name="addressId" value="{{defaulAddress.id}}"/>
+          <text class="keyss">收货地址</text>
+          <text class="valuess">{{defaulAddress.area+defaulAddress.detailedAddress}}</text>
+        </navigator>
+        <!--没有默认收货地址，跳转添加收货地址-->
+        <view wx:if="{{!defaulAddress}}" bindtap="goAddressAdd" class="add-btn">添加默认收货地址</view>
+        <!--废话-->
+        <view class="input_wrapper bbc">
+          <text class="keyss">配送方式</text>
+          <text class="valuess">包邮</text>
+        </view>
+        <!--抵扣券-->
+        <view wx-if="{{totalExp>0}}" class="input_wrapper bbc">可抵扣<text style="color: #F04E00;">{{totalExp}}</text>元</view>
+      </view>
+      <view class="input_wrapper bbc">
+        <text class="keyss">买家留言</text>
+        <!--买家留言-->
+        <input class="input valuess" name="message"  placeholder="买家留言（选填）" type="text" />
+      </view>
+      <view class="input_wrapper bbc">
+        <text class="keyss">指导老师</text>
+        <!--指导老师-->
+        <input class="input valuess" name="recommend"  placeholder="指导老师" type="text" />
+      </view>
+      <view style="height: 8px;background:#F2F3F5;"></view>
+      <!--统计-->
+      <view class="car-wrapper">
+        <!-- <view>
+          <view bindtap="selectAll" wx:if="{{!selectAllFlag}}"  class="circle"></view>
+          <image bindtap="selectAll" wx:if="{{selectAllFlag}}" class="circle-image"  src="xuanzhong@2x.png"></image>
+          <text>全选</text>
+        </view> -->
+        <view>
+          <text>合计：</text>
+          <text>￥{{totleMoney}}</text>
+        </view>
+        <button class="btn-area"  formType="submit">
+          <text>结算({{totleNum}})</text>
+        </button>
+      </view>
+    </form>
+</view>

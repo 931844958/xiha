@@ -1,0 +1,71 @@
+page{
+    height: 100%;
+}
+.item{
+    display: flex;
+    justify-content: space-between;
+    padding: 20rpx 0;
+}
+.name-default{
+    text-align: center;
+    width: 160rpx;
+}
+.name-default .default{
+    width: 60rpx;
+    height: 30rpx;
+    border: 1rpx solid #ff0000;
+    border-radius: 8rpx;
+    color: #ff0000;
+    font-family: PingFang-SC-Medium;
+    font-size: 20rpx;
+    text-align: center;
+}
+.name-default .name{
+    color: #666666;
+    font-family: PingFang-SC-Medium;
+    font-size: 32rpx;
+    line-height: 1.8;
+}
+.reset-btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 140rpx;
+}
+.reset-btn image{
+    width: 40rpx;
+    height: 40rpx;
+}
+.phone-address{
+    flex:1;
+}
+.phone-address .phone{
+    color: #666666;
+    font-family: PingFang-SC-Medium;
+    font-size: 28rpx;
+}
+.phone-address .address{
+    color: #999999;
+    font-family: PingFang-SC-Medium;
+    font-size: 24rpx;
+}
+
+.add-btn{
+    margin-top:50rpx;
+    position:relative;
+    display:block;
+    margin-left:auto;
+    margin-right:auto;
+    padding-left:14px;
+    padding-right:14px;
+    box-sizing:border-box;
+    font-size:18px;
+    text-align:center;
+    text-decoration:none;
+    line-height:2.55555556;
+    border-radius:5px;
+    -webkit-tap-highlight-color:transparent;
+    overflow:hidden;
+    background-color: #8ebdfd;
+    color: #ffffff;
+}

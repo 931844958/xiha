@@ -1,0 +1,56 @@
+.container{
+    min-height: 100vh;
+    font-family: PingFang-SC-Regular;
+}
+.title{
+    background-color: #eeeeee;
+    display: flex;
+    color: #333333;
+    font-size: 34rpx;
+    line-height: 2.4;
+    text-align: center;
+}
+.title text{
+    flex: 1;
+}
+.item{
+    padding: 20rpx 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1rpx solid #eeeeee;
+}
+.item text{
+    flex: 1;
+    text-align: center;
+}
+.item:last-of-type{
+    border-bottom: none;
+}
+.head{
+    width: 88rpx;
+    height: 88rpx;
+    border-radius: 50%;
+}
+.contact{
+    background-color: #e81f0b;
+    color: #ffffff;
+    margin:0;
+    line-height: 2;
+    font-size: 14px;
+}
+
+.empty-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.empty-container .btn{
+    background-color: #e81f0b;
+    color: #ffffff;
+    width: 199rpx;
+    text-align: center;
+    border-radius: 30rpx;
+    line-height: 2;
+    font-size: 32rpx;
+}

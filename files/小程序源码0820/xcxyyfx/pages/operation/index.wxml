@@ -1,0 +1,49 @@
+<view class="container">
+  <view class="classify">
+    <view class="classify-title">我要挣钱</view>
+    <view class="item-wrapper">
+      <view class="item-title" bindtap="toggle" data-index='0'>1.【有鱼好药】是什么？</view>
+      <view class="content {{item[0]?'':'hide'}}">有鱼好药是一个健康好药销售分享平台为客户提供品质、安全、有效的OTC药品的同时利用社交生活圈分销赚钱的小程序。</view>
+    </view>
+    <view class="item-wrapper">
+      <view class="item-title" bindtap="toggle" data-index='1'>2.怎样挣钱？</view>
+      <view class="content {{item[1]?'':'hide'}}">通过分销一瓶好药出去按照身份等级从【代理员】-【业务员】-【销售员】计提不同等级的鱼仔。</view>
+    </view>
+    <view class="item-wrapper">
+      <view class="item-title" bindtap="toggle" data-index='2'>3.鱼仔比例</view>
+      <view class="content {{item[2]?'':'hide'}}">分销一瓶好药出去，对应销售计提55%鱼仔，绑定业务员10%，绑定代理员5.5%，分销一瓶药出去，鱼仔即刻到达各自微信账号。</view>
+    </view>
+  </view>
+  <view class="classify">
+    <view class="classify-title">app操作</view>
+    <view class="item-wrapper">
+      <view class="item-title" bindtap="toggle" data-index='3'>1.app操作</view>
+      <view class="content {{item[3]?'':'hide'}}">应用商店下载【有鱼好药】APP，手机或微信进行在线注册，完善个人资料，即享受【有鱼好药APP】站类所有权利和义务。</view>
+    </view>
+  </view>
+  <view class="classify">
+    <view class="classify-title">等级积分</view>
+    <view class="item-wrapper">
+      <view class="item-title" bindtap="toggle" data-index='4'>1.积分兑换</view>
+      <view class="content {{item[4]?'':'hide'}}">【有鱼好药APP】根据得到的鱼仔多少相应积分，累计的积分可以到有鱼商城兑换好礼。</view>
+    </view>
+  </view>
+  <view class="classify">
+    <view class="classify-title">好药严选</view>
+    <view class="item-wrapper">
+      <view class="item-title" bindtap="toggle" data-index='5'>1.药品分销</view>
+      <view class="content {{item[5]?'':'hide'}}">【有鱼好药APP】药品都是严格按照国家药品质量监管和相关机构检测的OTC药类，保证产品的质量和效果。</view>
+    </view>
+  </view>
+  <view class="classify">
+    <view class="classify-title">售后服务</view>
+    <view class="item-wrapper">
+      <view class="item-title" bindtap="toggle" data-index='6'>1.售后服务</view>
+      <view class="content {{item[6]?'':'hide'}}">我们的销售药品实行售后三包政策，所有药品不影响二次销售情况下均七天无理由退换货。</view>
+    </view>
+    <view class="item-wrapper">
+      <view class="item-title" bindtap="toggle" data-index='7'>2.专属小秘</view>
+      <view class="content {{item[7]?'':'hide'}}">微信客服：有鱼健康互助（youyujiankang）</view>
+    </view>
+  </view>
+</view>

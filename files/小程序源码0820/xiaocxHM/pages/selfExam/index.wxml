@@ -1,0 +1,24 @@
+<view class="container">
+  <image src="biejing@2x.png" class="bg"></image>
+  <view class="head-wrapper">
+    <image class="head-img" src="Male health self-test@2x.png"></image>
+  </view>
+  <view class="item-wrapper">
+    <navigator url="/pages/selfTest/index?id=32" class="item">
+      <image class="logo" src="icon-zaoxie@2x.png"></image>
+      <text class="desc">早泄</text>
+    </navigator>
+    <navigator url="/pages/selfTest/index?id=33" class="item">
+      <image class="logo"src="icon-yangwei@2x.png"></image>
+      <text class="desc">阳痿</text>
+    </navigator>
+    <navigator url="/pages/selfTest/index?id=34" class="item">
+      <image class="logo"src="icon-shenxu@2x.png"></image>
+      <text class="desc">短茎</text>
+    </navigator>
+    <navigator url="/pages/selfTest/index?id=35" class="item">
+      <image class="logo"src="icon-shimian@2x.png"></image>
+      <text class="desc">失眠</text>
+    </navigator>
+  </view>
+</view>

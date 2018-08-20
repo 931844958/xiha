@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "快问好医生",
+  "usingComponents":{
+    "aProducts":"../components/aProducts/index",
+    "tProducts":"../components/tproducts/index",
+    "nProducts":"../components/nProducts/index"
+  }
+}

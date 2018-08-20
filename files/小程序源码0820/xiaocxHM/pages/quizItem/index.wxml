@@ -1,0 +1,27 @@
+<view class="container" wx:if="{{!gameOver}}">
+  <image class="bg" src="bg@2x.png"></image>
+  <view class="v-header">领10元现金，有奖竞答火热进行！</view>
+  <swiper class="swiper" duration="1000" indicator-dots indicator-color="#ffffff" current="{{sCurrent}}" indicator-active-color="#fc7e22">
+    <block wx:for="{{questions}}" wx:for-index="fdx" wx:for-item="fitem" wx:key="index">
+      <swiper-item>
+        <view class="q-key">{{fdx+1+'.'+fitem.keyss}}</view>
+        <view class="q-item" wx:for="{{fitem.valuess}}" wx:key="index" bindtap="selectItem" data-fdx="{{fdx}}" data-index="{{index}}" >
+          <text class="item-text">{{item}}</text>
+          <image class="item-bg" src="{{fitem.cdx===index?'item-on@2x.png':'item-off@2x.png'}}"></image>
+        </view>
+      </swiper-item>
+    </block>
+  </swiper>
+</view>
+<view class="container" wx:if="{{gameOver}}">
+  <image class="bg" src="overbg@2x.png"></image>
+  <view class="content">
+    <view class="title">恭喜</view>
+    <view class="tips">答对了{{score}}道题</view>
+    <view class="tips">{{score===5?"大奖擦肩而过了！":score===4?"继续再接再厉了！":score===3?"没能赢得大奖！":score===2?"继续加油！":"恶补知识呦！"}}</view>
+  </view>
+  <button open-type="share" class="btn">
+    <text class="btn-text">发到群里挑战一下好友</text>
+    <image class="btn-bg" src="anniu@2x.png"></image>
+  </button>
+</view>

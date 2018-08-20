@@ -1,0 +1,67 @@
+<view class="container">
+  <view class="page" wx:if="{{!complete && !examResult}}">
+    <view class="exam-head">
+      <view class="item" >
+        <text class="circle c1"></text>
+        <text class="text">没有症状</text>
+      </view>
+      <view class="item" >
+        <text class="circle c2"></text>
+        <text class="text">有该症状</text>
+      </view>
+      <view class="item">
+        <text class="circle c3" ></text>
+        <text class="text">症状严重</text>
+      </view>
+    </view>
+    <view class="list-wrapper">
+      <view class="case" wx:for="{{caseData}}" wx:key="unique" bindtap="selectCase" data-index="{{index}}">
+        <text>{{item.content}}</text>
+        <image class="case-iamge" src="{{index%2===0?(item.ssstatus===0?'meiyouzhengzhuang1@2x.png':item.ssstatus===1?'yougaizhengzhuang1@2x.png':'zhengzhuangyanzhong1@2x.png'):(item.ssstatus===0?'meiyouzhengzhuang2@2x.png':item.ssstatus===1?'yougaizhengzhuang2@2x.png':'zhengzhuangyanzhong2@2x.png')}}"></image>
+      </view>
+    </view>
+    <view class="btn-wrapper"><button bindtap="addShdProblem">完成</button></view>
+  </view>
+
+  <view class="page" wx:if="{{complete && !examResult}}">
+    <image class="bg" src="beijing@2x.png"></image>
+    <view class="head-wrapper">
+      <image class="head-img" src="professional test@2x.png"></image>
+    </view>
+    <form bindsubmit="getResult">
+      <view class="form">
+        <view class="form-wrapper">
+          <text class="keyss">姓名：</text>
+          <input class="valuess" name="name" placeholder="请留下您的姓名"/>
+        </view>
+        <view class="form-wrapper">
+          <text class="keyss">电话：</text>
+          <input class="valuess" type="number" name="phone" placeholder="方便获取个人健康档案"/>
+        </view>
+        <view>
+          <image style="width: 22rpx;height: 22rpx;margin-right: 12rpx;" src="tixing@2x.png"></image>
+          <text class="tips">电话只是为了更好地帮助您建立电子健康档案，没有经过允许不会打扰到您</text>
+        </view>
+      </view>
+      <button class="sub-btn" formType="submit">提交信息查看检测报告</button>
+    </form>
+  </view>
+
+  <view class="page" wx:if="{{examResult}}">
+    <image class="bg" src="rbiejing@2x.png"></image>
+    <view class="content-wrapper">
+      <view class="score">{{examResult.score}}分</view>
+      <view class="content">{{examResult.answer}}</view>
+    </view>
+    <view class="button-wrapper">
+      <button open-type="contact" class="contact-btn">
+        <image class="image" src="anniu2@2x.png"></image>
+        <text class="text">专病速诊</text>
+      </button>
+      <button open-type="contact" class="contact-btn">
+        <image class="image" src="anniu2@2x.png"></image>
+        <text class="text">专家咨询</text>
+      </button>
+    </view>
+  </view>
+</view>

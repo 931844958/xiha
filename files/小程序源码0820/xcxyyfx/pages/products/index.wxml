@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="nav-wrapper">
+    <text class="tab {{index===navIndex?'active':''}}" bindtap="navHandler" data-id="{{index}}" wx:for="{{navData}}" wx:key="unique">{{item}}</text>
+  </view>
+  <view style="height: 16rpx;background:#F2F2F2;"></view>
+  <!--产品-->
+  <view class="products_wrapper"> 
+    <view wx:for="{{productList}}" wx:key="unique" style="padding:30rpx 0; width: 335rpx;">
+      <view data-id="{{item.id}}" bindtap="toDetail" class="p-item" >
+        <view class="slide-image-wrapper">
+          <image src="{{item.indexUrl}}" class="slide-image"/>
+        </view>
+        <view class="name-sale">
+          <text class="name">{{item.name}}</text>
+          <!-- <text class="price">￥{{item.price}}</text> -->
+          <!-- <text class="sale">月销量：{{item.monthlySales}}</text> -->
+        </view>
+        <view class="effect">{{item.effect}}</view>
+        <view class="des-wrapper">
+          <text class="price">￥{{item.price}}</text>
+          <!--roleId::1店员 2店长 3业务员 4代理-->
+          <view class="share-btn"><image style="width:18rpx;height:26rpx; " src="fish-white@2x.png"></image>{{item.myRate}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

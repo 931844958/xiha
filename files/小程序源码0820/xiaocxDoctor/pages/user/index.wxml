@@ -1,0 +1,53 @@
+<view class="container" >
+  <view class="head-wrapper">
+    <navigator  url="/pages/userInfo/index" class="hcontent">
+      <image class="head-img" src="{{userData.headImg}}"></image>
+      <view>
+        <view class="name">{{userData.name}}</view>
+        <navigator  url="/pages/jifenStore/index" class="item">
+          <text >积分</text>
+          <text style="color: #45a0ef;">{{userData.totalScore}}</text>
+        </navigator>
+      </view>
+    </navigator>
+    <!-- <view class="hdesc">
+      <navigator  url="/pages/jifenStore/index" class="item">
+        <text class="keyss">积分</text>
+        <text class="valuess">{{userData.totalScore}}</text>
+      </navigator>
+      <view class="item">
+        <text class="keyss">抵扣券</text>
+        <text class="valuess">{{userData.totalExp}}</text>
+      </view>
+    </view> -->
+  </view>
+  <view style="height: 8px;background:#F2F3F5;"></view>
+  <view class="state-container">
+    <view class="state-name">订单中心</view>
+    <view class="state-wrapper">
+      <navigator url="/pages/orders/index?oState=0">
+        <image class="o-img" src="icon_daifahuo_60_62@2x.png" style="width: 62rpx;height: 62rpx;"></image>
+        <view>待发货</view>
+      </navigator>
+      <navigator url="/pages/orders/index?oState=1">
+        <image class="o-img" src="icon_daiquerenfahuo_62_62@2x.png" style="width: 62rpx;height: 62rpx;"></image>
+        <view>已发货</view>
+      </navigator>
+      <navigator url="/pages/orders/index?oState=2">
+        <image class="o-img" src="icon_yifahuo_62_62@2x.png" style="width: 62rpx;height: 62rpx;"></image>
+        <view>已完成</view>
+      </navigator>
+      <!-- <view>
+        <image src="icon_daifahuo_60_62@2x.png" style="width: 62rpx;height: 62rpx;"></image>
+        <view>待评价</view>
+      </view> -->
+    </view>
+  </view>
+  <view style="height: 8px;background:#F2F3F5;"></view>
+  <view class="group">
+    <navigator  url="/pages/addressManage/index" class="item"><text>收货地址</text><text class="jiantou"></text></navigator>
+    <navigator  url="/pages/userInfo/index" class="item"><text>个人资料</text><text class="jiantou"></text></navigator>
+    <navigator  url="/pages/jifenStore/index" class="item"><text>积分商城</text><text class="jiantou"></text></navigator>
+    <navigator  url="/pages/feedback/index" class="item"><text>有奖反馈</text><text class="jiantou"></text></navigator>
+  </view>
+</view>

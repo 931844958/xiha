@@ -1,0 +1,34 @@
+<view class="container">
+  <view class="header">
+    <view class="content-wrapper">
+      <view class="name">{{orderDetail.title}}</view>
+      <view class="money">{{orderDetail.totalMoney}}</view>
+      <view class="state">交易成功</view>
+    </view>
+  </view>
+  <view class="item">
+    <text class="left">订单详情</text>
+    <view class="right">
+      <text>{{orderDetail.title}}</text>
+    </view>
+  </view>
+  <view class="item" wx:if="{{orderDetail.recommend!==''}}">
+    <text class="left">指导老师</text>
+    <view class="right">
+      <text>{{orderDetail.recommend}}</text>
+    </view>
+  </view>
+  <view class="item">
+    <text class="left">创建时间</text>
+    <view class="right">
+      <text>{{orderDetail.createTime}}</text>
+    </view>
+  </view>
+  <button class="item no-btn" open-type="contact">
+    <text class="left">对此订单有疑问</text>
+    <view class="right">
+      <text>联系他</text>
+      <text class="jiantou"></text>
+    </view>
+  </button>
+</view>

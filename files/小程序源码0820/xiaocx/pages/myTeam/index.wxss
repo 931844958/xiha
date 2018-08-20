@@ -1,0 +1,55 @@
+page{
+    height: 100%;
+}
+.header{
+    padding: 20rpx 30rpx;
+    display: flex;
+}
+.headImg{
+    width: 120rpx;
+    height: 120rpx;
+    border-radius: 50%;
+    margin-right: 12rpx;
+}
+.nike-name{
+    font-family: PingFang-SC-Medium;
+    font-size: 30rpx;
+    color: #FF3826;
+    line-height: 2.2;
+}
+.user-grade{
+    font-family: PingFang-SC-Medium;
+    font-size: 30rpx;
+    color: #333333;
+    line-height: 2.2;
+}
+
+.teamMarket{
+    display: flex;
+}
+.case{
+    flex: 1;
+    text-align: center;
+}
+.case .keyss{
+    font-family: PingFang-SC-Medium;
+    font-size: 28rpx;
+    color: #666666;
+    line-height: 2.2;
+}
+.case .valuess{
+    font-family: PingFang-SC-Medium;
+    font-size: 36rpx;
+    color: #333333;
+    line-height: 2.2;
+}
+.case.active{
+    background-color: #fdf4f4;
+}
+
+.no-data{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 262rpx;
+}

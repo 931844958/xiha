@@ -1,0 +1,50 @@
+<view class="container">
+  <view class="container-wrapepr {{isTextareaFocus ? 'textarea-focus-container':''}}" >
+    <video class="video" src="{{hothall.videoUrl}}" poster="{{hothall.converUrl}}"  enable-danmu  controls></video>
+    <view style="height: 8px;background:#F2F3F5;"></view>
+    <view class="lesson-wrapper">
+      <navigator  url="/pages/vDetail/index?articleId={{item.id}}&articleType=6"  class="lesson-item" wx:for="{{relevantVideos}}" wx:key="unique">
+          <view class="content">
+            <view  class="title">{{item.title}}</view>
+            <view class="name">{{item.nickname}}</view>
+            <view class="desc">
+              <text class="view">{{item.browse}}次观看</text>
+              <text  class="time">{{item.createTime}}</text>
+            </view>
+          </view>
+          <view class="wrap-image">
+            <image class="image" src="{{item.converUrl}}"></image>
+            <image class="btn" src="../../images/videoPlay@2x.png"></image>
+          </view>
+        </navigator>
+    </view>
+    <image style="width:100%;display: block;" wx:if="{{loadFlag}}" mode="widthFix"  src="../../images/originPic.png"></image>
+    <image style="width: 520rpx;height: 110rpx;margin: 0 auto;display: block;" wx:if="{{loadFlag}}" bindtap="toHome" src="../../images/morePic.png"></image>
+    <!--下拉加载这里不应该这么写，应该点击查看所有-->
+    <!-- <scroll-view scroll-y style="height: 360px;" wx:if="{{commentList.length>0}}" style="height:{{commentList.length*75}}px;" bindscrolltolower="reachBottom">  -->
+    <view class="comment-list" wx:if="{{commentList.length>0}}">
+      <view class="comment-item" wx:for="{{commentList}}" wx:key="unique">
+        <image class="image" src="{{item.userHeadImg}}"></image>
+        <view class="content">
+          <view class="words">{{item.content}}</view>
+          <view class="name-time">
+            <text class="name">{{item.createUserName}}</text>
+            <text class="time">{{item.createTime}}</text>
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- </scroll-view> -->
+  </view>
+  <view class="comment-wrapper  {{isTextareaFocus ? 'textarea-focus-comment':''}}">
+    <form bindsubmit="pushContent">
+      <view class="wrapper">
+        <!-- <textarea  class="textarea" bindconfirm="confirming" value="{{textareaValue}}"  cursor-spacing="{{isTextareaFocus?'60':'0'}}"  bindblur="textareaBlur" bindfocus="textareaFocus" name="content" placeholder="写下你的评论"></textarea> -->
+        <textarea  class="textarea" bindconfirm="confirming" value="{{textareaValue}}"  cursor-spacing="70"  bindblur="textareaBlur" bindfocus="textareaFocus" name="content" placeholder="写下你的评论"></textarea>
+        <button wx:if="{{isTextareaFocus}}" formType="submit" class="sub-btn">发表</button>
+        <button wx:if="{{!isTextareaFocus}}" formType="submit" class="sub-btn"><text class="tips">{{commentList.length}}</text><image class="image" src="pinglun@2x.png"></image></button>
+        <button wx:if="{{!isTextareaFocus}}" open-type="share" class="share-btn"><image class="image" src="zhuanfa@2x.png"></image></button>
+      </view>  
+    </form>
+  </view>
+</view>

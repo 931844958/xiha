@@ -1,0 +1,93 @@
+<view class="container">
+  <view class="header-wrapper">
+    <!--搜索框-->
+    <view class="search-wrapper" >
+      <view class="search-box">
+        <input class="search" bindinput="searchInput" value="{{keywords}}" placeholder-class="h-class" placeholder="搜索药品、症状、品牌"/>
+        <view class="s-icon-wrapper" bindtap="toProduct">
+          <image class="s-icon" src="../../images/icon-search@2x.png"></image>
+        </view>
+      </view>
+    </view>
+    <swiper class="banner-swiper"  circular autoplay  indicator-dots="{{true}}" indicator-active-color="#e81f0b">
+      <swiper-item >
+        <image src="banner1@2x.png"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="banner1@2x.png"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="banner1@2x.png"></image>
+      </swiper-item>
+      <swiper-item>
+        <image src="banner1@2x.png"></image>
+      </swiper-item>
+    </swiper>
+  </view>
+  <!--商品分类-->
+  <view class="catogory">
+    <view class="ca-item"    bindtap="toProduct" data-id="1">
+      <image src="icon-xinpintuijian@2x.png" style="width: 100rpx;height: 100rpx;"></image>
+      <image src="hot@2x.png" class="t-icon" style="width: 31rpx;height: 36rpx;"></image>
+      <view>新品推荐</view>
+    </view>
+    <view class="ca-item"    bindtap="toProduct" data-id="2">
+      <image src="icon-nanxing@2x.png" style="width: 100rpx;height: 100rpx;"></image>
+      <image src="otc@2x.png" class="t-icon" style="width: 44rpx;height: 25rpx;"></image>
+      <view>男性</view>
+    </view>
+    <view class="ca-item"    bindtap="toProduct" data-id="3">
+      <image src="icon-nvxing@2x.png" style="width: 100rpx;height: 100rpx;"></image>
+      <image src="otc@2x.png" class="t-icon" style="width: 44rpx;height: 25rpx;"></image>
+      <view>女性</view>
+    </view>
+    <view class="ca-item"    bindtap="toProduct" data-id="4">
+      <image src="icon-chufangyao@2x.png" style="width: 100rpx;height: 100rpx;"></image>
+      <view>处方药</view>
+    </view>
+    <view class="ca-item"    bindtap="toProduct" data-id="5">
+      <image src="icon-yiliaoqixie@2x.png" style="width: 100rpx;height: 100rpx;"></image>
+      <view>医疗器械</view>
+    </view>
+  </view>
+  <!--公告-->
+  <view class="board-wrapper">
+    <view class="title">
+      <view >商城</view>
+      <view style="background-color: #e81f0b;font-size: 12px;color: #ffffff;padding:4rpx 6rpx;border-radius: 6rpx;">公告</view>
+    </view>
+    <swiper class="board-swiper" circular="{{true}}"  circular autoplay  display-multiple-items="{{2}}" vertical="{{true}}">
+      <view bindtap='toH5' data-src="OTY5XzY3WGZzWTNPVFlXTEJyeGlEU29KNUNsX0JzVFc1djd6MzFNTWl5NXRTMDZ6dXUyaGJhZm8wNlh0aDRZLW10RENacGlpOXZoMFlTaGQ3b01KUk1MOE4wbzBwOUVacVUzOXFXNGhaT3VOSm5MaXg1dDNRTjFfTmktYmU2VjQ4a3ZyUUNUMERtQkc1Z1VNbHo2YUpfeTlHdFRtNWx6MXVlQWJ5QnFQcXd%2Bfg%3D%3D&chksm=7df6a2fc4a812beac29ff3a0c6d7edfa660d7db0ffb499077696056a88801bef74d92679ce8f&scene=0&previewkey=4TY24Rttt0HLeafXszhXM8NS9bJajjJKzz%252F0By7ITJA%253D#wechat_redirect"><swiper-item ><text class="b-tips">医药</text>线上线下相结合，布局引流线下业务！</swiper-item></view>
+      <view bindtap='toH5' data-src="OTY5X1JMZkVMZFE0WGdOMEdWRlZEU29KNUNsX0JzVFc1djd6MzFNTWl5NXRTMDZ6dXUyaGJhZm8wNlh0aDRhT1B5T3hYQm1rWkpPOXFPRS1DSHRYSlhLaXZQNHZRV1NVU2R1SGJkR1FXS2RHYk9Uc1FTOWRDRkVaMHlpaFgzM1p3UWpYNE5SSGlBQzNocktMUkl3bXBfWkMxdTRiUjlIdm9MT0RDbUx5aGd%2Bfg%3D%3D&chksm=7df6a2fc4a812beab8c25c9187defc322fbe866e566907385860d7c024cbc05dffd18b4ef277&scene=0&previewkey=4TY24Rttt0HLeafXszhXM8NS9bJajjJKzz%252F0By7ITJA%253D#wechat_redirect"><swiper-item ><text class="b-tips">医药</text>创新药店营销模式，着眼创新未来！</swiper-item></view>
+      <view bindtap='toH5' data-src="OTY5X0Jab29kVHJCcXd5b2tselJEU29KNUNsX0JzVFc1djd6MzFNTWl5NXRTMDZ6dXUyaGJhZm8wNlh0aDRZNEthLUFPMmxTQ1hmT0tfNFhYLWJ6d2RUZElTR2ZtYnR1b3FWdDhRRW9WZ1poNjg1NkRJMXdoUnZWdlViU0FGNVBOb2c4YTRvNER4djNFODBpNmRBaWg0SU5IM1R3eVpaWEJqb1I5dlVrdnd%2Bfg%3D%3D&chksm=7df6a2fc4a812bea245236144f68fc4cf97345885d4f995442e1fee2814db78aeeb5bbee965d&scene=0&previewkey=4TY24Rttt0HLeafXszhXM8NS9bJajjJKzz%252F0By7ITJA%253D#wechat_redirect"><swiper-item ><text class="b-tips">医药</text>致敬 : 每位医药人</swiper-item></view>
+    </swiper>
+  </view>
+  <view style="height: 100rpx;background-color: #f5f5f7;padding:0 30rpx;display: flex;align-items: center;">
+    <view style="padding-left: 12rpx;border-left: 2px solid #e81f0b;font-family: PingFang-SC-Medium;color: #333333;font-size: 16px;">推荐专区</view>
+  </view>
+  <!--推荐产品-->
+  <tProducts ></tProducts>
+  <!--产品-->
+  <view class="pro-wrapper">
+    <view class="bt-wrapper">
+      <text class="b-title"></text>
+      <text style="margin:0 24rpx;">新品上架</text>
+      <text class="b-title"></text>
+    </view>
+    <!--新品-->
+    <nProducts ></nProducts>
+    <view style="height: 100rpx;background-color: #f5f5f7;display: flex;align-items: center;justify-content: space-between;">
+      <view style="padding-left: 12rpx;border-left: 2px solid #e81f0b;font-family: PingFang-SC-Medium;color: #333333;font-size: 16px;">商品专区</view>
+      <view bindtap="toProduct" data-id="1" style="color: #999999;font-family: PingFang-SC-Medium;font-size: 12px;">查看更多 ></view>
+    </view>
+    <!--全部产品-->
+    <aProducts ></aProducts>
+    <view bindtap="toProduct" data-id="1" style="color: #d61203;font-family: PingFang-SC-Medium;font-size: 18px;text-align: center;line-height: 2;">点击查看更多</view>
+  </view>
+  <view style="position: fixed;z-index:222;top:50%;transform: translateY(-50%);right:0;background-color: #45b2e3;border-radius: 10rpx;width: 78rpx;height: 166rpx;">
+    <button  open-type="contact" style="background: #45b2e3;color: #ffffff;padding:0;line-height: 0;display: flex;flex-wrap: wrap;justify-content: center;border: none;">
+      <image class="image" style="width: 58rpx; height:64rpx;margin-top: 30rpx;" src="icon_zixun@2x.png"></image>
+      <view style="font-size: 32rpx;padding-top:10rpx;padding-bottom: 20rpx;width: 100%;line-height: 1.2; ">咨询</view>
+    </button>
+  </view>
+</view>

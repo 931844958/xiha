@@ -1,0 +1,50 @@
+page{
+    height: 100%;
+    font-size: 14px;
+}
+.input_wrapper{
+  display: flex;
+  justify-content: flex-start;
+  padding: 20rpx 30rpx;
+  font-size: 32rpx;
+}
+.bbc{
+  border-bottom: 1rpx solid #999999;
+}
+.input_wrapper .keyss{
+  width: 160rpx;
+}
+.input_wrapper .valuess{
+  padding-left: 10px;
+  flex: 1;
+}
+
+.form-group{
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1rpx solid #eeeeee;
+    font-family: PingFang-SC-Medium;
+}
+.pic-image{
+    width: 70rpx;
+    height: 58rpx;
+    margin-left: 10rpx;
+}
+
+.mask{
+  position: fixed;
+  top:0;
+  right: 0;
+  bottom: 0;
+  left:0;
+  z-index: 777;
+  background-color: #000000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mask image{
+  width: 100%;
+}
